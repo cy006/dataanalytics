@@ -1,0 +1,2645 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Create clean Dataset</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Explorative Datenanalyse" href="Exploration_leasingrisk.html" />
+    <link rel="prev" title="1. Einführung" href="../plan_leasingrisiko.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Applied Data Analytics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Restwertermittlung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_restwertermittlung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraper_mobile.html">
+   2. Webscraper mobile.de
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_cleaning.html">
+   3. Data Cleaning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_Regression_Diagnostic.html">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelbuilding_restwertermittlung.html">
+   5. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leasingrisiko
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_leasingrisiko.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Create clean Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exploration_leasingrisk.html">
+   3. Explorative Datenanalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modelbuilding_leasingrisk.html">
+   4. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kundensegmentierung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_segmentierung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_cluster_dataset.html">
+   2. Create Dataset for Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_segemntierung.html">
+   3. EDA &amp; Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans_segmentation.html">
+   4. Modeling &amp; Evaluation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Create_clean_Dataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cy006/data_analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cy006/data_analytics/issues/new?title=Issue%20on%20page%20%2Fcontent/Create_clean_Dataset.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cy006/data_analytics/master?urlpath=tree/docs/content/Create_clean_Dataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-dependencies">
+   Import dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleaning-dataset">
+   Cleaning dataset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-features-that-have-no-informative-value">
+     Removing features that have no informative value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-missing-values">
+     Remove missing values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-of-custom-dataset-for-leasing-risk-usecase">
+   Creation of custom dataset for leasing risk usecase
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shaping-loan-amount">
+     Shaping Loan amount
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-the-right-dtype-for-features">
+   Set the right dtype for features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-custom-label-with-conditions">
+   Create custom label with conditions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="create-clean-dataset">
+<h1>2. Create clean Dataset<a class="headerlink" href="#create-clean-dataset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-dependencies">
+<h2>Import dependencies<a class="headerlink" href="#import-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cleaning-dataset">
+<h2>Cleaning dataset<a class="headerlink" href="#cleaning-dataset" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Leasing_risk/Dataset1/train_u6lujuX_CVtuZ9i.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 614 entries, 0 to 613
+Data columns (total 13 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Loan_ID            614 non-null    object 
+ 1   Gender             601 non-null    object 
+ 2   Married            611 non-null    object 
+ 3   Dependents         599 non-null    object 
+ 4   Education          614 non-null    object 
+ 5   Self_Employed      582 non-null    object 
+ 6   ApplicantIncome    614 non-null    int64  
+ 7   CoapplicantIncome  614 non-null    float64
+ 8   LoanAmount         592 non-null    float64
+ 9   Loan_Amount_Term   600 non-null    float64
+ 10  Credit_History     564 non-null    float64
+ 11  Property_Area      614 non-null    object 
+ 12  Loan_Status        614 non-null    object 
+dtypes: float64(4), int64(1), object(8)
+memory usage: 62.5+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="removing-features-that-have-no-informative-value">
+<h3>Removing features that have no informative value<a class="headerlink" href="#removing-features-that-have-no-informative-value" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Removing Loan_Status because a custom label is to be created later</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Loan_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Loan_Status&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Married</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>Self_Employed</th>
+      <th>ApplicantIncome</th>
+      <th>CoapplicantIncome</th>
+      <th>LoanAmount</th>
+      <th>Loan_Amount_Term</th>
+      <th>Credit_History</th>
+      <th>Property_Area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5849</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4583</td>
+      <td>1508.0</td>
+      <td>128.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>3000</td>
+      <td>0.0</td>
+      <td>66.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2583</td>
+      <td>2358.0</td>
+      <td>120.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>6000</td>
+      <td>0.0</td>
+      <td>141.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2900</td>
+      <td>0.0</td>
+      <td>71.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>3+</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4106</td>
+      <td>0.0</td>
+      <td>40.0</td>
+      <td>180.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>611</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>8072</td>
+      <td>240.0</td>
+      <td>253.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>612</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>7583</td>
+      <td>0.0</td>
+      <td>187.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>613</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>4583</td>
+      <td>0.0</td>
+      <td>133.0</td>
+      <td>360.0</td>
+      <td>0.0</td>
+      <td>Semiurban</td>
+    </tr>
+  </tbody>
+</table>
+<p>614 rows × 11 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="remove-missing-values">
+<h3>Remove missing values<a class="headerlink" href="#remove-missing-values" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender               13
+Married               3
+Dependents           15
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_9_1.png" src="../_images/Create_clean_Dataset_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_10_1.png" src="../_images/Create_clean_Dataset_10_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender               13
+Married               3
+Dependents           15
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Married</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>Self_Employed</th>
+      <th>ApplicantIncome</th>
+      <th>CoapplicantIncome</th>
+      <th>LoanAmount</th>
+      <th>Loan_Amount_Term</th>
+      <th>Credit_History</th>
+      <th>Property_Area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5849</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4583</td>
+      <td>1508.0</td>
+      <td>128.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>3000</td>
+      <td>0.0</td>
+      <td>66.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2583</td>
+      <td>2358.0</td>
+      <td>120.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>6000</td>
+      <td>0.0</td>
+      <td>141.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2900</td>
+      <td>0.0</td>
+      <td>71.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>3+</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4106</td>
+      <td>0.0</td>
+      <td>40.0</td>
+      <td>180.0</td>
+      <td>1.0</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>611</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>8072</td>
+      <td>240.0</td>
+      <td>253.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>612</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>7583</td>
+      <td>0.0</td>
+      <td>187.0</td>
+      <td>360.0</td>
+      <td>1.0</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>613</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>4583</td>
+      <td>0.0</td>
+      <td>133.0</td>
+      <td>360.0</td>
+      <td>0.0</td>
+      <td>Semiurban</td>
+    </tr>
+  </tbody>
+</table>
+<p>614 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; Gender</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender                0
+Married               3
+Dependents           15
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; Married</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Married</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Married</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender                0
+Married               0
+Dependents           15
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; Dependents</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Dependents</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Dependents</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender                0
+Married               0
+Dependents            0
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Self_Employed</span> <span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_19_1.png" src="../_images/Create_clean_Dataset_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; Self_Employed</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Self_Employed</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Self_Employed</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender                0
+Married               0
+Dependents            0
+Education             0
+Self_Employed         0
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_22_1.png" src="../_images/Create_clean_Dataset_22_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_23_1.png" src="../_images/Create_clean_Dataset_23_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; Loan_Amount_Term</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 614 entries, 0 to 613
+Data columns (total 11 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Gender             614 non-null    object 
+ 1   Married            614 non-null    object 
+ 2   Dependents         614 non-null    object 
+ 3   Education          614 non-null    object 
+ 4   Self_Employed      614 non-null    object 
+ 5   ApplicantIncome    614 non-null    int64  
+ 6   CoapplicantIncome  614 non-null    float64
+ 7   LoanAmount         592 non-null    float64
+ 8   Loan_Amount_Term   614 non-null    float64
+ 9   Credit_History     564 non-null    float64
+ 10  Property_Area      614 non-null    object 
+dtypes: float64(4), int64(1), object(6)
+memory usage: 52.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender                0
+Married               0
+Dependents            0
+Education             0
+Self_Employed         0
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term      0
+Credit_History       50
+Property_Area         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage of most_frequent strategy for categorical variable -&gt; LoanAmount</span>
+<span class="n">x_string</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">=</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Credit_History</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_28_1.png" src="../_images/Create_clean_Dataset_28_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span>  <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Credit_History&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender               0
+Married              0
+Dependents           0
+Education            0
+Self_Employed        0
+ApplicantIncome      0
+CoapplicantIncome    0
+LoanAmount           0
+Loan_Amount_Term     0
+Property_Area        0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creation-of-custom-dataset-for-leasing-risk-usecase">
+<h2>Creation of custom dataset for leasing risk usecase<a class="headerlink" href="#creation-of-custom-dataset-for-leasing-risk-usecase" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shaping-loan-amount">
+<h3>Shaping Loan amount<a class="headerlink" href="#shaping-loan-amount" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_33_1.png" src="../_images/Create_clean_Dataset_33_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">100.0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">30.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.75</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">7000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.60</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">12000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">10.0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.6</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">120000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_39_1.png" src="../_images/Create_clean_Dataset_39_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.5</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">125000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">17.0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">40000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">2.0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">30000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">1.4</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">50000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_44_1.png" src="../_images/Create_clean_Dataset_44_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">2.0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">50000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.6</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">90000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.6</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">94000.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.6</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">0.9</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mf">1.5</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="k">else</span> <span class="n">x</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_51_1.png" src="../_images/Create_clean_Dataset_51_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Fahrzeugwert&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">LoanAmount</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_54_1.png" src="../_images/Create_clean_Dataset_54_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loan_Amount_Term&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">23.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Loan_Amount_Term</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_56_1.png" src="../_images/Create_clean_Dataset_56_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasing_monat_48M&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Fahrzeugwert</span> <span class="o">/</span> <span class="mi">48</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasing_summe&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasing_monat_48M&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loan_Amount_Term&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasingrate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasing_summe&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loan_Amount_Term&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;einkommen_025&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ApplicantIncome&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.25</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;LoanAmount&#39;</span><span class="p">,</span> <span class="s1">&#39;leasing_summe&#39;</span><span class="p">,</span> <span class="s1">&#39;leasing_monat_48M&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-right-dtype-for-features">
+<h2>Set the right dtype for features<a class="headerlink" href="#set-the-right-dtype-for-features" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 558 entries, 0 to 613
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Gender             558 non-null    object 
+ 1   Married            558 non-null    object 
+ 2   Dependents         558 non-null    object 
+ 3   Education          558 non-null    object 
+ 4   Self_Employed      558 non-null    object 
+ 5   ApplicantIncome    558 non-null    int64  
+ 6   CoapplicantIncome  558 non-null    float64
+ 7   Loan_Amount_Term   558 non-null    float64
+ 8   Property_Area      558 non-null    object 
+ 9   Fahrzeugwert       558 non-null    float64
+ 10  leasingrate        558 non-null    float64
+ 11  einkommen_025      558 non-null    float64
+dtypes: float64(5), int64(1), object(6)
+memory usage: 56.7+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;Gender&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s2">&quot;Married&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s2">&quot;Dependents&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s2">&quot;Education&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s2">&quot;Self_Employed&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s2">&quot;CoapplicantIncome&quot;</span><span class="p">:</span> <span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="s2">&quot;Loan_Amount_Term&quot;</span><span class="p">:</span> <span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="s2">&quot;Property_Area&quot;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 558 entries, 0 to 613
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype   
+---  ------             --------------  -----   
+ 0   Gender             558 non-null    category
+ 1   Married            558 non-null    category
+ 2   Dependents         558 non-null    category
+ 3   Education          558 non-null    category
+ 4   Self_Employed      558 non-null    category
+ 5   ApplicantIncome    558 non-null    int64   
+ 6   CoapplicantIncome  558 non-null    int64   
+ 7   Loan_Amount_Term   558 non-null    int64   
+ 8   Property_Area      558 non-null    category
+ 9   Fahrzeugwert       558 non-null    float64 
+ 10  leasingrate        558 non-null    float64 
+ 11  einkommen_025      558 non-null    float64 
+dtypes: category(6), float64(3), int64(3)
+memory usage: 34.6 KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-custom-label-with-conditions">
+<h2>Create custom label with conditions<a class="headerlink" href="#create-custom-label-with-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Married</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>Self_Employed</th>
+      <th>ApplicantIncome</th>
+      <th>CoapplicantIncome</th>
+      <th>Loan_Amount_Term</th>
+      <th>Property_Area</th>
+      <th>Fahrzeugwert</th>
+      <th>leasingrate</th>
+      <th>einkommen_025</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5849</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>65318.400</td>
+      <td>680.400000</td>
+      <td>1462.25</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4583</td>
+      <td>1508</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>65318.400</td>
+      <td>680.400000</td>
+      <td>1145.75</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>3000</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>48498.912</td>
+      <td>505.197000</td>
+      <td>750.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2583</td>
+      <td>2358</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>61236.000</td>
+      <td>637.875000</td>
+      <td>645.75</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>6000</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>71952.300</td>
+      <td>749.503125</td>
+      <td>1500.00</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>608</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3232</td>
+      <td>1950</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>55112.400</td>
+      <td>574.087500</td>
+      <td>808.00</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2900</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>60385.500</td>
+      <td>629.015625</td>
+      <td>725.00</td>
+    </tr>
+    <tr>
+      <th>611</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>8072</td>
+      <td>240</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>46478.124</td>
+      <td>484.147125</td>
+      <td>2018.00</td>
+    </tr>
+    <tr>
+      <th>612</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>7583</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>57255.660</td>
+      <td>596.413125</td>
+      <td>1895.75</td>
+    </tr>
+    <tr>
+      <th>613</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>4583</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>67869.900</td>
+      <td>706.978125</td>
+      <td>1145.75</td>
+    </tr>
+  </tbody>
+</table>
+<p>558 rows × 12 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;leasingrate&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;einkommen_025&#39;</span><span class="p">])</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Self_Employed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Property_Area&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Urban&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Not Graduate&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Loan_Amount_Term&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">]</span>
+                                         
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Risk&#39;</span><span class="p">,</span> <span class="s1">&#39;No Risk&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new column and use np.select to assign values to it using -&gt; lists as arguments</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Married</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>Self_Employed</th>
+      <th>ApplicantIncome</th>
+      <th>CoapplicantIncome</th>
+      <th>Loan_Amount_Term</th>
+      <th>Property_Area</th>
+      <th>Fahrzeugwert</th>
+      <th>leasingrate</th>
+      <th>einkommen_025</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5849</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>65318.400</td>
+      <td>680.400000</td>
+      <td>1462.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4583</td>
+      <td>1508</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>65318.400</td>
+      <td>680.400000</td>
+      <td>1145.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>3000</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>48498.912</td>
+      <td>505.197000</td>
+      <td>750.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2583</td>
+      <td>2358</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>61236.000</td>
+      <td>637.875000</td>
+      <td>645.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>6000</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>71952.300</td>
+      <td>749.503125</td>
+      <td>1500.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>5417</td>
+      <td>4196</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>49050.036</td>
+      <td>510.937875</td>
+      <td>1354.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2333</td>
+      <td>1516</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>48478.500</td>
+      <td>504.984375</td>
+      <td>583.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>3+</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3036</td>
+      <td>2504</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>48376.440</td>
+      <td>503.921250</td>
+      <td>759.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4006</td>
+      <td>1526</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>51438.240</td>
+      <td>535.815000</td>
+      <td>1001.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>12841</td>
+      <td>10968</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>64114.092</td>
+      <td>667.855125</td>
+      <td>3210.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3200</td>
+      <td>700</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>51438.240</td>
+      <td>535.815000</td>
+      <td>800.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2500</td>
+      <td>1840</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>55622.700</td>
+      <td>579.403125</td>
+      <td>625.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3073</td>
+      <td>8106</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>61236.000</td>
+      <td>637.875000</td>
+      <td>768.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>1853</td>
+      <td>2840</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>58174.200</td>
+      <td>605.981250</td>
+      <td>463.25</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4950</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>63787.500</td>
+      <td>664.453125</td>
+      <td>1237.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>1</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>3596</td>
+      <td>0</td>
+      <td>24</td>
+      <td>Urban</td>
+      <td>51030.000</td>
+      <td>531.562500</td>
+      <td>899.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3510</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>64638.000</td>
+      <td>673.312500</td>
+      <td>877.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>4887</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>67869.900</td>
+      <td>706.978125</td>
+      <td>1221.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2600</td>
+      <td>3500</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>58684.500</td>
+      <td>611.296875</td>
+      <td>650.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>7660</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>53071.200</td>
+      <td>552.825000</td>
+      <td>1915.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5955</td>
+      <td>5625</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>57868.020</td>
+      <td>602.791875</td>
+      <td>1488.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>2600</td>
+      <td>1911</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>59194.800</td>
+      <td>616.612500</td>
+      <td>650.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>3365</td>
+      <td>1917</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>57153.600</td>
+      <td>595.350000</td>
+      <td>841.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3717</td>
+      <td>2925</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>46233.180</td>
+      <td>481.595625</td>
+      <td>929.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>9560</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>58480.380</td>
+      <td>609.170625</td>
+      <td>2390.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2799</td>
+      <td>2253</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>62256.600</td>
+      <td>648.506250</td>
+      <td>699.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>4226</td>
+      <td>1040</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>56133.000</td>
+      <td>584.718750</td>
+      <td>1056.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>1442</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>71442.000</td>
+      <td>744.187500</td>
+      <td>360.50</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>2</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3750</td>
+      <td>2083</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>61236.000</td>
+      <td>637.875000</td>
+      <td>937.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4166</td>
+      <td>3369</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>61542.180</td>
+      <td>641.064375</td>
+      <td>1041.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3167</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>62937.000</td>
+      <td>655.593750</td>
+      <td>791.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>Yes</td>
+      <td>4692</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>54091.800</td>
+      <td>563.456250</td>
+      <td>1173.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3500</td>
+      <td>1667</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>58174.200</td>
+      <td>605.981250</td>
+      <td>875.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>3+</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>12500</td>
+      <td>3000</td>
+      <td>36</td>
+      <td>Rural</td>
+      <td>58786.560</td>
+      <td>612.360000</td>
+      <td>3125.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2275</td>
+      <td>2067</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>65318.400</td>
+      <td>680.400000</td>
+      <td>568.75</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>1828</td>
+      <td>1330</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>51030.000</td>
+      <td>531.562500</td>
+      <td>457.00</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Female</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3667</td>
+      <td>1459</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>73483.200</td>
+      <td>765.450000</td>
+      <td>916.75</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4166</td>
+      <td>7210</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>56337.120</td>
+      <td>586.845000</td>
+      <td>1041.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>3748</td>
+      <td>1668</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>56133.000</td>
+      <td>584.718750</td>
+      <td>937.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3600</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>68040.000</td>
+      <td>708.750000</td>
+      <td>900.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Male</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>1800</td>
+      <td>1213</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>57561.840</td>
+      <td>599.602500</td>
+      <td>450.00</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2400</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>63787.500</td>
+      <td>664.453125</td>
+      <td>600.00</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3941</td>
+      <td>2336</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>68380.200</td>
+      <td>712.293750</td>
+      <td>985.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>Yes</td>
+      <td>4695</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>48988.800</td>
+      <td>510.300000</td>
+      <td>1173.75</td>
+      <td>Risk</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>3410</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>44906.400</td>
+      <td>467.775000</td>
+      <td>852.50</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5649</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>53887.680</td>
+      <td>561.330000</td>
+      <td>1412.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>5821</td>
+      <td>0</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>73483.200</td>
+      <td>765.450000</td>
+      <td>1455.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Female</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>2645</td>
+      <td>3440</td>
+      <td>36</td>
+      <td>Urban</td>
+      <td>61236.000</td>
+      <td>637.875000</td>
+      <td>661.25</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Female</td>
+      <td>No</td>
+      <td>0</td>
+      <td>Graduate</td>
+      <td>No</td>
+      <td>4000</td>
+      <td>2275</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>73483.200</td>
+      <td>765.450000</td>
+      <td>1000.00</td>
+      <td>No Risk</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Female</td>
+      <td>Yes</td>
+      <td>0</td>
+      <td>Not Graduate</td>
+      <td>No</td>
+      <td>1928</td>
+      <td>1644</td>
+      <td>36</td>
+      <td>Semiurban</td>
+      <td>51030.000</td>
+      <td>531.562500</td>
+      <td>482.00</td>
+      <td>Risk</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No Risk    471
+Risk        87
+Name: label, dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/Create_clean_Dataset_66_1.png" src="../_images/Create_clean_Dataset_66_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 558 entries, 0 to 613
+Data columns (total 13 columns):
+ #   Column             Non-Null Count  Dtype   
+---  ------             --------------  -----   
+ 0   Gender             558 non-null    category
+ 1   Married            558 non-null    category
+ 2   Dependents         558 non-null    category
+ 3   Education          558 non-null    category
+ 4   Self_Employed      558 non-null    category
+ 5   ApplicantIncome    558 non-null    int64   
+ 6   CoapplicantIncome  558 non-null    int64   
+ 7   Loan_Amount_Term   558 non-null    int64   
+ 8   Property_Area      558 non-null    category
+ 9   Fahrzeugwert       558 non-null    float64 
+ 10  leasingrate        558 non-null    float64 
+ 11  einkommen_025      558 non-null    float64 
+ 12  label              558 non-null    object  
+dtypes: category(6), float64(3), int64(3), object(1)
+memory usage: 39.0+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Leasing_risk/Final_data/dataset_leasingrisk.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsub</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;ApplicantIncome&#39;</span><span class="p">,</span> <span class="s1">&#39;leasingrate&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Clustering/subdataset_customersegmentation.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../plan_leasingrisiko.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. Einführung</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Exploration_leasingrisk.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3. Explorative Datenanalyse</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch Cenk Yagkan<br/>
+        
+            &copy; Urheberrechte © 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

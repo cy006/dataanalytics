@@ -1,0 +1,2295 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Modelbuilding</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Einführung" href="../plan_leasingrisiko.html" />
+    <link rel="prev" title="4. EDA und Regression Diagnostic" href="EDA_Regression_Diagnostic.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Applied Data Analytics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Restwertermittlung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_restwertermittlung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraper_mobile.html">
+   2. Webscraper mobile.de
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_cleaning.html">
+   3. Data Cleaning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_Regression_Diagnostic.html">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leasingrisiko
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_leasingrisiko.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_clean_Dataset.html">
+   2. Create clean Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exploration_leasingrisk.html">
+   3. Explorative Datenanalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modelbuilding_leasingrisk.html">
+   4. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kundensegmentierung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_segmentierung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_cluster_dataset.html">
+   2. Create Dataset for Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_segemntierung.html">
+   3. EDA &amp; Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans_segmentation.html">
+   4. Modeling &amp; Evaluation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/modelbuilding_restwertermittlung.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cy006/data_analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cy006/data_analytics/issues/new?title=Issue%20on%20page%20%2Fcontent/modelbuilding_restwertermittlung.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cy006/data_analytics/master?urlpath=tree/docs/content/modelbuilding_restwertermittlung.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-dependencies">
+   Import Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimal-preprocessing">
+   Minimal Preprocessing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-und-trainingsdaten">
+   Test- und Trainingsdaten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#baseline-modelle">
+   Baseline Modelle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelbuliding-with-pipelines">
+   Modelbuliding with pipelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erkenntnisse-uber-die-modelle">
+   Erkenntnisse über die Modelle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lineare-regression">
+     Lineare Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#knn-regression">
+     KNN Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#randomforrest-regressor">
+     RandomForrest Regressor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradientboosting-regressor">
+     GradientBoosting Regressor
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bestes-modell">
+   Bestes Modell
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actual-vs-predicted">
+   Actual vs Predicted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weiterer-ansatz-lasso-regression">
+   Weiterer Ansatz: Lasso Regression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encode-categorial-variables">
+     Encode categorial variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#split-data">
+     Split Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standardisierung">
+     Standardisierung
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lasso-mit-dem-optimalen-alpha-wert">
+     Lasso mit dem optimalen Alpha-Wert
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erstellung-des-lasso-modells">
+     Erstellung des Lasso Modells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modell-evaluation">
+     Modell Evaluation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="modelbuilding">
+<h1>5. Modelbuilding<a class="headerlink" href="#modelbuilding" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-dependencies">
+<h2>Import Dependencies<a class="headerlink" href="#import-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span><span class="n">make_pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span><span class="n">KFold</span><span class="p">,</span><span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">f_regression</span><span class="p">,</span> <span class="n">mutual_info_regression</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">set_config</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">shapiro</span><span class="p">,</span> <span class="n">normaltest</span><span class="p">,</span> <span class="n">anderson</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">QuantileTransformer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVR</span>
+
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.gofplots</span> <span class="kn">import</span> <span class="n">qqplot</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">spearmanr</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVR</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PowerTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">RobustScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">precision_score</span><span class="p">,</span><span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loading dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/cenkyagkan/books/mynewbook/content/mobile_clean_data_without_outlier.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># displaying dataframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>Model</th>
+      <th>power_ps</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>van</td>
+      <td>1</td>
+      <td>Sprinter</td>
+      <td>143.0</td>
+      <td>4.246667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>suv</td>
+      <td>1</td>
+      <td>GLB</td>
+      <td>190.0</td>
+      <td>1.413333</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>2.496667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>cabrio</td>
+      <td>2</td>
+      <td>C-Klasse</td>
+      <td>156.0</td>
+      <td>4.746667</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>2.496667</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 799 entries, 0 to 798
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   carname         799 non-null    object 
+ 1   price           799 non-null    float64
+ 2   milage          799 non-null    float64
+ 3   hubraum         799 non-null    float64
+ 4   fuel_type       799 non-null    object 
+ 5   transmission    799 non-null    object 
+ 6   num_seats       799 non-null    int64  
+ 7   num_doors       799 non-null    object 
+ 8   emission_class  799 non-null    object 
+ 9   car_type        799 non-null    object 
+ 10  num_owners      799 non-null    int64  
+ 11  Model           799 non-null    object 
+ 12  power_ps        799 non-null    float64
+ 13  age             799 non-null    float64
+dtypes: float64(5), int64(2), object(7)
+memory usage: 87.5+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="minimal-preprocessing">
+<h2>Minimal Preprocessing<a class="headerlink" href="#minimal-preprocessing" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;carname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;carname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="test-und-trainingsdaten">
+<h2>Test- und Trainingsdaten<a class="headerlink" href="#test-und-trainingsdaten" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
+
+<span class="c1"># Erstellen der Test- und Trainingsdaten </span>
+<span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Erstellen der Test- und Trainingsdaten ohne cat-Features</span>
+<span class="n">X_ohne_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_traincat</span><span class="p">,</span><span class="n">X_testcat</span><span class="p">,</span><span class="n">y_traincat</span><span class="p">,</span><span class="n">y_testcat</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X_ohne_cat</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="baseline-modelle">
+<h2>Baseline Modelle<a class="headerlink" href="#baseline-modelle" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wahl der Algorithmen</span>
+<span class="n">rfr</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span>
+<span class="n">gbr</span> <span class="o">=</span> <span class="n">GradientBoostingRegressor</span><span class="p">()</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">()</span>
+
+<span class="c1"># Listen und Dictionary zum Abspeichern der einzelnen Ergebnisse der Modelle</span>
+<span class="n">base_results</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">best_params</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">feats</span><span class="o">=</span> <span class="p">[]</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pipes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">maes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">rmses</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="c1"># Alle Modelle werden in einer Liste abgespeichert, so dass über diese iteriert werden kann</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">lr</span><span class="p">,</span><span class="n">knn</span><span class="p">,</span><span class="n">rfr</span><span class="p">,</span><span class="n">gbr</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+         <span class="s1">&#39;simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="c1"># small preprocessing pipeline</span>
+    <span class="n">pipe</span><span class="o">=</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">SimpleImputer</span><span class="p">(),</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">gs</span><span class="o">=</span><span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span><span class="n">params</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_traincat</span><span class="p">,</span> <span class="n">y_traincat</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_testcat</span><span class="p">)</span>
+     
+    <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_testcat</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_testcat</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gs</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_testcat</span><span class="p">,</span> <span class="n">y_testcat</span><span class="p">))</span>
+    <span class="n">best_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gs</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+    <span class="n">maes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span>
+    <span class="n">rmses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">))</span>
+
+
+<span class="n">base_results</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Algorithm&#39;</span><span class="p">:</span> <span class="n">models</span><span class="p">,</span> <span class="s1">&#39;Best Params&#39;</span><span class="p">:</span> <span class="n">best_params</span><span class="p">,</span> <span class="s1">&#39;Score&#39;</span><span class="p">:</span> <span class="n">scores</span><span class="p">,</span> <span class="s1">&#39;MAE&#39;</span><span class="p">:</span><span class="n">maes</span><span class="p">,</span> <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="n">rmses</span><span class="p">}</span>
+<span class="n">base_results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">base_results</span><span class="p">)</span>
+
+<span class="n">base_results_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Algorithm</th>
+      <th>Best Params</th>
+      <th>Score</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>LinearRegression()</td>
+      <td>{'simpleimputer__strategy': 'mean'}</td>
+      <td>0.783302</td>
+      <td>5458.140085</td>
+      <td>6971.453277</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>KNeighborsRegressor()</td>
+      <td>{'simpleimputer__strategy': 'mean'}</td>
+      <td>0.428758</td>
+      <td>8784.946000</td>
+      <td>11318.938445</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RandomForestRegressor()</td>
+      <td>{'simpleimputer__strategy': 'median'}</td>
+      <td>0.858111</td>
+      <td>3855.921873</td>
+      <td>5641.188422</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GradientBoostingRegressor()</td>
+      <td>{'simpleimputer__strategy': 'median'}</td>
+      <td>0.851585</td>
+      <td>4283.937292</td>
+      <td>5769.448531</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Nicht distanzbasierte Modelle:</strong></p>
+<ul class="simple">
+<li><p>RandomForestRegressor(), GradientBoostingRegressor() erzielen jetzt schon sehr gute Ergebnisse, da sie keine Normalverteilung, keine Standardisierung und keine Skalierung benötigen</p></li>
+</ul>
+<p><strong>Distanzbasierte Modelle:</strong></p>
+<ul class="simple">
+<li><p>KNeighborsRegressor(), LinearRegression() erzielen schon gute Werte, jedoch liegen die Daten hierfür noch nicht in der richitgen Form vor. So müssen die Daten noch angepasst werden.</p></li>
+</ul>
+</div>
+<div class="section" id="modelbuliding-with-pipelines">
+<h2>Modelbuliding with pipelines<a class="headerlink" href="#modelbuliding-with-pipelines" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jede Pipeline wird in Form eines Dictionaries abgespeichert, über das später dann iteriert wird.</span>
+<span class="c1"># Alle pipelines sind immer gleich aufgebaut: Model, params, features, transformer</span>
+<span class="c1"># Bei den Features wird in numeric und categoric features unterschieden, da diese sich im Preprocessing bzw. bei der Transformation nochmals unterscheiden </span>
+
+
+<span class="n">pipelines</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;pipeline1&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;power_transformer&#39;</span><span class="p">,</span> <span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;box-cox&quot;</span><span class="p">))]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline2&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;power_transformer&#39;</span><span class="p">,</span> <span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;yeo-johnson&quot;</span><span class="p">))]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline3&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;power_transformer&#39;</span><span class="p">,</span> <span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;yeo-johnson&quot;</span><span class="p">))]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline4&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__n_quantiles&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__output_distribution&#39;</span><span class="p">:[</span><span class="s1">&#39;normal&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;quantil_transformer&#39;</span><span class="p">,</span> <span class="n">QuantileTransformer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline5&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;power_transformer&#39;</span><span class="p">,</span> <span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;box-cox&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="s1">&#39;robustscaler&#39;</span><span class="p">,</span> <span class="n">RobustScaler</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline6&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;robustscaler&#39;</span><span class="p">,</span> <span class="n">RobustScaler</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;power_transformer&#39;</span><span class="p">,</span> <span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;yeo-johnson&quot;</span><span class="p">))]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline7&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__n_quantiles&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__output_distribution&#39;</span><span class="p">:[</span><span class="s1">&#39;normal&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),(</span><span class="s1">&#39;quantil_transformer&#39;</span><span class="p">,</span> <span class="n">QuantileTransformer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline8&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__n_quantiles&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
+           <span class="s1">&#39;preprocessor__num__quantil_transformer__output_distribution&#39;</span><span class="p">:[</span><span class="s1">&#39;normal&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;standard_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;quantil_transformer&#39;</span><span class="p">,</span> <span class="n">QuantileTransformer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline9&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;standard_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline10&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;minmaxscaler&#39;</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline11&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">KNeighborsRegressor</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+           <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+           <span class="s1">&#39;model__n_neighbors&#39;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span> <span class="p">(</span><span class="s1">&#39;standard_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline12&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">RandomForestRegressor</span><span class="p">(),</span>
+
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))]),</span>
+
+    <span class="p">},</span>
+    
+    <span class="s2">&quot;pipeline13&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">RandomForestRegressor</span><span class="p">(),</span>
+
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;model__max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;sqrt&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;model__min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+            <span class="s1">&#39;model__min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+            <span class="s1">&#39;model__bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))]),</span>
+
+    <span class="p">},</span>
+    
+     <span class="s2">&quot;pipeline14&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">RandomForestRegressor</span><span class="p">(),</span>
+
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;model__max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;sqrt&#39;</span><span class="p">,</span> <span class="s1">&#39;log2&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;model__criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="s1">&#39;mae&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;model__min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+            <span class="s1">&#39;model__min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+            <span class="s1">&#39;model__bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;onehotencoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+    <span class="p">},</span>
+    
+      <span class="s2">&quot;pipeline15&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">GradientBoostingRegressor</span><span class="p">(),</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;model__learning_rate&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.075</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],</span>
+            <span class="s2">&quot;model__min_samples_split&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+            <span class="s2">&quot;model__min_samples_leaf&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+            <span class="s2">&quot;model__max_depth&quot;</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+            <span class="s2">&quot;model__max_features&quot;</span><span class="p">:[</span><span class="s2">&quot;log2&quot;</span><span class="p">,</span><span class="s2">&quot;sqrt&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;model__criterion&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;friedman_mse&quot;</span><span class="p">,</span>  <span class="s2">&quot;mae&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;model__subsample&quot;</span><span class="p">:[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span>
+            <span class="s2">&quot;model__n_estimators&quot;</span><span class="p">:[</span><span class="mi">10</span><span class="p">]</span>
+        <span class="p">},</span>
+
+        <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;numeric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span>
+           <span class="s2">&quot;categoric_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+        <span class="p">},</span>
+
+        <span class="s2">&quot;numeric_transformer&quot;</span> <span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">())]),</span>
+        <span class="s2">&quot;categoric_transformer&quot;</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;one_hot_encoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))]),</span>
+
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now, create a list with the objects </span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">best_params</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">feats</span><span class="o">=</span> <span class="p">[]</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pipes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">maes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">rmses</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># iterating all pipeline configurations</span>
+<span class="k">for</span> <span class="n">pipeline</span> <span class="ow">in</span> <span class="n">pipelines</span><span class="p">:</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;params&quot;</span><span class="p">]</span>
+
+    <span class="n">features</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;features&quot;</span><span class="p">][</span><span class="s2">&quot;features&quot;</span><span class="p">]</span>
+
+    <span class="n">X_train_2</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">features</span><span class="p">]</span>
+    <span class="n">X_test_2</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">features</span><span class="p">]</span>
+
+    <span class="n">numeric_features</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;features&quot;</span><span class="p">][</span><span class="s1">&#39;numeric_features&#39;</span><span class="p">]</span>
+    <span class="n">categoric_features</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;features&quot;</span><span class="p">][</span><span class="s1">&#39;categoric_features&#39;</span><span class="p">]</span>
+
+    <span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;numeric_transformer&quot;</span><span class="p">]</span>
+    <span class="n">categoric_transformer</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;categoric_transformer&quot;</span><span class="p">]</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">pipelines</span><span class="p">[</span><span class="n">pipeline</span><span class="p">][</span><span class="s2">&quot;model&quot;</span><span class="p">]</span>
+
+
+    <span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+    <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">categoric_transformer</span><span class="p">,</span> <span class="n">categoric_features</span><span class="p">)])</span>
+
+    <span class="n">pre_pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)])</span>
+
+
+    <span class="c1"># GridSearch</span>
+    <span class="n">gs</span><span class="o">=</span><span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pre_pipe</span><span class="p">,</span><span class="n">params</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_2</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_2</span><span class="p">)</span>
+    <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gs</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_2</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+    <span class="n">best_params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gs</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+    <span class="n">feats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+    <span class="n">trans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">preprocessor</span><span class="p">)</span>
+    <span class="n">pipes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+    <span class="n">maes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span>
+    <span class="n">rmses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
+    
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pipe&#39;</span><span class="p">:</span><span class="n">pipes</span><span class="p">,</span><span class="s1">&#39;Algorithm&#39;</span><span class="p">:</span> <span class="n">models</span><span class="p">,</span> <span class="s1">&#39;Features&#39;</span><span class="p">:</span> <span class="n">feats</span><span class="p">,</span><span class="s1">&#39;Best Params&#39;</span><span class="p">:</span> <span class="n">best_params</span><span class="p">,</span> <span class="s1">&#39;Preprocessor&#39;</span><span class="p">:</span> <span class="n">trans</span><span class="p">,</span> <span class="s1">&#39;Score&#39;</span><span class="p">:</span> <span class="n">scores</span><span class="p">,</span> <span class="s1">&#39;MAE&#39;</span><span class="p">:</span><span class="n">maes</span><span class="p">,</span> <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="n">rmses</span><span class="p">}</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline1 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline2 done
+pipeline3 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline4 done
+pipeline5 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline6 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline7 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline8 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline9 done
+pipeline10 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline11 done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pipeline12 done
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">8</span><span class="n">a451064b99f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="c1"># GridSearch</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">gs</span><span class="o">=</span><span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pre_pipe</span><span class="p">,</span><span class="n">params</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>     <span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_2</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">y_pred</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_2</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/sklearn/utils/validation.py</span> in <span class="ni">inner_f</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>             <span class="n">extra_args</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_args</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>             <span class="k">if</span> <span class="n">extra_args</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">63</span>                 <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span> 
+<span class="g g-Whitespace">     </span><span class="mi">65</span>             <span class="c1"># extra_args &gt; 0</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_search.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, groups, **fit_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">839</span>                 <span class="k">return</span> <span class="n">results</span>
+<span class="g g-Whitespace">    </span><span class="mi">840</span> 
+<span class="ne">--&gt; </span><span class="mi">841</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_run_search</span><span class="p">(</span><span class="n">evaluate_candidates</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">842</span> 
+<span class="g g-Whitespace">    </span><span class="mi">843</span>             <span class="c1"># multimetric is determined here because in the case of a callable</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_search.py</span> in <span class="ni">_run_search</span><span class="nt">(self, evaluate_candidates)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="k">def</span> <span class="nf">_run_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evaluate_candidates</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span>         <span class="sd">&quot;&quot;&quot;Search all candidates in param_grid&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1288</span>         <span class="n">evaluate_candidates</span><span class="p">(</span><span class="n">ParameterGrid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">param_grid</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1289</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1290</span> 
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_search.py</span> in <span class="ni">evaluate_candidates</span><span class="nt">(candidate_params, cv, more_results)</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>                               <span class="n">n_splits</span><span class="p">,</span> <span class="n">n_candidates</span><span class="p">,</span> <span class="n">n_candidates</span> <span class="o">*</span> <span class="n">n_splits</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span> 
+<span class="ne">--&gt; </span><span class="mi">795</span>                 <span class="n">out</span> <span class="o">=</span> <span class="n">parallel</span><span class="p">(</span><span class="n">delayed</span><span class="p">(</span><span class="n">_fit_and_score</span><span class="p">)(</span><span class="n">clone</span><span class="p">(</span><span class="n">base_estimator</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>                                                        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>                                                        <span class="n">train</span><span class="o">=</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="p">,</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self, iterable)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1052</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1053</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="o">.</span><span class="n">retrieval_context</span><span class="p">():</span>
+<span class="ne">-&gt; </span><span class="mi">1054</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1055</span>             <span class="c1"># Make sure that we get a last message telling us we are done</span>
+<span class="g g-Whitespace">   </span><span class="mi">1056</span>             <span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/joblib/parallel.py</span> in <span class="ni">retrieve</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">931</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">932</span>                 <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="s1">&#39;supports_timeout&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">933</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">_output</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">934</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">_output</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/joblib/_parallel_backends.py</span> in <span class="ni">wrap_future_result</span><span class="nt">(future, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span>         <span class="n">AsyncResults</span><span class="o">.</span><span class="n">get</span> <span class="kn">from</span> <span class="nn">multiprocessing.</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">542</span><span class="s2">             return future.result(timeout=timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span><span class="s2">         except CfTimeoutError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span><span class="s2">             raise TimeoutError from e</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/concurrent/futures/_base.py</span> in <span class="ni">result</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span><span class="s2">                 return self.__get_result()</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">434</span><span class="s2">             self._condition.wait(timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span><span class="s2">             if self._state in [CANCELLED, CANCELLED_AND_NOTIFIED]:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/threading.py</span> in <span class="ni">wait</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">300</span><span class="s2">         try:    # restore state no matter what (e.g., KeyboardInterrupt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span><span class="s2">             if timeout is None:</span>
+<span class="ne">--&gt; </span><span class="mi">302</span><span class="s2">                 waiter.acquire()</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span><span class="s2">                 gotit = True</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span><span class="s2">             else:</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pipe</th>
+      <th>Algorithm</th>
+      <th>Features</th>
+      <th>Best Params</th>
+      <th>Preprocessor</th>
+      <th>Score</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>pipeline1</td>
+      <td>LinearRegression()</td>
+      <td>[milage, hubraum, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.765051</td>
+      <td>5348.887674</td>
+      <td>7231.330712</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pipeline2</td>
+      <td>LinearRegression()</td>
+      <td>[milage, hubraum, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.760665</td>
+      <td>5383.203374</td>
+      <td>7298.501254</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pipeline3</td>
+      <td>LinearRegression()</td>
+      <td>[milage, fuel_type, transmission, num_seats, n...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.761132</td>
+      <td>5446.242055</td>
+      <td>7291.381957</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>pipeline4</td>
+      <td>LinearRegression()</td>
+      <td>[milage, fuel_type, transmission, num_seats, n...</td>
+      <td>{'preprocessor__num__quantil_transformer__n_qu...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.776982</td>
+      <td>5575.336601</td>
+      <td>7045.321459</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>pipeline5</td>
+      <td>LinearRegression()</td>
+      <td>[milage, fuel_type, transmission, num_seats, n...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.764354</td>
+      <td>5430.125020</td>
+      <td>7242.047461</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>pipeline6</td>
+      <td>LinearRegression()</td>
+      <td>[milage, fuel_type, transmission, num_seats, n...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.764147</td>
+      <td>5373.584558</td>
+      <td>7245.228900</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>pipeline7</td>
+      <td>LinearRegression()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__quantil_transformer__n_qu...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.812459</td>
+      <td>4805.231208</td>
+      <td>6460.701295</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>pipeline8</td>
+      <td>LinearRegression()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__quantil_transformer__n_qu...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.812459</td>
+      <td>4805.231118</td>
+      <td>6460.701191</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>pipeline9</td>
+      <td>LinearRegression()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.848577</td>
+      <td>4191.971581</td>
+      <td>5805.332513</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>pipeline10</td>
+      <td>LinearRegression()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.848577</td>
+      <td>4191.971689</td>
+      <td>5805.332250</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>pipeline11</td>
+      <td>KNeighborsRegressor()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'model__n_neighbors': 5, 'preprocessor__num__...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.835737</td>
+      <td>4408.790000</td>
+      <td>6046.449941</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>pipeline12</td>
+      <td>RandomForestRegressor()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'preprocessor__num__simpleimputer__strategy':...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.845669</td>
+      <td>3947.624750</td>
+      <td>5860.803636</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>pipeline13</td>
+      <td>RandomForestRegressor()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'model__bootstrap': False, 'model__max_featur...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.887494</td>
+      <td>3272.469050</td>
+      <td>5004.024177</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>pipeline14</td>
+      <td>RandomForestRegressor()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'model__bootstrap': False, 'model__criterion'...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.888300</td>
+      <td>3279.016700</td>
+      <td>4986.062975</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>pipeline15</td>
+      <td>GradientBoostingRegressor()</td>
+      <td>[hubraum, milage, fuel_type, transmission, num...</td>
+      <td>{'model__criterion': 'friedman_mse', 'model__l...</td>
+      <td>ColumnTransformer(transformers=[('num',\n     ...</td>
+      <td>0.771425</td>
+      <td>5270.485600</td>
+      <td>7132.555886</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">factorplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Pipe&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">results_df</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modelbuilding_restwertermittlung_16_0.png" src="../_images/modelbuilding_restwertermittlung_16_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="erkenntnisse-uber-die-modelle">
+<h2>Erkenntnisse über die Modelle<a class="headerlink" href="#erkenntnisse-uber-die-modelle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lineare-regression">
+<h3>Lineare Regression<a class="headerlink" href="#lineare-regression" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Bei der linearen Regression, hat sich herausgestellt, dass man mit dem MinMax Scaler und dem OnehotEncoder den besten Wert erzielt.</p></li>
+<li><p>In der Regressions Diagnostic wurde eigentlich erkannt, dass das Feature “hubraum” für eine Multikollinearität verantwortlich ist. Beim Testen hat sich jedoch gezeigt, dass das Modell mit dem Feature “hubraum” eine bessere Performance liefert.</p></li>
+<li><p>Vergleicht man das Baselinemodell mit dem Modell aus der Pipeline 10, kann man erkennen, dass man durch weitere Preprocessing-Schritte das Modell um 13,48% verbessert werden konnte.</p></li>
+<li><p>R2 = 0,848 -&gt; Das Regressionsmodell erklärt 84,8% der Streuung.</p></li>
+<li><p>RMSE = 5805,33 -&gt; Die vorhergesagten Werte liegen im Durchschnitt mit einem Abstand von 5805,33€ von den beobachteten Werten entfernt.</p></li>
+<li><p>MAE = 4191,97 -&gt; Der durchschnittliche vertikale Abstand zu den beobachteten Werten liegt bei 4191,97.</p></li>
+</ul>
+</div>
+<div class="section" id="knn-regression">
+<h3>KNN Regression<a class="headerlink" href="#knn-regression" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Die KNN Regression hat im Vergleich mit der linearen Regression ähnlich gut abgeschnitten.</p></li>
+<li><p>Auch hier hat sich gezeigt, dass weitere Preprocessing-Schritte einen positiven Einfluss auf das Modell haben.</p></li>
+<li><p>Da die KNN Regression auf Distanzen basiert, war ein Scaling notwendig. Im Test hat sich gezeigt, dass man mit dem StandardScaler bessere Ergebnisse erzielt.</p></li>
+<li><p>Durch die GridSearch hat sich gezeigt, dass K = 5 der beste Wert ist, um ein besseres Ergebnis erzielen zu können.</p></li>
+<li><p>R2 = 0,835 -&gt; Das Regressionsmodell erklärt 83,5% der Streuung.</p></li>
+<li><p>Und hat einen RMSE von 6046,44 und einen MAE von 4408,79.</p></li>
+</ul>
+</div>
+<div class="section" id="randomforrest-regressor">
+<h3>RandomForrest Regressor<a class="headerlink" href="#randomforrest-regressor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Mit dem RandomForrest Regressor konnte das beste Ergebnis erzielt werden.</p></li>
+<li><p>Im Vergleich zum Baselinemodell, konnte das Modell mit der Preprocessing-Pipeline das Ergebnis um 3,3% verbessern.</p></li>
+<li><p>Standardmäßig wurde immer der OneHotEncoder verwendet, um die kategorischen Variablen in der Regression zu nutzen.</p></li>
+<li><p>R2 = 0,888 -&gt; Das Regressionsmodell erklärt 88,8% der Streuung.</p></li>
+<li><p>RMSE = 4986 -&gt; Die vorhergesagten Werte liegen im Durchschnitt mit einem Abstand von 4986€ von den beobachteten Werten entfernt.</p></li>
+<li><p>MAE = 3279 -&gt; Der durchschnittliche vertikale Abstand zu den beobachteten Werten liegt bei 3279.</p></li>
+</ul>
+</div>
+<div class="section" id="gradientboosting-regressor">
+<h3>GradientBoosting Regressor<a class="headerlink" href="#gradientboosting-regressor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Der GradientBoosting Regressor hat trotz einer umfangreichen Gridsearch einer der schlechteren Ergebnisse erzielt.</p></li>
+<li><p>Durch weiteres Hyperparamter-Tuning wäre sicherlich noch ein besseres Ergebnis möglich.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bestes-modell">
+<h2>Bestes Modell<a class="headerlink" href="#bestes-modell" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_pipeline</span> <span class="o">=</span> <span class="n">results_df</span><span class="p">[</span><span class="n">results_df</span><span class="o">.</span><span class="n">Pipe</span> <span class="o">==</span> <span class="s2">&quot;pipeline14&quot;</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">best_pipeline</span><span class="p">[</span><span class="s1">&#39;Best Params&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;model__bootstrap&#39;: False,
+  &#39;model__criterion&#39;: &#39;mse&#39;,
+  &#39;model__max_features&#39;: &#39;sqrt&#39;,
+  &#39;model__min_samples_leaf&#39;: 1,
+  &#39;model__min_samples_split&#39;: 2,
+  &#39;preprocessor__num__simpleimputer__strategy&#39;: &#39;mean&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;preprocessor__num__simpleimputer__strategy&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;model__bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">],</span>
+          <span class="s1">&#39;model__criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;model__max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sqrt&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;model__min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+          <span class="s1">&#39;model__min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+         <span class="p">}</span>
+
+<span class="n">numeric_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">categoric_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span> <span class="s1">&#39;Model&#39;</span><span class="p">]</span>
+
+
+
+<span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;simpleimputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">())])</span>
+<span class="n">categoric_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;onehotencoder&#39;</span><span class="p">,</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))])</span>
+
+
+<span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+    <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">categoric_transformer</span><span class="p">,</span> <span class="n">categoric_features</span><span class="p">)])</span>
+
+<span class="n">pre_pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)])</span>
+
+    <span class="c1"># GridSearch</span>
+<span class="n">gs</span><span class="o">=</span><span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pre_pipe</span><span class="p">,</span><span class="n">params</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="actual-vs-predicted">
+<h2>Actual vs Predicted<a class="headerlink" href="#actual-vs-predicted" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">y_pred</span><span class="p">}</span>
+<span class="n">df_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_result</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_pred</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;y_test&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y_pred&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Actual vs predicted&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modelbuilding_restwertermittlung_23_0.png" src="../_images/modelbuilding_restwertermittlung_23_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>R2 = 0,88</p></li>
+<li><p>RMSE = 4986</p></li>
+<li><p>Im Plot “”Actual vs Predicted” kann man erkennen, dass das Modell gute Ergebnisse geliefert hat. Es besteht eine starke Korrelation zwischen den Vorhersagen des Modells und den tatsächlichen Ergebnissen.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_res</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
+<span class="n">df_res</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_res</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Model&#39;</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modelbuilding_restwertermittlung_26_0.png" src="../_images/modelbuilding_restwertermittlung_26_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="weiterer-ansatz-lasso-regression">
+<h2>Weiterer Ansatz: Lasso Regression<a class="headerlink" href="#weiterer-ansatz-lasso-regression" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 799 entries, 0 to 798
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   carname         799 non-null    category
+ 1   price           799 non-null    float64 
+ 2   milage          799 non-null    float64 
+ 3   hubraum         799 non-null    float64 
+ 4   fuel_type       799 non-null    category
+ 5   transmission    799 non-null    category
+ 6   num_seats       799 non-null    category
+ 7   num_doors       799 non-null    category
+ 8   emission_class  799 non-null    category
+ 9   car_type        799 non-null    category
+ 10  num_owners      799 non-null    category
+ 11  Model           799 non-null    category
+ 12  power_ps        799 non-null    float64 
+ 13  age             799 non-null    float64 
+dtypes: category(9), float64(5)
+memory usage: 79.9 KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="encode-categorial-variables">
+<h3>Encode categorial variables<a class="headerlink" href="#encode-categorial-variables" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="split-data">
+<h3>Split Data<a class="headerlink" href="#split-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>462    26750.0
+729    14200.0
+390    19999.0
+450    46990.0
+47     34977.0
+        ...   
+369    20780.0
+320    38900.0
+527    58690.0
+125    43580.0
+265    47880.0
+Name: price, Length: 559, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="standardisierung">
+<h3>Standardisierung<a class="headerlink" href="#standardisierung" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Die unabhängigen Variablen müssen für die Lasso Regression standardisert werden, damit eine bessere Perfomance des Modells erzielt werden kann.</p></li>
+<li><p>So müssen die numerischen Features um 0 herum zentriert sein und eine Varianz in der gleichen Größenordnung aufweisen.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numerics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">]</span>
+<span class="n">list_numerical</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">numerics</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">list_numerical</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;milage&#39;, &#39;hubraum&#39;, &#39;power_ps&#39;, &#39;age&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">list_numerical</span><span class="p">])</span> 
+
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">list_numerical</span><span class="p">])</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="n">list_numerical</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zuweisung der standardisierten Werte</span>
+<span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train_scaled</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train_scaled</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train_scaled</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train_scaled</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_scaled</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_scaled</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_scaled</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_scaled</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power_ps</th>
+      <th>age</th>
+      <th>fuel_type_Diesel</th>
+      <th>fuel_type_Hybrid</th>
+      <th>transmission_Schaltgetriebe</th>
+      <th>num_seats_3</th>
+      <th>num_seats_4</th>
+      <th>num_seats_5</th>
+      <th>...</th>
+      <th>Model_M-Klasse</th>
+      <th>Model_MarcoPolo</th>
+      <th>Model_OTHER</th>
+      <th>Model_R-Klasse</th>
+      <th>Model_S-Klasse</th>
+      <th>Model_SL</th>
+      <th>Model_Sprinter</th>
+      <th>Model_V-Klasse</th>
+      <th>Model_Vaneo</th>
+      <th>Model_Vito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>462</th>
+      <td>1.131389</td>
+      <td>0.073690</td>
+      <td>-0.043343</td>
+      <td>1.332038</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>729</th>
+      <td>1.907324</td>
+      <td>-0.288242</td>
+      <td>-0.672051</td>
+      <td>1.270799</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>390</th>
+      <td>1.576670</td>
+      <td>-0.288242</td>
+      <td>-0.672051</td>
+      <td>0.229730</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>450</th>
+      <td>1.163352</td>
+      <td>0.073690</td>
+      <td>-0.206341</td>
+      <td>1.087081</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>0.551642</td>
+      <td>-0.288242</td>
+      <td>-0.159770</td>
+      <td>0.168490</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td>2.006520</td>
+      <td>0.073690</td>
+      <td>-0.520695</td>
+      <td>0.290969</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>-0.943632</td>
+      <td>-0.211355</td>
+      <td>0.189512</td>
+      <td>-1.240015</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>527</th>
+      <td>-0.969368</td>
+      <td>-0.211355</td>
+      <td>1.144218</td>
+      <td>-2.097365</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>-0.867967</td>
+      <td>-0.288242</td>
+      <td>-0.520695</td>
+      <td>-1.301254</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>265</th>
+      <td>-0.997473</td>
+      <td>-0.288242</td>
+      <td>-0.159770</td>
+      <td>-1.484972</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>559 rows × 52 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="lasso-mit-dem-optimalen-alpha-wert">
+<h3>Lasso mit dem optimalen Alpha-Wert<a class="headerlink" href="#lasso-mit-dem-optimalen-alpha-wert" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LassoCV</span>
+
+<span class="c1"># Lasso with 5 fold cross-validation</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># Fit model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LassoCV(cv=5, max_iter=10000, random_state=0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">alpha_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.280300831304658
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Durch die Kreuzvaliderung kam heraus, dass 27,28 der beste alpha-Wert ist.</p></li>
+</ul>
+</div>
+<div class="section" id="erstellung-des-lasso-modells">
+<h3>Erstellung des Lasso Modells<a class="headerlink" href="#erstellung-des-lasso-modells" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lasso_best</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">alpha_</span><span class="p">)</span>
+<span class="n">lasso_best</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lasso(alpha=27.280300831304658)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modell-Koeffizienten:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">lasso_best</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">X</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(-4231.171444807786, &#39;milage&#39;), (1426.548417068822, &#39;hubraum&#39;), (7300.856243163212, &#39;power_ps&#39;), (-5922.131306880558, &#39;age&#39;), (3193.8675002950636, &#39;fuel_type_Diesel&#39;), (5613.378904568733, &#39;fuel_type_Hybrid&#39;), (-3925.3791162875164, &#39;transmission_Schaltgetriebe&#39;), (-2901.149269512689, &#39;num_seats_3&#39;), (1753.7580355917416, &#39;num_seats_4&#39;), (-4970.470443223313, &#39;num_seats_5&#39;), (7206.316348717148, &#39;num_seats_6&#39;), (8545.208085855738, &#39;num_seats_7&#39;), (0.0, &#39;num_seats_8&#39;), (0.0, &#39;num_seats_9&#39;), (3620.793007832022, &#39;num_doors_4/5&#39;), (-0.0, &#39;emission_class_Euro6&#39;), (-285.55572155468326, &#39;emission_class_Euro6c&#39;), (882.4813234379563, &#39;emission_class_Euro6d&#39;), (5760.021245659876, &#39;car_type_cabrio&#39;), (-0.0, &#39;car_type_kleinwagen&#39;), (-1985.2047015650357, &#39;car_type_kombi&#39;), (-7.414415084978062, &#39;car_type_limousine&#39;), (4917.471608028286, &#39;car_type_sport&#39;), (4197.832824804228, &#39;car_type_suv&#39;), (-0.0, &#39;car_type_van&#39;), (272.1644020524715, &#39;num_owners_2&#39;), (-423.98255503684993, &#39;num_owners_3&#39;), (0.0, &#39;num_owners_10&#39;), (876.9214438746592, &#39;Model_B-Klasse&#39;), (-235.14261700313557, &#39;Model_C-Klasse&#39;), (1964.9183042503807, &#39;Model_CL&#39;), (-1491.317729829414, &#39;Model_CLA&#39;), (0.0, &#39;Model_CLC&#39;), (0.0, &#39;Model_E-Klasse&#39;), (-0.0, &#39;Model_G-Klasse&#39;), (0.0, &#39;Model_GL&#39;), (1475.4426033059003, &#39;Model_GLA&#39;), (-0.0, &#39;Model_GLB&#39;), (799.7887096431713, &#39;Model_GLC&#39;), (-0.0, &#39;Model_GLE&#39;), (-127.54452563824081, &#39;Model_GLS&#39;), (0.0, &#39;Model_GT&#39;), (-0.0, &#39;Model_M-Klasse&#39;), (0.0, &#39;Model_MarcoPolo&#39;), (-290.0204436711111, &#39;Model_OTHER&#39;), (0.0, &#39;Model_R-Klasse&#39;), (0.0, &#39;Model_S-Klasse&#39;), (-0.0, &#39;Model_SL&#39;), (0.0, &#39;Model_Sprinter&#39;), (0.0, &#39;Model_V-Klasse&#39;), (-0.0, &#39;Model_Vaneo&#39;), (117.9276677887427, &#39;Model_Vito&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modell-evaluation">
+<h3>Modell Evaluation<a class="headerlink" href="#modell-evaluation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R squared training set&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lasso_best</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R squared test set&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">lasso_best</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R squared training set 84.85
+R squared test set 82.87
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Im Vergleich zu den anderen Modellen aus der Pipeline scheidet die Lasso Regression mit einem R2 von 82.87 ähnlich gut ab wie die Lineare Regression(84,8) und die KNN Regression (83.5).</p></li>
+<li><p>So bleibt das beste Modell weiterhin der Randomforest Regressor mit einem R2 von 88.8.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">lasso_best</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RMSE:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE: 6046.42
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bei der Lasso Regression liegen die vorhergesagten Werte im Durchschnitt mit einem Abstand von 6046,42 von den beobachteten Werten entfernt.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="EDA_Regression_Diagnostic.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">4. EDA und Regression Diagnostic</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../plan_leasingrisiko.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1. Einführung</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch Cenk Yagkan<br/>
+        
+            &copy; Urheberrechte © 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

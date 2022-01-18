@@ -1,0 +1,25 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Restwertermittlung
+  chapters:
+  - file: plan_restwertermittlung
+  - file: content/webscraper_mobile
+  - file: content/data_cleaning
+  - file: content/EDA_Regression_Diagnostic
+  - file: content/modelbuilding_restwertermittlung
+- caption: Leasingrisiko
+  chapters:
+  - file: plan_leasingrisiko
+  - file: content/Create_clean_Dataset
+  - file: content/Exploration_leasingrisk
+  - file: content/Modelbuilding_leasingrisk
+- caption: Kundensegmentierung
+  chapters:
+  - file: plan_segmentierung
+  - file: content/Create_cluster_dataset
+  - file: content/EDA_segemntierung
+  - file: content/kmeans_segmentation

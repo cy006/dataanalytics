@@ -1,0 +1,901 @@
+carname,price,milage,hubraum,fuel_type,transmission,num_seats,num_doors,emission_class,car_type,num_owners,Model,power_ps,power_kw,age
+Mercedes-Benz Sprinter II Kasten 214 CDI Klima Erste Hand !,16950.0,198245.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,Sprinter,143.0,105.0,4.246666666666594
+Mercedes-Benz GLB 220 d 4M Progressive AHK Distr HUD 360° Pano,60490.0,10529.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,GLB,190.0,140.0,1.4133333333332605
+Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*KAMERA*KEYLESS,24990.0,91205.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,136.0,100.0,2.4966666666665938
+Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND*LED*KEYLESS*,31990.0,84925.0,1.595,Benzin,Automatik,4,2/3,Euro6,cabrio,2,C-Klasse,156.0,115.0,4.746666666666594
+Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*KAMERA*KEYLESS,24990.0,91205.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,136.0,100.0,2.4966666666665938
+Mercedes-Benz E 220 d 4Matic Distronic LED KAMERA COMAND,28890.0,163609.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,E-Klasse,194.0,143.0,4.16333333333326
+Mercedes-Benz E 400 d 4Matic T-Mod. Distronic - AHK - Kamera !,36295.0,100620.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,340.0,250.0,3.0799999999999272
+Mercedes-Benz GLE Coupe350d AMG-LINE HUD PANORAMA LUFTFEDERUNG,59000.0,62400.0,2.987,Diesel,Automatik,5,4/5,Euro6,sport,1,E-Klasse,258.0,190.0,2.4133333333332607
+Mercedes-Benz E 350 d T-Mod. AMG Distronic ~Kamera ~Wide ~HUD,45450.0,66002.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,286.0,210.0,1.8299999999999272
+Mercedes-Benz S 63 AMG*4Matic+*Coupe*ILS*BURM*HEAD-UP*OLD*VMAX,122990.0,66438.0,3.982,Benzin,Automatik,4,2/3,Euro6,sport,1,S-Klasse,612.0,450.0,3.0799999999999272
+Mercedes-Benz Mercedes GLC 350d 4MATIC ILS 360 Kamera 9G...,77850.0,17618.0,1.95,Diesel,Automatik,7,4/5,Euro6,van,1,GLC,237.0,174.0,0.4966666666665939
+Mercedes-Benz CLA 250e AMG+MBUX+DISTR+MULTIB+PANO+360°+NIGHT++,48800.0,100000.0,2.996,Benzin,Automatik,5,4/5,Euro6,sport,1,CLA,333.0,245.0,3.6633333333332607
+Mercedes-Benz GLE 400 d 4M AMG Line/E-ACTIVE BODY CONTROL/AHK,48910.0,10650.0,1.332,Hybrid,Automatik,5,4/5,Euro6d,sport,1,GLE,160.0,118.0,1.0799999999999272
+Mercedes-Benz A 250 e PROGRESS+MULTIB+DISTR+360°+SOUND+24KW BL,103967.0,5410.0,2.925,Diesel,Automatik,5,4/5,Euro6,suv,1,A-Klasse,330.0,243.0,0.9133333333332606
+Mercedes-Benz CLS 350d AMG 4Matic 9G SB+MBeam+Navi+Night+360°+,103967.0,5410.0,2.925,Diesel,Automatik,5,4/5,Euro6,sport,1,CL,330.0,243.0,0.9133333333332606
+Mercedes-Benz GLE 400 d 4M. AMG Multibeam 360 Pan AHK Ass Burm,43290.0,8350.0,1.332,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,GLE,160.0,118.0,1.0799999999999272
+Mercedes-Benz S -Klasse Coupe S 63 AMG 4Matic+,41880.0,83947.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,S-Klasse,190.0,140.0,4.246666666666594
+"Mercedes-Benz Vito 114 CDI Kasten LANG NAVI,KAMERA,TRENNWAND",25880.0,82856.0,2.143,Diesel,Automatik,2,4/5,Euro6,van,1,Vito,163.0,120.0,3.6633333333332607
+Mercedes-Benz Mercedes-Benz CLA 250 AMG-Volleder-Night-L...,28480.0,22851.0,2.143,Diesel,Automatik,3,4/5,Euro6,van,1,CLA,136.0,100.0,3.9966666666665938
+Mercedes-Benz C 220 T d 4Matic AVANTGARDE LED AHK NAVI So + Wi,28480.0,22851.0,2.143,Diesel,Automatik,3,4/5,Euro6,van,1,C-Klasse,136.0,100.0,3.9966666666665938
+"Mercedes-Benz E 250 HEAD-UP,KAMERA,WIDESCREEN,DISTRONIC,COMAND",23440.0,125000.0,2.143,Diesel,Automatik,3,4/5,Euro6,van,1,E-Klasse,136.0,100.0,3.6633333333332607
+Mercedes-Benz Mercedes-Benz Typ E 200 Limosine Bauj.2019...,42780.0,143981.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,E-Klasse,190.0,140.0,3.5799999999999272
+Mercedes-Benz C 63 AMG T Navi LED Memory Pano Distron Garantie,32970.0,87000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,170.0,125.0,4.746666666666594
+Mercedes-Benz B 180 CDI /d..Keylss-Go.LED..NAVI..1 JAHR GARANT,37880.0,80000.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,B-Klasse,381.0,280.0,4.329999999999927
+Mercedes-Benz A 200 d Kompaktlimousine Progressive LED Navi,46800.0,66757.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,A-Klasse,476.0,350.0,3.6633333333332607
+Mercedes-Benz GLS 350 d 4M-7 SITZER-AIRMATIC-DISTRONIC-360-AHK,37880.0,80000.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,GLS,381.0,280.0,4.329999999999927
+Mercedes-Benz GLS 400 d 4M AMG MBUX+AHK+Distronic+Widescreen+,46800.0,66757.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,GLS,476.0,350.0,3.6633333333332607
+Mercedes-Benz B -Klasse B 220 d AMG Line,33800.0,149000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,B-Klasse,194.0,143.0,3.1633333333332607
+"Mercedes-Benz A 250 Sport AMG-Line+19""AMG LM+LED+Navi+SHZ+..",19990.0,50000.0,1.461,Diesel,Automatik,5,4/5,Euro6,van,2,A-Klasse,109.0,80.0,3.4133333333332607
+Mercedes-Benz SLC 300 AMG Line*Distr*LED*MSky*Comand*Night*RFK,33950.0,17246.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,SL,150.0,110.0,0.9966666666665939
+"Mercedes-Benz T-C250BlueTEC,Autom,AMG-Lin,Leder,Burmest,Comand",29381.0,46143.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,C-Klasse,163.0,120.0,1.1633333333332607
+Mercedes-Benz E 220d Coupe AMG-Line/Pano/Wide/360°/Multibeam,58298.0,12961.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,2,E-Klasse,190.0,140.0,1.9133333333332607
+Mercedes-Benz GLC 4Matic Coupe` AMG-line+Navi+Schiebedach+Cam.,58298.0,12961.0,2.143,Diesel,Automatik,6,4/5,Euro6,kombi,2,GLC,190.0,140.0,1.9133333333332607
+Mercedes-Benz CLA 220 Shooting Brake,26990.0,45500.0,1.991,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,1,CLA,218.0,160.0,4.079999999999927
+Mercedes-Benz C 220 T-Modell BlueTEC / d Avantgarde,59740.0,4510.0,1.95,Diesel,Automatik,5,4/5,Euro6,suv,2,C-Klasse,190.0,140.0,1.746666666666594
+Mercedes-Benz CLA 35 4M SB+Aerodynamik+Perfomance+Stand+HeadUp,89990.0,19052.0,2.925,Diesel,Automatik,7,4/5,Euro6d,suv,1,CLA,286.0,210.0,1.4133333333332605
+Mercedes-Benz C 220 d 4MATIC T Autom. Com LED AHK WR SHZ Assis,58298.0,12961.0,2.143,Diesel,Automatik,6,4/5,Euro6,kombi,2,C-Klasse,190.0,140.0,1.9133333333332607
+Mercedes-Benz Mercedes-Benz GLE 300d AMG V167 4M 9G 7 Si...,26990.0,45500.0,1.991,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,1,GLE,218.0,160.0,4.079999999999927
+Mercedes-Benz Vito Kasten RWD lang AHK Klima Navi 1. Hand,59740.0,4510.0,1.95,Diesel,Automatik,5,4/5,Euro6,suv,2,Vito,190.0,140.0,1.746666666666594
+Mercedes-Benz GLC 220 d 4M AMG Line Navi*Leder*LED*18*PDC*Temp,89990.0,19052.0,2.925,Diesel,Automatik,7,4/5,Euro6d,suv,1,GLC,286.0,210.0,1.4133333333332605
+Mercedes-Benz V 220 CDI kompakt 1-Hd.,94850.0,82000.0,2.925,Diesel,Automatik,7,4/5,Euro6d,suv,1,V-Klasse,330.0,243.0,1.0799999999999272
+Mercedes-Benz GLE -Klasse GLE 350 d 4Matic*S-Dach*K-GO*1.Hand,94850.0,82000.0,2.925,Diesel,Automatik,7,4/5,Euro6d,suv,1,GLE,330.0,243.0,1.0799999999999272
+Mercedes-Benz GLC -Klasse Coupe GLC 350 d 4Matic AMG*Ni-Paket*,118950.0,21000.0,3.982,Benzin,Automatik,5,4/5,Euro6,sport,2,GLC,585.0,430.0,2.8299999999999272
+Mercedes-Benz C 200 d T Avantgarde Aut. NAV+LED+AHK+17ZO+E6dT,32499.0,45000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,C-Klasse,194.0,143.0,4.329999999999927
+Mercedes-Benz C 220 Coupe d AMG line Night Paket Comand Kamera,108950.0,45000.0,1.95,Diesel,Automatik,6,4/5,Euro6,van,1,C-Klasse,239.0,176.0,1.1633333333332607
+Mercedes-Benz Sofort abholbar Expose Mercdes-Benz V 250 ...,26990.0,107000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,V-Klasse,204.0,150.0,4.496666666666594
+Mercedes-Benz C 220 d T AMG-Line Night LED DISTRO NAVI WIDES,21990.0,151251.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,177.0,130.0,3.5799999999999272
+"Mercedes-Benz S 500 L""BURMESTER 4D/3D Head Up/Augmented/ Full",19481.0,149719.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,S-Klasse,170.0,125.0,3.6633333333332607
+Mercedes-Benz S -Klasse Lim. S 400 d 4Matic,19481.0,149719.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,S-Klasse,170.0,125.0,3.6633333333332607
+Mercedes-Benz GLS 63 AMG 4M*MY22*Burmester*Head Up*PANO*360°,29950.0,36300.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLS,163.0,120.0,2.4133333333332607
+Mercedes-Benz CLA 180 Shooting Brake Progressive NAVI+LED+DAB,56489.0,44900.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,2,CLA,306.0,225.0,1.5799999999999272
+Mercedes-Benz GLC 250 d 4M AMG DIST+STAND+HUD+AIR BAL+LED+360°,20500.0,155000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,170.0,125.0,4.496666666666594
+Mercedes-Benz GLA 200 d 8G-DCT AMG Line Distronic Pano Multib,34980.0,59893.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,GLA,170.0,125.0,4.329999999999927
+"Mercedes-Benz CLA180 Shooting Brake ,Scheinwerfer LED,AMG-LINE",27750.0,174300.0,2.143,Diesel,Schaltgetriebe,4,4/5,Euro6,van,1,A-Klasse,163.0,120.0,4.329999999999927
+Mercedes-Benz AMG C 63 S Performance PANO+MULTIBEAM+HEADUP+360,32900.0,183000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,258.0,190.0,4.746666666666594
+Mercedes-Benz C 200 d T AMG/BURMESTER/RFK/STHZG/NIGHT/DISTRON,77890.0,44520.0,2.999,Benzin,Automatik,4,4/5,Euro6,sport,1,C-Klasse,435.0,320.0,2.6633333333332607
+Mercedes-Benz GLC 350 e Exclusive Navi*LED*Burmester*18*PDC*AK,26989.0,79450.0,1.597,Diesel,Automatik,5,4/5,Euro6d,kombi,1,CL,160.0,118.0,2.2466666666665938
+Mercedes-Benz E 350 d T AMG Line Ambiente Comand CarPlay,32880.0,45960.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,163.0,120.0,3.3299999999999272
+Mercedes-Benz Mercedes Benz CLS 400d AMG,34977.0,147000.0,1.95,Diesel,Automatik,4,2/3,Euro6d,sport,1,CL,194.0,143.0,3.1633333333332607
+Mercedes-Benz C 300 de T AMG*NIGHT*DISTR* COMAND,38986.0,24210.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,194.0,143.0,0.7466666666665939
+Mercedes-Benz E 220 d 4M 2*AMG Line Night BURMESTER PANO MBUX,108950.0,45000.0,1.95,Diesel,Automatik,6,4/5,Euro6,van,1,E-Klasse,239.0,176.0,1.1633333333332607
+Mercedes-Benz A 180 BlueEfficiency Urban Aut.*Navi*LED*Cam,20500.0,139890.0,2.143,Diesel,Schaltgetriebe,2,4/5,Euro6,andere,1,A-Klasse,136.0,100.0,4.329999999999927
+Mercedes-Benz V 250 Marco Polo Edition 4-Matic *EasyUp *AMG,26666.0,82000.0,2.143,Diesel,Schaltgetriebe,9,4/5,Euro6,van,1,V-Klasse,136.0,100.0,3.2466666666665938
+Mercedes-Benz GLE 350 d 4M AMG Line WEBASTO PANO AMBI AHK,147740.0,8500.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLE,435.0,320.0,0.9133333333332606
+Mercedes-Benz EQC 400 4M AMG Line BURM Schiebed Fahrass SD 360,125740.0,5000.0,2.925,Diesel,Automatik,5,4/5,Euro6d,limousine,1,OTHER,330.0,243.0,0.7466666666665939
+Mercedes-Benz Mercedes Benz Sprinter 319,37930.0,58754.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,Sprinter,204.0,150.0,4.16333333333326
+Mercedes-Benz A 220 d*AMG ALU*LED*LEDER*NAVI*MBUX*WIDESCREEN*,39900.0,17208.0,1.597,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,160.0,118.0,0.6633333333332606
+Mercedes-Benz C 63 AMG Cabrio*NAVI*LED*AIRSCARF*ACC*,74990.0,8500.0,2.999,Benzin,Automatik,5,4/5,Euro6d,suv,1,C-Klasse,367.0,270.0,2.5799999999999272
+"Mercedes-Benz X 250 d 4Matic Doppelkabine Edition Po, 2.Hand",84330.0,33377.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,2,OTHER,510.0,375.0,1.9133333333332607
+"Mercedes-Benz Mercedes-AMG S 63 4MATIC+ Keramik,4 Sitzpl.,VOLL",63800.0,20499.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,S-Klasse,306.0,225.0,1.1633333333332607
+Mercedes-Benz G 500/ AMG OPTIK,97461.0,34000.0,3.982,Benzin,Automatik,5,4/5,Euro6,suv,1,G-Klasse,421.0,310.0,4.41333333333326
+Mercedes-Benz A 180 d Progressive+Night+MBUX+volldigi+Navi+18',27899.0,48114.0,1.461,Diesel,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,116.0,85.0,3.2466666666665938
+Mercedes-Benz E 43 AMG T 4Matic Burmester/MultiBeam/Memory/AHK,27899.0,48114.0,1.461,Diesel,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,116.0,85.0,3.2466666666665938
+Mercedes-Benz C 63 S AMG Lim.-AGA AMG-DRiVERS PACKAGE-360° KA,43900.0,130000.0,2.996,Benzin,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,401.0,295.0,4.079999999999927
+"Mercedes-Benz C 220 d T AMG Line, Night-P., DISTR., Standhz",29850.0,39000.0,1.598,Diesel,Schaltgetriebe,8,4/5,Euro6,van,1,C-Klasse,114.0,84.0,2.8299999999999272
+Mercedes-Benz B 200 d Progressive DISTRONIC Kamera LED MBUX,48899.0,25600.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,B-Klasse,194.0,143.0,1.5799999999999272
+Mercedes-Benz A 180 Kompaktlimousine DAB+PROGRESSIVE+TOTWINKEL,29850.0,39000.0,1.598,Diesel,Schaltgetriebe,8,4/5,Euro6,van,1,A-Klasse,114.0,84.0,2.8299999999999272
+"Mercedes-Benz V 250 -Klasse 220 CDI d, BT d EDITION lang AHK N",48899.0,25600.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,V-Klasse,194.0,143.0,1.5799999999999272
+Mercedes-Benz E350d ALL-TERRAiN|PANO|NAPPA|DiST|WiDE|20|FondTV,39980.0,77700.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,E-Klasse,190.0,140.0,3.5799999999999272
+Mercedes-Benz A 180 d+Limo+AMG Line+Kamera+Memory+Navi+MBUX,48590.0,69975.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,258.0,190.0,3.4966666666665938
+Mercedes-Benz Mercedes c300 AMG,30980.0,20899.0,1.461,Diesel,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,116.0,85.0,1.5799999999999272
+Mercedes-Benz E 200 9G-TRONIC AMG Line,23990.0,52500.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,170.0,125.0,4.246666666666594
+Mercedes-Benz V -Klasse V 220 EDITION Sitzh. Navi Service neu,25880.0,52992.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6d,suv,1,V-Klasse,122.0,90.0,1.746666666666594
+Mercedes-Benz E 400 4M DISTRONIC+KAMERA360+BURMESTER+WIDESCREN,28800.0,72143.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,E-Klasse,194.0,143.0,4.16333333333326
+Mercedes-Benz E350d 4Matic Cabrio AMG-Paket/Wides/Burm./HeatUp,31880.0,112179.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,194.0,143.0,4.41333333333326
+Mercedes-Benz MANHART GLR 700,46990.0,69975.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,GL,258.0,190.0,3.4966666666665938
+Mercedes-Benz E 220d T 4Matic ACC*AHK*HeadUp*Kamera*el.SD*Navi,37990.0,120925.0,2.143,Diesel,Automatik,8,4/5,Euro6,andere,2,E-Klasse,163.0,120.0,3.5799999999999272
+Mercedes-Benz E 200 d T Aut. Navi Kamera PDC originalfarbe,42770.0,79171.0,3.498,Benzin,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,333.0,245.0,3.1633333333332607
+"Mercedes-Benz C -Klasse Cabrio C 63 AMG S, Traumausstattung!",49999.0,94000.0,2.987,Diesel,Automatik,4,2/3,Euro6,cabrio,1,C-Klasse,258.0,190.0,3.2466666666665938
+"Mercedes-Benz 314 CDI 36*L2H2*Mbux*Rückf.-Kam.*AHK 3,5 t*",36800.0,125000.0,2.143,Diesel,Automatik,5,4/5,Euro6c,suv,1,OTHER,204.0,150.0,2.7466666666665938
+Mercedes-Benz GLA 250 -AMG Paket-Kamera-LED-Panoramadach,29890.0,135000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLA,194.0,143.0,3.4966666666665938
+Mercedes-Benz B 200 d 4Matic 7G Leder GRA Navi Kamera Keyless,36289.0,24900.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,B-Klasse,143.0,105.0,1.4133333333332605
+Mercedes-Benz E 220 d 4MATIC 9G-TRONIC Avantgarde EU6c/RFK/...,44990.0,86000.0,2.996,Benzin,Automatik,5,4/5,Euro6,suv,1,E-Klasse,333.0,245.0,3.1633333333332607
+Mercedes-Benz Mercedes X250 4Matic Power Edition Navi/Le...,36289.0,24900.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,OTHER,143.0,105.0,1.4133333333332605
+Mercedes-Benz A -Klasse A 180 BlueEfficiency//AMG//ALCANTARA//,44990.0,86000.0,2.996,Benzin,Automatik,5,4/5,Euro6,suv,1,A-Klasse,333.0,245.0,3.1633333333332607
+Mercedes-Benz E -Klasse Lim. E 43 AMG 4Matic!,26900.0,64000.0,1.991,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,1,E-Klasse,211.0,155.0,4.41333333333326
+Mercedes-Benz CLS 350 d 4Matic AMG Line*Aut.* Brumester*Multib,15900.0,163870.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,CL,136.0,100.0,3.9133333333332607
+Mercedes-Benz E 220 d AMG NIGHT LED BURMESTER,72888.0,10000.0,1.95,Diesel,Automatik,6,4/5,Euro6,van,1,E-Klasse,239.0,176.0,0.7466666666665939
+Mercedes-Benz C 220 d T Auto. Navi Distronic LED Park-Assist..,44500.0,90639.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,C-Klasse,204.0,150.0,4.579999999999927
+Mercedes-Benz G 350 d AMG Line ~Widescreen ~Distronic ~Kamera,17950.0,102650.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,1,G-Klasse,109.0,80.0,3.2466666666665938
+Mercedes-Benz G -Modell Station G 500/AMG-Line Shd Standheizun,17950.0,102650.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,1,G-Klasse,109.0,80.0,3.2466666666665938
+Mercedes-Benz B 180 (CDI) d (Gute Ausstattung),42890.0,10000.0,1.497,Benzin,Automatik,4,2/3,Euro6d,sport,1,B-Klasse,156.0,115.0,0.4966666666665939
+Mercedes-Benz E 63 AMG S 4Matic+ SPORTABGAS/DISTRONIC/HUD/360°,49990.0,146955.0,1.95,Diesel,Automatik,7,4/5,Euro6,van,1,E-Klasse,239.0,176.0,2.2466666666665938
+Mercedes-Benz Vito Mixto 114 CDI BT MIX L GARANTIE 5 SITZE,49990.0,146955.0,1.95,Diesel,Automatik,7,4/5,Euro6,van,1,Vito,239.0,176.0,2.2466666666665938
+Mercedes-Benz Mercedes Benz A250 AMG-Line,23900.0,71000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,170.0,125.0,3.3299999999999272
+Mercedes-Benz C 200 dt 1.Hand Navi Pdc....,32725.0,152603.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,2,C-Klasse,170.0,125.0,4.16333333333326
+Mercedes-Benz A 200 Progressive W177 LED+MBUX+NAVI Premium P.,144585.0,9495.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,A-Klasse,286.0,210.0,0.5799999999999272
+Mercedes-Benz E 220 d T 9G-TRONIC,53550.0,3310.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,1.1633333333332607
+Mercedes-Benz GLA 180 AMG Styling PDC Navi Sportpaket Klima,66500.0,890.0,2.987,Diesel,Automatik,9,4/5,Euro6,van,1,GLA,190.0,140.0,0.5799999999999272
+Mercedes-Benz G 63 AMG Edition 463 Designo Harman Kardon DISTR,168000.0,22690.0,3.982,Benzin,Automatik,5,4/5,Euro6d,suv,1,G-Klasse,421.0,310.0,1.6633333333332605
+Mercedes-Benz CLS 450 4Matic AMG DISTRONIC PLUS 360°-Kamera MU,24990.0,106326.0,1.991,Benzin,Automatik,5,4/5,Euro6,kombi,2,CL,184.0,135.0,3.9133333333332607
+Mercedes-Benz CLA 250 e AMG Night Kamera MBUX LED High Perform,30345.0,89.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,CLA,136.0,100.0,0.5799999999999272
+Mercedes-Benz AMG GT 63 S 4Matic+ DISTRONIC PLUS Memory Keyles,74900.0,94353.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,1,S-Klasse,612.0,450.0,3.3299999999999272
+Mercedes-Benz GLE 350 e AMG Coupe 4Matic Distronic Pano LED AH,74900.0,94353.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,1,GLE,612.0,450.0,3.3299999999999272
+Mercedes-Benz EQC 400 4Matic AMG 360°-Kamera Distronic Plus SH,27880.0,27500.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,1,OTHER,136.0,100.0,3.1633333333332607
+Mercedes-Benz C 220 Cabrio d 4M AMG Night KEYLESS AHK Airscarf,27137.0,38500.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,163.0,120.0,3.3299999999999272
+Mercedes-Benz C 300 T d AMG AHK Ambiente Kamera Multibeam Komf,67700.0,16800.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,389.0,286.0,0.9966666666665939
+Mercedes-Benz CLA 200 Shooting Brake AMG Night Kamera DAB MBUX,46600.0,9900.0,1.332,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,CLA,218.0,160.0,0.9966666666665939
+Mercedes-Benz E 53 AMG 4M+ 360°-Kamera AIRMATIC Dual Pano Dist,41888.0,98000.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,286.0,210.0,2.6633333333332607
+Mercedes-Benz C 220 d Coupe AMG DISTRONIC PLUS Panorama 360°-K,55900.0,5500.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,C-Klasse,211.0,155.0,0.7466666666665939
+Mercedes-Benz E 300 de AMG Panorama MBUX 360°-Kamera Night DAB,93900.0,19600.0,1.991,Hybrid,Automatik,5,4/5,Euro6,sport,1,E-Klasse,333.0,245.0,0.7466666666665939
+Mercedes-Benz C 250 9G-TRONIC AMG Line STANDHZ+LED,27900.0,6900.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,C-Klasse,163.0,120.0,1.4133333333332605
+Mercedes-Benz Sprinter 316 CDI 3 SEITEN KIPPPER/KLIMA/STHZN/7S,44900.0,3500.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,Sprinter,224.0,165.0,0.7466666666665939
+Mercedes-Benz Mercedes Benz E-Klasse 220d AMG T-Modell,49900.0,20200.0,1.95,Diesel,Automatik,5,2/3,Euro6d,cabrio,1,E-Klasse,194.0,143.0,1.6633333333332605
+"Mercedes-Benz CLA 200 Shoting Brake , Diesel , Urban, LED",59900.0,9900.0,2.996,Benzin,Automatik,5,4/5,Euro6d,limousine,1,CLA,390.0,287.0,0.8299999999999272
+Mercedes-Benz E 53 AMG 4Matic+ 360°/DISTRONIC/HUD/SPORTABGAS,84900.0,2900.0,3.982,Benzin,Automatik,5,2/3,Euro6d,sport,1,E-Klasse,510.0,375.0,1.1633333333332607
+Mercedes-Benz 319 CDI Sprinter Standard 4x4 HA 7G-TRONIC Plus,103900.0,5900.0,2.999,Hybrid,Automatik,4,4/5,Euro6,sport,1,Sprinter,457.0,336.0,2.7466666666665938
+Mercedes-Benz C 180 T 9G-TRONIC,38900.0,8500.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,245.0,180.0,1.2466666666665938
+"Mercedes-Benz A 160 CDI 1,5 Ltr. Automatik Keyless Go",37800.0,3000.0,1.332,Benzin,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,163.0,120.0,0.5799999999999272
+Mercedes-Benz C 220 Avantgarde Business Plus LED Navi SHZ PDC,132900.0,25000.0,3.982,Benzin,Automatik,4,4/5,Euro6d,sport,1,C-Klasse,585.0,430.0,1.4133333333332605
+"Mercedes-Benz E 220 d T AMG Line*LED*Comand*Night*20""AMG*RFK",74900.0,19800.0,2.999,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,457.0,336.0,0.9133333333332606
+Mercedes-Benz E 300 de T AVANTGARDE/MULTIBEAM/Distronic/AHK,39900.0,25200.0,1.597,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,160.0,118.0,0.9133333333332606
+Mercedes-Benz Mercedes Benz E Klasse 220 D,42900.0,12500.0,1.95,Diesel,Automatik,5,2/3,Euro6d,sport,1,E-Klasse,194.0,143.0,0.9133333333332606
+Mercedes-Benz Vito 119 CDI (BlueTEC) Lang Aut. Mixto/LKW,59900.0,6000.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,Vito,194.0,143.0,1.2466666666665938
+Mercedes-Benz V 250 Avantgarde kompakt 4Matic Comand Klima,24880.0,99850.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,V-Klasse,136.0,100.0,3.4966666666665938
+Mercedes-Benz Mercedes CLA 200d AMG PEAK Edition Nightpa...,29000.0,33500.0,2.143,Diesel,Schaltgetriebe,7,4/5,Euro6,van,1,CLA,163.0,120.0,4.16333333333326
+Mercedes-Benz Mercedes-Benz A 220 d Kompaktlimousine,29000.0,33500.0,2.143,Diesel,Schaltgetriebe,7,4/5,Euro6,van,1,A-Klasse,163.0,120.0,4.16333333333326
+Mercedes-Benz Mercedes CLA 200,14870.0,168393.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,CLA,136.0,100.0,3.3299999999999272
+Mercedes-Benz A -Klasse A 45 S AMG 4Matic,94900.0,35000.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,2,A-Klasse,435.0,320.0,0.6633333333332606
+Mercedes-Benz A 180 Progessive 7G DCT*LED*BUSINESS*TWA*KAMERA*,17255.0,141106.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,1,A-Klasse,90.0,66.0,4.579999999999927
+Mercedes-Benz C 300 T-Modell AVANTGARDE Exterieur/COMAND APS,33900.0,25500.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,194.0,143.0,2.7466666666665938
+Mercedes-Benz GLC 200 d 4Matic*MBUX*Kamera*LED*Navi*el.Heckk*,35900.0,62400.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,194.0,143.0,3.2466666666665938
+Mercedes-Benz CLA 180 Shooting Brake AMG Line+ Pano!,47720.0,18192.0,1.95,Hybrid,Automatik,5,4/5,Euro6,kombi,1,CLA,194.0,143.0,0.9133333333332606
+Mercedes-Benz GLC 300 4Matic Pano LED Keyless,52900.0,79500.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,GLC,190.0,140.0,4.496666666666594
+Mercedes-Benz G 500 7G-TRONIC 1.Hand !!! ALLE EXTRAS !!!,29900.0,119978.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,G-Klasse,204.0,150.0,4.579999999999927
+Mercedes-Benz GLC 43 AMG 4Matic *Nightpaket Pano AHK Distron.,169900.0,50.0,2.925,Diesel,Automatik,5,4/5,Euro6,suv,1,GLC,286.0,210.0,0.24666666666659387
+Mercedes-Benz C 63 AMG Coupe LED NAVI PANORAMA SPUR+TOTWINKEL,28990.0,27800.0,1.332,Benzin,Automatik,5,4/5,Euro6d,van,1,C-Klasse,136.0,100.0,1.8299999999999272
+Mercedes-Benz Vito 111 CDI (BlueTEC)tourer 9 Sitze,44450.0,11995.0,1.991,Benzin,Automatik,4,2/3,Euro6d,sport,1,Vito,258.0,190.0,1.746666666666594
+Mercedes-Benz EQC 400 4MATIC Navi/Distronic/Sofort verfügbar!,48950.0,4187.0,1.991,Benzin,Automatik,5,4/5,Euro6,kombi,1,OTHER,258.0,190.0,0.7466666666665939
+Mercedes-Benz GLA 200 CDI Automatik/LED,43580.0,18200.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,GLA,163.0,120.0,1.1633333333332607
+Mercedes-Benz Mercedes Benz CLA 220 d Coupé PEAK,29990.0,70417.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,CLA,194.0,143.0,4.41333333333326
+Mercedes-Benz S 560 4Ma Lang AMG+Chauffer+PSD+VOLL+3xTV+NP165,45400.0,9700.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,S-Klasse,150.0,110.0,0.4966666666665939
+Mercedes-Benz G 63 AMG Edition 463 CARBON STH KAM AHK,99948.0,71897.0,5.461,Benzin,Automatik,5,4/5,Euro6,suv,2,G-Klasse,571.0,420.0,4.16333333333326
+Mercedes-Benz CLA 180 EDITION 2020+AMG+Night+Pano+LED+Kamera,45990.0,14000.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,CLA,136.0,100.0,0.07999999999992724
+Mercedes-Benz Coupe E400 4Matic AMG Line=LEDER-BRAUN=KAMERA,39990.0,133200.0,2.996,Benzin,Automatik,4,2/3,Euro6,sport,1,OTHER,333.0,245.0,3.4133333333332607
+Mercedes-Benz GLC 43 AMG Cp. 4M designo Fahrass 360°,42990.0,14000.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,136.0,100.0,0.1633333333332606
+Mercedes-Benz GLE 350 e 4M AMG WideScreen Pano Distr. HUD AHK,27690.0,49920.0,1.461,Diesel,Automatik,5,4/5,Euro6d,limousine,1,GLE,116.0,85.0,2.9133333333332607
+Mercedes-Benz S 63 AMG 4M+ Lang Carbon Keramik Driversp Stdhzg,40890.0,35736.0,2.143,Diesel,Automatik,5,4/5,Euro6c,suv,1,S-Klasse,170.0,125.0,2.5799999999999272
+Mercedes-Benz GLC 250 d 4M Exclusive LED Kamera Navi EDW 9G,25000.0,99000.0,1.598,Diesel,Schaltgetriebe,3,2/3,Euro6,van,2,CL,114.0,84.0,4.41333333333326
+Mercedes-Benz CLA 220 d EDITION 2020+AMG+Night+Pano+LED+Kamera,50890.0,58813.0,2.996,Benzin,Automatik,5,4/5,Euro6,sport,1,CLA,367.0,270.0,4.496666666666594
+Mercedes-Benz S 350 d L Pano+360+DIGITAL-L+Burmester3D+Sthzg,91990.0,4351.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,suv,1,S-Klasse,211.0,155.0,0.7466666666665939
+"Mercedes-Benz GLS 350 d 4M AMG Sportpaket Night AMG 21"" Headup",99990.0,58568.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLS,612.0,450.0,3.8299999999999272
+Mercedes-Benz S 500 L 4M AMG+Night+Pano+DIGITAL-L+Burmester3D+,34990.0,54113.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,S-Klasse,204.0,150.0,3.1633333333332607
+Mercedes-Benz C 180 AVANTG+Night+Pano+360+LED+Sthzg+Spur+Totw,52900.0,14000.0,1.95,Diesel,Automatik,5,4/5,Euro6,sport,1,C-Klasse,190.0,140.0,0.07999999999992724
+Mercedes-Benz Mercedes Benz GLC 63 S AMG Sterne 2023 / N...,121790.0,14000.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,S-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz C 43 AMG,108490.0,14000.0,2.925,Diesel,Automatik,7,4/5,Euro6,suv,1,C-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz GLC 250 d Cp. 4M AMG 360° ILS LED Night Navi,165990.0,14000.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,435.0,320.0,0.07999999999992724
+Mercedes-Benz S 500 L Fondent 360° Stdhzg Pano Multibeam HUD,37900.0,14000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,S-Klasse,156.0,115.0,0.6633333333332606
+Mercedes-Benz C 200 4M Coupé AMG+Night+Pano+MultiBeam+Kamera,43890.0,15601.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,C-Klasse,204.0,150.0,4.079999999999927
+Mercedes-Benz C 200 T AMG LED AHK Night Kamera Spurhalt-Ass 9G,71990.0,23478.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,435.0,320.0,2.3299999999999272
+Mercedes-Benz C 63 AMG S Cp. Driversp Perf-Abgas Burmester PTS,61990.0,6600.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,421.0,310.0,0.41333333333326056
+Mercedes-Benz CLS 400 d 4Matic AMG Line*WIDESCREEN*LED*360KAM*,51990.0,14000.0,1.497,Benzin,Automatik,5,2/3,Euro6d,sport,1,CL,184.0,135.0,0.24666666666659387
+Mercedes-Benz Mercedes V250 Extralang Ultra VIP,60482.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,kombi,1,OTHER,204.0,150.0,0.07999999999992724
+"Mercedes-Benz Mercedes-Benz C63 AMG Coupé - KW Federn, Y...",107987.0,14000.0,3.982,Benzin,Automatik,5,2/3,Euro6d,sport,1,OTHER,510.0,375.0,0.07999999999992724
+Mercedes-Benz A200 Mercedes Urban schwarz,63849.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,204.0,150.0,0.07999999999992724
+Mercedes-Benz GLC -Klasse GLC 250 4Matic AMG Line,25750.0,64000.0,1.595,Benzin,Automatik,5,4/5,Euro6c,kombi,1,GLC,156.0,115.0,3.1633333333332607
+Mercedes-Benz B 180 d Progressive Rcam Navi MBUX PTS LED Memor,25750.0,64000.0,1.595,Benzin,Automatik,5,4/5,Euro6c,kombi,1,B-Klasse,156.0,115.0,3.1633333333332607
+Mercedes-Benz Mercedes Benz CLA 250 Coupe Euro 6d-Temp A...,12480.0,49700.0,1.461,Diesel,Schaltgetriebe,5,2/3,Euro6,van,1,CLA,90.0,66.0,4.16333333333326
+Mercedes-Benz 316 CDI Sprinter Lang HA Pritsche,30800.0,24000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,Sprinter,156.0,115.0,0.9966666666665939
+Mercedes-Benz Mercedes CLA 200 7G-DCT Urban,29700.0,2000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,van,1,CLA,116.0,85.0,1.8299999999999272
+Mercedes-Benz CLA 200 SB AMG/7G-DCT/Multib/Pano/Distr/ Digital,51900.0,33012.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,2,CLA,190.0,140.0,2.4966666666665938
+Mercedes-Benz MERCEDES SPRINTER 316 W907 6 SITZER L2/H1,36000.0,22523.0,2.143,Diesel,Schaltgetriebe,3,2/3,Euro6,suv,1,Sprinter,163.0,120.0,1.5799999999999272
+"Mercedes-Benz Mercedes C63 AMG Performance Sitze, Head u...",42950.0,15000.0,1.991,Hybrid,Automatik,5,4/5,Euro6,kombi,1,OTHER,211.0,155.0,0.8299999999999272
+Mercedes-Benz CLA 200d Urban COMAND*Night*Kamera*Leder*KeylGO,37450.0,11680.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,CLA,163.0,120.0,1.3299999999999272
+Mercedes-Benz Mercedes Benz C300d Coupe Amg Line 17Mon.G...,47880.0,6450.0,1.95,Hybrid,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,194.0,143.0,0.9133333333332606
+Mercedes-Benz C 250 d Cabrio AMG Line 9G-Tronic *LED-Navi*,33900.0,40000.0,2.143,Diesel,Automatik,9,4/5,Euro6,van,1,C-Klasse,163.0,120.0,3.9133333333332607
+Mercedes-Benz E 220 d 9G-TRONIC,91930.0,10631.0,1.991,Hybrid,Automatik,5,4/5,Euro6,suv,1,E-Klasse,211.0,155.0,0.8299999999999272
+Mercedes-Benz Mercedes Benz C43 AMG *Navi*Sitzh.*Pano*Sp...,29780.0,58300.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,OTHER,211.0,155.0,4.16333333333326
+Mercedes-Benz A Klasse 220 Mercedes AMG Line,36810.0,10900.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,224.0,165.0,1.1633333333332607
+Mercedes-Benz Mercedes C63s/,47880.0,6450.0,1.95,Hybrid,Automatik,5,4/5,Euro6,kombi,1,OTHER,194.0,143.0,0.9133333333332606
+Mercedes-Benz A 45 AMG 4Matic Yellow Night Edition Service neu,33900.0,40000.0,2.143,Diesel,Automatik,9,4/5,Euro6,van,1,A-Klasse,163.0,120.0,3.9133333333332607
+Mercedes-Benz G500 G63 AMG UMBAU WIDESCREEN MULTIBEAM LED 360,91930.0,10631.0,1.991,Hybrid,Automatik,5,4/5,Euro6,suv,1,OTHER,211.0,155.0,0.8299999999999272
+Mercedes-Benz CLA 200 AMG Navi LED Kamera Tempomat MBUX SHZ,29780.0,58300.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,CLA,211.0,155.0,4.16333333333326
+Mercedes-Benz E 220 d T AMG MoPf AHK Distronic 360° Multibeam,36810.0,10900.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,224.0,165.0,1.1633333333332607
+Mercedes-Benz C 180 T AMG Multibeam Ambient Totwinkel Spur AHK,55810.0,16269.0,1.95,Diesel,Automatik,5,4/5,Euro6d,sport,1,C-Klasse,194.0,143.0,1.2466666666665938
+Mercedes-Benz GLC 400 d 4M AMG Pano High End Info Park Licht,49610.0,38098.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,1,GLC,197.0,145.0,1.2466666666665938
+Mercedes-Benz A 250 AMG Night Pano Ambi MBUX MBeam Fahrass 360,52780.0,23945.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,194.0,143.0,0.5799999999999272
+Mercedes-Benz E 220 d T-Modell Avantgarde+LED+AHK+Kamera+Navi,44830.0,6198.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,E-Klasse,197.0,145.0,1.1633333333332607
+Mercedes-Benz C 220 d T-Modell Avantgarde+Fahrassist.,54810.0,17998.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,197.0,145.0,0.7466666666665939
+Mercedes-Benz G 350 d 4M; Schiebedach; Sitzheizung; AHK,36990.0,20653.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,G-Klasse,163.0,120.0,1.4133333333332605
+Mercedes-Benz C 180 Avantgarde Ass-Pkt SD LED RFK Ambiente DAB,54900.0,72800.0,2.987,Diesel,Automatik,5,4/5,Euro6c,suv,1,C-Klasse,258.0,190.0,3.1633333333332607
+Mercedes-Benz C 300 e T AMG AssPkt MBeam KEYGO NIGHT eHe Ambie,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,136.0,100.0,3.7466666666665938
+"Mercedes-Benz V -Klasse V 250 d AVANTGARDE EDITION 4Matic,AHK",20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,V-Klasse,136.0,100.0,3.7466666666665938
+Mercedes-Benz E 63 S AMG BRABUS B40-700 Edition 1 Voll,30999.0,175000.0,2.143,Diesel,Automatik,4,2/3,Euro6,cabrio,1,E-Klasse,204.0,150.0,4.41333333333326
+Mercedes-Benz E 220 Td Avantgarde Comand Kamera LED Easypack,153900.0,31500.0,3.982,Benzin,Automatik,2,2/3,Euro6d,cabrio,1,E-Klasse,557.0,410.0,1.746666666666594
+Mercedes-Benz X 250 d 4M Progr. Edition AHK 360 Comand LED,34490.0,98500.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,OTHER,381.0,280.0,3.8299999999999272
+Mercedes-Benz AMG A 45 4Matic AMG Speedshift 7G-DCT,45900.0,8784.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,163.0,120.0,0.7466666666665939
+Mercedes-Benz Mercedes E-Klasse E220 W212 Bluetec 4Matic,59890.0,12528.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,0.7466666666665939
+Mercedes-Benz GLE 43 AMG Coupe 4Matic 1Hand Navi Voll LED AHK,36950.0,12630.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GLE,156.0,115.0,1.4133333333332605
+Mercedes-Benz GLC 43 AMG 4M Coupe Night 21'' Comand HUD,64900.0,11470.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,GLC,330.0,243.0,1.0799999999999272
+Mercedes-Benz GLC 350 d 4Matic Head-up 360-Kamera Night,38900.0,11335.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,224.0,165.0,1.2466666666665938
+Mercedes-Benz GLC 350 d 4M Coupe AMG Sport Comand ILS 360 ABC,42890.0,13800.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,194.0,143.0,1.0799999999999272
+Mercedes-Benz GLA 220 4M AMG Kamera Panorama-D Memory,55690.0,3000.0,1.993,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLA,200.0,147.0,0.24666666666659387
+Mercedes-Benz E 400 4Matic Burmester TV Spurhalte Exclusive,88900.0,60495.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,E-Klasse,245.0,180.0,3.5799999999999272
+Mercedes-Benz E 350 d AMG Night 20'' Multibeam Comand Burmeste,26880.0,49041.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,184.0,135.0,3.1633333333332607
+Mercedes-Benz E 250 AMG Night 20'' 9G LED Panorama-D Comand,32880.0,19229.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,156.0,115.0,0.8299999999999272
+Mercedes-Benz CLS 300 d Coupe AMG Multibeam Kamera,34845.0,32980.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,CL,156.0,115.0,0.7466666666665939
+Mercedes-Benz CLA 220 d SB AMG 7G LED Navigation Business,53945.0,14350.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,CLA,194.0,143.0,0.7466666666665939
+Mercedes-Benz C 43 AMG 4M Coupe 9G LED Panorama-SD Comand,42885.0,10450.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,211.0,155.0,1.0799999999999272
+Mercedes-Benz S 560 4M Lang AMG Line PLUS,31850.0,17704.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,S-Klasse,194.0,143.0,3.2466666666665938
+Mercedes-Benz AMG GT Coupe Distronic Pano 1.Hand,55350.0,27880.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GT,299.0,220.0,1.3299999999999272
+"Mercedes-Benz E 200 Cabrio 9G-TRONIC AMG Line, Sitzbelüftung.",110850.0,3350.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,571.0,420.0,1.4133333333332605
+Mercedes-Benz CLA 220 SB d Progressive Night Spur+Totw Multib,45900.0,8784.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,CLA,163.0,120.0,0.7466666666665939
+Mercedes-Benz E 220 d Coupe AMG Pano 360 Kamera KeylessGo,59890.0,12528.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,0.7466666666665939
+Mercedes-Benz AMG GT S PANO BURM DISTR DIGI TACHO PERF ABGAS,36950.0,12630.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,S-Klasse,156.0,115.0,1.4133333333332605
+Mercedes-Benz S400d L 4M AMG 20Zoll Brabus HeadUp Pano,64900.0,11470.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,OTHER,330.0,243.0,1.0799999999999272
+Mercedes-Benz C 220 d T Avantgarde STDHZG AHK PANOSD Burmeste,38900.0,11335.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,224.0,165.0,1.2466666666665938
+Mercedes-Benz C43 amg Facelift 4matic,42890.0,13800.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,OTHER,194.0,143.0,1.0799999999999272
+Mercedes-Benz GLE 43 4M Distr Night KomfortP ExclusivP Pano,55690.0,3000.0,1.993,Diesel,Automatik,5,4/5,Euro6d,kombi,1,CL,200.0,147.0,0.24666666666659387
+Mercedes-Benz CLS 500 Coupe AMG Plus Night Airmatic Sitzklima,88900.0,60495.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,CL,245.0,180.0,3.5799999999999272
+Mercedes-Benz CLS 400 d 4M Coupe AMG-Sport Comand Wide SHD 360,26880.0,49041.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,CL,184.0,135.0,3.1633333333332607
+Mercedes-Benz G 350d Modell Station Soundsystem Chrom,32880.0,19229.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,G-Klasse,156.0,115.0,0.8299999999999272
+Mercedes-Benz GLE 400 AMG Line 4Matic HUD Standheiz FixKIT,34845.0,32980.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLE,156.0,115.0,0.7466666666665939
+Mercedes-Benz G 500 AMG STANDHEIZ SITZKLIMA RIDE CONTROL,53945.0,14350.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,G-Klasse,194.0,143.0,0.7466666666665939
+Mercedes-Benz E 350 COUPE AMG LINE PANO MULTIBEAM COMAND DAB,42885.0,10450.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,211.0,155.0,1.0799999999999272
+Mercedes-Benz C 300 T 9G-TRONIC Avantgarde,54900.0,72800.0,2.987,Diesel,Automatik,5,4/5,Euro6c,suv,1,C-Klasse,258.0,190.0,3.1633333333332607
+Mercedes-Benz Mercedes Cls 450 Amg 53 Amg Edition 1 Gara...,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,CL,136.0,100.0,3.7466666666665938
+Mercedes-Benz Mercedes Benz GLS 350D,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLS,136.0,100.0,3.7466666666665938
+Mercedes-Benz Zum Verkauf steht meine E-Klasse (W213) in...,30999.0,175000.0,2.143,Diesel,Automatik,4,2/3,Euro6,cabrio,1,E-Klasse,204.0,150.0,4.41333333333326
+Mercedes-Benz Vito Tourer 114 CDI Bus und Camper Version...,153900.0,31500.0,3.982,Benzin,Automatik,2,2/3,Euro6d,cabrio,1,Vito,557.0,410.0,1.746666666666594
+Mercedes-Benz Mercedes-Benz GLE 350d Coupe AMG Line Spur...,34490.0,98500.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,GLE,381.0,280.0,3.8299999999999272
+"Mercedes-Benz GLC 220 d AMG-Line 4Matic Vollleder Navi LED 20""",44850.0,84500.0,1.95,Diesel,Automatik,4,2/3,Euro6,sport,2,GLC,194.0,143.0,3.4966666666665938
+"Mercedes-Benz GLA -Klasse 180 Automatik 7-Gang , Panorama-Dach",34748.0,176000.0,2.925,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLA,340.0,250.0,2.9966666666665938
+Mercedes-Benz C 200 T 9G-TRONIC AMG Line,33490.0,61998.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,194.0,143.0,2.6633333333332607
+Mercedes-Benz E350 d 4Matic Lim. WIDESCREEN*MULTIBEAM*VOLL*VOL,24900.0,45876.0,1.595,Benzin,Automatik,5,4/5,Euro6d,suv,1,E-Klasse,122.0,90.0,2.2466666666665938
+Mercedes-Benz Mercedes B 180,59500.0,122000.0,2.143,Diesel,Automatik,4,4/5,Euro6,van,2,B-Klasse,190.0,140.0,4.66333333333326
+Mercedes-Benz S 500 L Limo. 4Matic HeadUp LED Burmester Voll!,25700.0,17524.0,1.6,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,S-Klasse,116.0,85.0,2.4133333333332607
+Mercedes-Benz S -Klasse Lim. S 400 4Matic,25900.0,24962.0,1.6,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,S-Klasse,116.0,85.0,2.4133333333332607
+Mercedes-Benz GLC 300 de 4M EXCLUSIVE-INT+18''+AHK+KAM+DKL.GLA,61790.0,7962.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,1,CL,330.0,243.0,1.4133333333332605
+Mercedes-Benz GLB 250 4Matic *AMG-LINE*6 TKM*PANORAMA*,41900.0,19418.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLB,194.0,143.0,1.3299999999999272
+Mercedes-Benz GLE -Klasse GLE 350 d 4Matic,46410.0,120000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,GLE,258.0,190.0,4.579999999999927
+Mercedes-Benz A 180 Urban,45999.0,12000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,A-Klasse,211.0,155.0,2.9133333333332607
+Mercedes-Benz E 200 Coupé Avantgarde Kamera HighMBUX Business,48990.0,9900.0,1.332,Benzin,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,163.0,120.0,0.4966666666665939
+Mercedes-Benz E 400 d 4M T AMG High-MBUX DISTRO+360°SD AHK elH,49900.0,4999.0,1.991,Benzin,Automatik,4,2/3,Euro6,sport,1,E-Klasse,197.0,145.0,0.24666666666659387
+Mercedes-Benz GLC 300 de 4M AMG DISTRO 360°AHK PSD Busi elHeck,78880.0,4999.0,2.925,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,330.0,243.0,0.32999999999992724
+Mercedes-Benz E 300 Coupé AMG Kamera High-MBUX DISTRO PanoSD,65900.0,4999.0,1.95,Hybrid,Automatik,5,4/5,Euro6,suv,1,E-Klasse,194.0,143.0,0.41333333333326056
+Mercedes-Benz Sprinter III Tourer 316 CDI KOMBI HOCHDACH -LA,64990.0,3000.0,1.991,Benzin,Automatik,4,2/3,Euro6,sport,1,Sprinter,258.0,190.0,0.4966666666665939
+Mercedes-Benz S -Klasse Cabriolet S 560,60095.0,1600.0,2.143,Diesel,Automatik,9,4/5,Euro6,van,1,S-Klasse,163.0,120.0,2.1633333333332607
+Mercedes-Benz Mercedes-Benz S 350 L,124900.0,19600.0,3.982,Benzin,Automatik,4,2/3,Euro6,cabrio,1,S-Klasse,469.0,345.0,3.0799999999999272
+Mercedes-Benz E 300 T de 4M Avantgarde+Exclusiv+Night+360°+18',86899.0,19846.0,2.999,Benzin,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,435.0,320.0,2.0799999999999272
+Mercedes-Benz E 220 T d 4M Avantgarde+Comand+Spur+LED+Kam+Totw,64899.0,18860.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,0.8299999999999272
+Mercedes-Benz C 300 T e AMG ex/in+Night Edi+Comand+volldig+Pan,35899.0,55000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,194.0,143.0,3.3299999999999272
+Mercedes-Benz CLS 450 4matic AMG Edition 1,50899.0,34608.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,CL,211.0,155.0,0.8299999999999272
+"Mercedes-Benz Mercedes Vito Camper, ähnlich Marco Polo",50899.0,34608.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,MarcoPolo,211.0,155.0,0.8299999999999272
+Mercedes-Benz GLE -Klasse GLE 500 e 4Matic-Panorama-Harman K.,43800.0,89459.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,GLE,204.0,150.0,4.496666666666594
+Mercedes-Benz Mercedes E300d Coupé,14999.0,120000.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,E-Klasse,109.0,80.0,4.579999999999927
+Mercedes-Benz C 400 Coupe 4Matic 9G-TRONIC AMG Line,29900.0,13227.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,C-Klasse,143.0,105.0,2.9133333333332607
+Mercedes-Benz CITAN KOMBI 111 CDI LANG TEMPOMAT KLIMA,23999.0,76000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vaneo,204.0,150.0,4.579999999999927
+Mercedes-Benz GLA 200 CDI Urban*Navi*Xenon*Ahk*Kamera*,36900.0,77380.0,1.95,Diesel,Automatik,4,2/3,Euro6,limousine,1,GLA,194.0,143.0,3.9133333333332607
+Mercedes-Benz CLA 45 S 4M+SB Perfo Sitz Sound Aero HUD Pano,99948.0,71897.0,5.461,Benzin,Automatik,5,4/5,Euro6,suv,2,S-Klasse,571.0,420.0,4.16333333333326
+Mercedes-Benz B 220 Progressive Distronic Kamera LED AHK HUD,45990.0,14000.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,B-Klasse,136.0,100.0,0.07999999999992724
+Mercedes-Benz A 220 4M Limousine AMG Distronic Pano.-Dach,39990.0,133200.0,2.996,Benzin,Automatik,4,2/3,Euro6,sport,1,A-Klasse,333.0,245.0,3.4133333333332607
+Mercedes-Benz C 220 d 4MATIC T-Modell /9G/Navigation/Memory-P.,42990.0,14000.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,136.0,100.0,0.1633333333332606
+Mercedes-Benz C 220 d T Avantgarde/9G/LED/Assistenz-Paket/AHK/,27690.0,49920.0,1.461,Diesel,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,116.0,85.0,2.9133333333332607
+Mercedes-Benz CLA 200 AMG MBUX Augment Ambiente Totw LED,40890.0,35736.0,2.143,Diesel,Automatik,5,4/5,Euro6c,suv,1,CLA,170.0,125.0,2.5799999999999272
+Mercedes-Benz E 220 d Sport 9G-TRONIC Comand Navi ParkAssist,91990.0,4351.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,suv,1,E-Klasse,211.0,155.0,0.7466666666665939
+Mercedes-Benz C 220 (BlueTEC) d T Avantgarde Finanzierung,99990.0,58568.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,2,C-Klasse,612.0,450.0,3.8299999999999272
+Mercedes-Benz GLE 400 d 4Matic 9G-TRONIC COUPE,34990.0,54113.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,GLE,204.0,150.0,3.1633333333332607
+Mercedes-Benz E 200 d 9G-TRONIC Avantgarde,52900.0,14000.0,1.95,Diesel,Automatik,5,4/5,Euro6,sport,1,E-Klasse,190.0,140.0,0.07999999999992724
+Mercedes-Benz AMG GT R-GARANTIE 05/2022-WARTUNG NEU-REIFEN NEU,121790.0,14000.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,GT,286.0,210.0,0.07999999999992724
+Mercedes-Benz Cabrio C 43 AMG 4Matic * Vollausstattung* 1Hand*,108490.0,14000.0,2.925,Diesel,Automatik,7,4/5,Euro6,suv,1,C-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz C 220 d 9G-TRONIC Avantgarde,165990.0,14000.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,435.0,320.0,0.07999999999992724
+"Mercedes-Benz G 400 d AMG LINE 20"" NIGHT I+II BURMESTER 360°",50890.0,58813.0,2.996,Benzin,Automatik,5,4/5,Euro6,sport,1,G-Klasse,367.0,270.0,4.496666666666594
+Mercedes-Benz GLA 220 4Ma AMG Line NAV/PSD/LED/PTS/DISTRO/360°,91990.0,4351.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,suv,1,GLA,211.0,155.0,0.7466666666665939
+Mercedes-Benz CLA 35 AMG 4Ma SB NAV/LED/MBUX/SPUR/PTS/SHZ/1H,99990.0,58568.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,2,CLA,612.0,450.0,3.8299999999999272
+"Mercedes-Benz C 300 T e AMG + NIGHT NAV/LEDER/PSD/SHZ/19""/NP75",34990.0,54113.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,204.0,150.0,3.1633333333332607
+Mercedes-Benz C 300 T AMG Line NIGHT NAV/LEDER/STDHZ/PSD/NP78,52900.0,14000.0,1.95,Diesel,Automatik,5,4/5,Euro6,sport,1,C-Klasse,190.0,140.0,0.07999999999992724
+Mercedes-Benz C 180 Avantgarde AUT/NAV/SHZ/LED/SHD/PTS/TW/SPUR,121790.0,14000.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz B 180 d Progressive Navigation Park-Assistent BC,108490.0,14000.0,2.925,Diesel,Automatik,7,4/5,Euro6,suv,1,B-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz A 200 AUT.*AMG Styling*NAVI*LED*LEDER*PDC*NIGHT*,165990.0,14000.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,435.0,320.0,0.07999999999992724
+Mercedes-Benz CLA 45 Coupe 4MaticAMG Driver Package,37900.0,14000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,CLA,156.0,115.0,0.6633333333332606
+Mercedes-Benz A 180 BlueEFFICIENCY Edition,43890.0,15601.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,A-Klasse,204.0,150.0,4.079999999999927
+Mercedes-Benz C 200 AMG-Line,71990.0,23478.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,435.0,320.0,2.3299999999999272
+Mercedes-Benz GLC 250 d Coupe 4Matic AMG/SHD/NIGHT/LEDER ROT,61990.0,6600.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,421.0,310.0,0.41333333333326056
+Mercedes-Benz MERCEDES BENZ CLA 220 AMG 7G 4MATIC*VOLLAU...,51990.0,14000.0,1.497,Benzin,Automatik,5,2/3,Euro6d,sport,1,CLA,184.0,135.0,0.24666666666659387
+Mercedes-Benz GLC 350d 4M 9G Exclusive*Designo/Night/Pano/LED*,60482.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,kombi,1,CL,204.0,150.0,0.07999999999992724
+Mercedes-Benz E 300 Coupe 9G-TRONIC AMG Line,107987.0,14000.0,3.982,Benzin,Automatik,5,2/3,Euro6d,sport,1,E-Klasse,510.0,375.0,0.07999999999992724
+"Mercedes-Benz GLC 250 d 4Matic, 9G-tronic, Allrad, LED, Navi",63849.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,204.0,150.0,0.07999999999992724
+Mercedes-Benz E 53 AMG 4Matic+/Multibeam+Comand+Widescreeen+,52900.0,14000.0,1.95,Diesel,Automatik,5,4/5,Euro6,sport,1,E-Klasse,190.0,140.0,0.07999999999992724
+Mercedes-Benz GLC 63 S AMG 4Matic*PANO*BURMESTER*360*21 ZOLL,121790.0,14000.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,S-Klasse,286.0,210.0,0.07999999999992724
+Mercedes-Benz GLA 250 4M AMG 7-GT LED NAVI aktPTS RFK EasyPack,108490.0,14000.0,2.925,Diesel,Automatik,7,4/5,Euro6,suv,1,GLA,286.0,210.0,0.07999999999992724
+Mercedes-Benz E 450 4Matic Cabrio Facelift Garantie bis 2026,165990.0,14000.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,435.0,320.0,0.07999999999992724
+Mercedes-Benz AMG G 63 AMG SPEEDSHIFT 7G-TRONIC Exclusive ...,37900.0,14000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,G-Klasse,156.0,115.0,0.6633333333332606
+Mercedes-Benz X250d 4Matic*Progressive*AHK*360°Kamera*LED*,43890.0,15601.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,OTHER,204.0,150.0,4.079999999999927
+Mercedes-Benz V300d EXCLUSIVE 4M.*AMG*6xSitzKlima*StHzg*Pano,71990.0,23478.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,2,CL,435.0,320.0,2.3299999999999272
+Mercedes-Benz V300d Avantgar*4M*AMG*StdHzg*Burme*DistrPlus*AHK,61990.0,6600.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,OTHER,421.0,310.0,0.41333333333326056
+Mercedes-Benz V250d*4M.*AMG*Pano*Distr*Burmester*AHK*StdHzg*,51990.0,14000.0,1.497,Benzin,Automatik,5,2/3,Euro6d,sport,1,OTHER,184.0,135.0,0.24666666666659387
+Mercedes-Benz S500 Cabrio*AMG*Massage*360°*SitzKlima*Burmester,60482.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,kombi,1,OTHER,204.0,150.0,0.07999999999992724
+Mercedes-Benz GLS400d AMG*Pano*HuD*Burm*AHK*360°*StHzg*Massage,107987.0,14000.0,3.982,Benzin,Automatik,5,2/3,Euro6d,sport,1,GLS,510.0,375.0,0.07999999999992724
+Mercedes-Benz GLE 53 AMG 4M.+*Massage*360°*Pano*AHK*SportAbgas,63849.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLE,204.0,150.0,0.07999999999992724
+Mercedes-Benz GLA 220d 4M.*AMG*Pano*AHK*Burmester*RFK*20Zoll*,107987.0,14000.0,3.982,Benzin,Automatik,5,2/3,Euro6d,sport,1,GLA,510.0,375.0,0.07999999999992724
+Mercedes-Benz GLA 220 d 4M*AMG*Pano*Night*RFK*Ambiente*20Zoll*,63849.0,14000.0,1.496,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLA,204.0,150.0,0.07999999999992724
+Mercedes-Benz CLA 35 AMG 4M.*Aero*HuD*Burm*ACC*Pano*360°*Multi,25750.0,64000.0,1.595,Benzin,Automatik,5,4/5,Euro6c,kombi,1,CLA,156.0,115.0,3.1633333333332607
+Mercedes-Benz C 43 AMG 4M*Night-P*Perf-AGA*Pano*Burme.*Ride.C,12480.0,49700.0,1.461,Diesel,Schaltgetriebe,5,2/3,Euro6,van,1,C-Klasse,90.0,66.0,4.16333333333326
+Mercedes-Benz GLA -Klasse GLA 180 CDI / Navi /LED,30800.0,24000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GLA,156.0,115.0,0.9966666666665939
+Mercedes-Benz A 220 Limo AMG 4M+MBUX High+Ambiente+Business,30800.0,24000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,156.0,115.0,0.9966666666665939
+Mercedes-Benz E 220 d 9G-TRONIC Avantgarde/19 Zoll/TV/Leder,29700.0,2000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,van,1,E-Klasse,116.0,85.0,1.8299999999999272
+Mercedes-Benz EQV 300 AVANTGARDE Lang Easy-Pack 360° 160km/h,51900.0,33012.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,2,OTHER,190.0,140.0,2.4966666666665938
+Mercedes-Benz A 200 AMG Sportpaket Night-Paket Automatik,36000.0,22523.0,2.143,Diesel,Schaltgetriebe,3,2/3,Euro6,suv,1,A-Klasse,163.0,120.0,1.5799999999999272
+"Mercedes-Benz GLE 43 AMG Coupe 4M 9G-TRONICNP:118.711,00€",42950.0,15000.0,1.991,Hybrid,Automatik,5,4/5,Euro6,kombi,1,GLE,211.0,155.0,0.8299999999999272
+Mercedes-Benz C 300 e EXCLUSIVE *Distronic*COMAND*360°*LED*,36000.0,22523.0,2.143,Diesel,Schaltgetriebe,3,2/3,Euro6,suv,1,C-Klasse,163.0,120.0,1.5799999999999272
+Mercedes-Benz V 250 d lang Avantgarde Edition 360° Burmester,42950.0,15000.0,1.991,Hybrid,Automatik,5,4/5,Euro6,kombi,1,V-Klasse,211.0,155.0,0.8299999999999272
+"Mercedes-Benz V 250/AMG-Line/2xTür,NAVI COMAND/LEDER/KAM,LED",37450.0,11680.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,V-Klasse,163.0,120.0,1.3299999999999272
+Mercedes-Benz A 180 d Style LED Spurhalt-Ass PTS 7G-DCT Sitzh,47880.0,6450.0,1.95,Hybrid,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,194.0,143.0,0.9133333333332606
+Mercedes-Benz GLA 180 Urban LED Kamera Navi Laderaump PTS Temp,33900.0,40000.0,2.143,Diesel,Automatik,9,4/5,Euro6,van,1,GLA,163.0,120.0,3.9133333333332607
+Mercedes-Benz A 200 Progressive LED Spurhalt-Ass PTS 7G-DCT,91930.0,10631.0,1.991,Hybrid,Automatik,5,4/5,Euro6,suv,1,A-Klasse,211.0,155.0,0.8299999999999272
+Mercedes-Benz Sprinter 214 CDI KA Hoch LED+9GTronic+CAM+MBUX,29780.0,58300.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,GT,211.0,155.0,4.16333333333326
+Mercedes-Benz V 250 d AVANTGARDE EDITION Lang+AMG+AHK+Comand,36810.0,10900.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,V-Klasse,224.0,165.0,1.1633333333332607
+Mercedes-Benz V 300 d AVANTGARDE EDITION Kompakt+AHK+6d-Temp,55810.0,16269.0,1.95,Diesel,Automatik,5,4/5,Euro6d,sport,1,V-Klasse,194.0,143.0,1.2466666666665938
+"Mercedes-Benz GLC 300 4M Fahrass/AHK/4xHigh-End/Pano/20""/Airb",49610.0,38098.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,1,GLC,197.0,145.0,1.2466666666665938
+Mercedes-Benz A 180 AMG Pano LED Navi PTS 7G-DCT Sitzh Temp,52780.0,23945.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,194.0,143.0,0.5799999999999272
+Mercedes-Benz GLA 250 4M AMG Night Pano Multibeam Distr. PTS,44830.0,6198.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,GLA,197.0,145.0,1.1633333333332607
+Mercedes-Benz CLS 450 Cp. 4M AMG designo WideScreen Stdhzg SHD,54810.0,17998.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,CL,197.0,145.0,0.7466666666665939
+Mercedes-Benz C 300 AMG Burmester LED Night Spurhalt-Ass PTS,54810.0,17998.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,197.0,145.0,0.7466666666665939
+Mercedes-Benz E 350 d T 4Matic*AMG*Pano*Memory*Burmester*HUD*,36990.0,20653.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,163.0,120.0,1.4133333333332605
+Mercedes-Benz GLE 350 d 4M AMG+Night+Pano+360+AHK+MultiBeam+9G,51900.0,37372.0,1.95,Diesel,Automatik,7,4/5,Euro6d,van,1,GLE,190.0,140.0,1.3299999999999272
+"Mercedes-Benz GLB 200 ALU 18"" LED Distronic PTS RÃ¼ckfahrk.",49550.0,13935.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,GLB,224.0,165.0,1.3299999999999272
+Mercedes-Benz CLA 250 4M EDITION 2020+AMG+Night+Pano+AHK+LED,43900.0,70331.0,1.991,Hybrid,Automatik,5,4/5,Euro6,sport,1,CLA,211.0,155.0,4.246666666666594
+"Mercedes-Benz C 200 4M AMG Sportpaket AMG 18"" LED PTS Tempomat",86900.0,3803.0,2.999,Benzin,Automatik,5,4/5,Euro6d,suv,1,C-Klasse,367.0,270.0,0.9966666666665939
+"Mercedes-Benz C 200 AMG Sportpaket Night AMG 18"" Pano-Dach PTS",56900.0,9816.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,194.0,143.0,0.9133333333332606
+Mercedes-Benz CLA 180 PROGRESSIVE+Night+Pano+LED+Kamera+7G,42900.0,132724.0,1.991,Hybrid,Automatik,5,4/5,Euro6,sport,1,CLA,211.0,155.0,4.329999999999927
+Mercedes-Benz GLE 350 d 4M AMG+Night+Pano+AHK+MultiBeam+Kamera,71900.0,64537.0,3.982,Benzin,Automatik,4,2/3,Euro6,sport,1,GLE,510.0,375.0,4.246666666666594
+"Mercedes-Benz C 220 d AMG Sportpaket AMG 18"" LED PTS Tempomat",31950.0,14722.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,C-Klasse,194.0,143.0,3.4966666666665938
+Mercedes-Benz EQV 300 Lang LED ILS Distronic PTS Sitzheizung,72900.0,7027.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,1,OTHER,421.0,310.0,0.4966666666665939
+"Mercedes-Benz GLB 250 Sport-AMG ALU 20"" LED PTS RÃ¼ckfahrk.",54500.0,5739.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,GLB,224.0,165.0,0.9133333333332606
+Mercedes-Benz GLB 250 4M AMG+Night+MultiBeam+Kamera+8G,30950.0,17133.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLB,190.0,140.0,1.9133333333332607
+Mercedes-Benz E 350 d AVANTGARDE STANDHEIZUNG,24950.0,55399.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6c,van,1,E-Klasse,163.0,120.0,1.5799999999999272
+Mercedes-Benz E 300 AMG*Pano*Head-Up*Keyless*Multibeam*Euro1*,94900.0,14326.0,2.996,Benzin,Automatik,4,2/3,Euro6d,sport,1,E-Klasse,367.0,270.0,2.4966666666665938
+"Mercedes-Benz C200 Cabrio AMG SD-Navi,LED,Distr.Totw.Kam.Sound",40998.0,12890.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,190.0,140.0,1.2466666666665938
+Mercedes-Benz AMG GT C Coupe-AEROKIT-KERAMiK-PERFORMANCE+AGA,39810.0,11781.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,224.0,165.0,1.8299999999999272
+Mercedes-Benz Vito Mixto 116 CDI 4x4 lang*ILS-LED*KAMERA*AHK*,31950.0,14722.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,Vito,194.0,143.0,3.4966666666665938
+Mercedes-Benz A -Klasse A 250 AMG-Line Sport,72900.0,7027.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,421.0,310.0,0.4966666666665939
+Mercedes-Benz Vito 119 CDI Tourer PRO Extralang,54500.0,5739.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,Vito,224.0,165.0,0.9133333333332606
+Mercedes-Benz Vito 116 CDI Mixto Lang+5-Sitzer+AHK+Tempomat,30950.0,17133.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,Vito,190.0,140.0,1.9133333333332607
+Mercedes-Benz C 300 e T AMG Multibeam Burmester Distr. COMAND,24950.0,55399.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6c,van,1,C-Klasse,163.0,120.0,1.5799999999999272
+Mercedes-Benz E 300 de 4M AVANTGARDE Distr*AHK*HUD*SHD*Kamera*,94900.0,14326.0,2.996,Benzin,Automatik,4,2/3,Euro6d,sport,1,E-Klasse,367.0,270.0,2.4966666666665938
+Mercedes-Benz AMG GT Sportpaket Automatik COMAND KEYLESS-GO,40998.0,12890.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GT,190.0,140.0,1.2466666666665938
+Mercedes-Benz C 220 d T 4M AMG Sportpaket Automatik COMAND,39810.0,11781.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,224.0,165.0,1.8299999999999272
+Mercedes-Benz GLC 220 d 4Matic Aut* NAVI* LED* 360° KAMERA,89790.0,6099.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,sport,1,GLC,194.0,143.0,0.8299999999999272
+"Mercedes-Benz GLB 180 Sport-AMG Night AMG 19"" LED PTS Tempomat",39211.0,43022.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,GLB,163.0,120.0,1.5799999999999272
+"Mercedes-Benz GLE 350 de 4M Pano+360+AHK+LED+Fahrass+20""+9G",39211.0,45458.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,GLE,163.0,120.0,1.5799999999999272
+"Mercedes-Benz A 35 AMG 4M Sportpaket AMG 18"" LED PTS Tempomat",39211.0,48590.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,A-Klasse,163.0,120.0,1.5799999999999272
+Mercedes-Benz C 300 e T AVANTG+AHK+LED+Kamera+Spur+Totw+9G,39211.0,49459.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,C-Klasse,163.0,120.0,1.496666666666594
+Mercedes-Benz GLC 300 e 4M Pano+AHK+LED+Kamera+Spur+Totw+9G,62950.0,28726.0,1.95,Diesel,Automatik,8,4/5,Euro6d,van,1,GLC,239.0,176.0,1.1633333333332607
+Mercedes-Benz CLA 250 e EDITION 2020+AMG+Night+Pano+AHK+LED+8G,29691.0,46174.0,2.143,Diesel,Schaltgetriebe,2,4/5,Euro6,van,1,CLA,163.0,120.0,2.4133333333332607
+Mercedes-Benz GLC 300 de 4M AHK+LED+Kamera+Keyless+9G,31630.0,8598.0,1.332,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GLC,163.0,120.0,1.9133333333332607
+Mercedes-Benz E 400 d T 4M AVANTG+Night+Pano+360+AHK+MultiBeam,41790.0,10617.0,1.595,Benzin,Schaltgetriebe,4,2/3,Euro6d,cabrio,1,E-Klasse,156.0,115.0,1.1633333333332607
+Mercedes-Benz E 300 e 4M EXCLUSIVE+AHK+MultiBeam+Fahrass+9G,64710.0,27951.0,2.999,Benzin,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,367.0,270.0,0.7466666666665939
+Mercedes-Benz GLC 63 S AMG 4Matic+*Perfor.*Burmester*360°AHK*,42780.0,10871.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,S-Klasse,150.0,110.0,1.4133333333332605
+Mercedes-Benz B 200 4M EDITION 2020+AMG+Night+Pano+360°,31630.0,8598.0,1.332,Benzin,Automatik,5,4/5,Euro6d,kombi,1,B-Klasse,163.0,120.0,1.9133333333332607
+"Mercedes-Benz C 300 d AMG Sportpaket Night AMG 18"" Distronic",41790.0,10617.0,1.595,Benzin,Schaltgetriebe,4,2/3,Euro6d,cabrio,1,C-Klasse,156.0,115.0,1.1633333333332607
+Mercedes-Benz CLA 200 EDITION 2020+AMG+Night+Pano+LED+Kamera,64710.0,27951.0,2.999,Benzin,Automatik,5,4/5,Euro6d,kombi,1,CLA,367.0,270.0,0.7466666666665939
+Mercedes-Benz CLA 200 AMG+Night+Pano+LED+Kamera+Totw+7G,42780.0,10871.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,CLA,150.0,110.0,1.4133333333332605
+Mercedes-Benz GLE 350d Coupe 4M AMG/PANO/HK/360/ILS/21/MEMO,44710.0,16712.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLE,194.0,143.0,1.2466666666665938
+"Mercedes-Benz GLC 220 d 4MATIC 9G-TRONIC DISTRONIC UPE:66000,-",36810.0,3229.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,194.0,143.0,0.41333333333326056
+Mercedes-Benz Mercedes Benz C200,34610.0,19794.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,194.0,143.0,0.9966666666665939
+Mercedes-Benz A 180d LIMOUSINE/AMG-LINE/MULTIBEAM/LEDER/KAMERA,37900.0,15845.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,163.0,120.0,1.3299999999999272
+Mercedes-Benz GLA 200 Navi PDC SHZ Klima R.Cam I.Hand E6 d Tem,31850.0,17704.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,GLA,194.0,143.0,3.2466666666665938
+Mercedes-Benz C 200 AMG Line Pan Dach Leder LED Navi RF Cam SH,55350.0,27880.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,299.0,220.0,1.3299999999999272
+Mercedes-Benz E 220 Navi LED RF Cam PDC SHZ Klimaauto.,110850.0,3350.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,571.0,420.0,1.4133333333332605
+Mercedes-Benz CLA 220 Shooting Brake Pano LED Nav AHK R.Cam SH,45900.0,8784.0,1.332,Benzin,Automatik,5,4/5,Euro6d,sport,1,CLA,163.0,120.0,0.7466666666665939
+Mercedes-Benz S 63 AMG 4M+ Keramik Swar Nacht Excl HeadUP,59890.0,12528.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,S-Klasse,194.0,143.0,0.7466666666665939
+Mercedes-Benz Mercedes Benz CLA Shooting Brake 200d mit ...,36950.0,12630.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,CLA,156.0,115.0,1.4133333333332605
+Mercedes-Benz GLS 350 d 4M Fahrass WideScreen 360° Airmat,64900.0,11470.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,GLS,330.0,243.0,1.0799999999999272
+Mercedes-Benz C 43 AMG 4M Cp. Perf-Abgas Pano 19'' Distr Night,38900.0,11335.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,224.0,165.0,1.2466666666665938
+Mercedes-Benz GLC 43 AMG Cp. 4M Perf-Abgas Multibeam Distr. 9G,42890.0,13800.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,194.0,143.0,1.0799999999999272
+Mercedes-Benz C 300 Cab. AMG Multibeam Burmester AHK Night PTS,55690.0,3000.0,1.993,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,200.0,147.0,0.24666666666659387
+Mercedes-Benz C 43 AMG 4M Cp. designo PerfAbgas Optik-Pak Pano,88900.0,60495.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,C-Klasse,245.0,180.0,3.5799999999999272
+"Mercedes-Benz GLA 180 d AMG+Night+AHK+LED+Kamera+19""+Totw+8G",26880.0,49041.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GLA,184.0,135.0,3.1633333333332607
+Mercedes-Benz GLC 300 4M AMG LED Kamera Spurhalt-Ass SpurPak,55690.0,3000.0,1.993,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,200.0,147.0,0.24666666666659387
+Mercedes-Benz Sprinter II Kasten 310/311/313/314/316 CDI,88900.0,60495.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,Sprinter,245.0,180.0,3.5799999999999272
+Mercedes-Benz A45 AMG 4-Matic|NAVI|KAMERA|PANO|SPOILER,26880.0,49041.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,184.0,135.0,3.1633333333332607
+Mercedes-Benz AMG GTC Roadster| PERFORMANCE SITZE&ABGAS|KAMERA,32880.0,19229.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GT,156.0,115.0,0.8299999999999272
+Mercedes-Benz C63 S AMG LIM|DRIVER`S PACKAGE|PANO|PERF-AGA,34845.0,32980.0,1.497,Benzin,Automatik,5,4/5,Euro6d,limousine,1,S-Klasse,156.0,115.0,0.7466666666665939
+Mercedes-Benz CLA 45 AMG 4Matic| PERFORMANCE ABGAS|NAVI|KAMERA,53945.0,14350.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,1,CLA,194.0,143.0,0.7466666666665939
+Mercedes-Benz CLA 45 AMG 4Matic|DRIVER`S PACKAGE|PERF-AGA|PANO,42885.0,10450.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,CLA,211.0,155.0,1.0799999999999272
+Mercedes-Benz C 200 9G-TRONIC AMG Line mit Herstellergarantie,54900.0,72800.0,2.987,Diesel,Automatik,5,4/5,Euro6c,suv,1,C-Klasse,258.0,190.0,3.1633333333332607
+Mercedes-Benz GLC 300 e 4M AMG Fahrass/Pano/AHK/360°/Volldigi,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,136.0,100.0,3.7466666666665938
+Mercedes-Benz GLE 63 AMG Cp. 4M Driversp Perf-Abgas 360° AHK,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLE,136.0,100.0,3.7466666666665938
+"Mercedes-Benz V 250 d lang Edition Night ALU 19"" LED ILS PTS",30999.0,175000.0,2.143,Diesel,Automatik,4,2/3,Euro6,cabrio,1,V-Klasse,204.0,150.0,4.41333333333326
+"Mercedes-Benz B 220 4M Progr. Distronic Standhz Kamera LED 18""",153900.0,31500.0,3.982,Benzin,Automatik,2,2/3,Euro6d,cabrio,1,B-Klasse,557.0,410.0,1.746666666666594
+Mercedes-Benz E 200 T *AVANTGARDE*SPOSI*LED*NAVI*el. Heckkl.*,20488.0,115000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,136.0,100.0,3.7466666666665938
+"Mercedes-Benz A 220 d 4M EDITION 2020+AMG+Night+Pano+360°+19""",30999.0,175000.0,2.143,Diesel,Automatik,4,2/3,Euro6,cabrio,1,A-Klasse,204.0,150.0,4.41333333333326
+Mercedes-Benz GLC 250 d Cp. 4M AMG Fahrass Burmester Distr. 9G,153900.0,31500.0,3.982,Benzin,Automatik,2,2/3,Euro6d,cabrio,1,GLC,557.0,410.0,1.746666666666594
+"Mercedes-Benz CLS 53 AMG 4Matic,Multibeam,Stdhz,Burmester,360",34490.0,98500.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,CL,381.0,280.0,3.8299999999999272
+Mercedes-Benz GLE 300 d 4M,44850.0,84500.0,1.95,Diesel,Automatik,4,2/3,Euro6,sport,2,GLE,194.0,143.0,3.4966666666665938
+Mercedes-Benz A -Klasse A 200 Automatik-Werksgarantie 01/2022,34748.0,176000.0,2.925,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,340.0,250.0,2.9966666666665938
+Mercedes-Benz Vito 119 Tourer PRO Lang,34490.0,98500.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,Vito,381.0,280.0,3.8299999999999272
+Mercedes-Benz V 250 d EDITION Kompakt+AHK+Sportpaket+6d-Temp,44850.0,84500.0,1.95,Diesel,Automatik,4,2/3,Euro6,sport,2,V-Klasse,194.0,143.0,3.4966666666665938
+"Mercedes-Benz Vito 116 CDI lang, 7G-Autom., Klima, LED, Navi",34748.0,176000.0,2.925,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,340.0,250.0,2.9966666666665938
+Mercedes-Benz A 180 BlueEfficiency Style ele.Sitz Memory,33490.0,61998.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,194.0,143.0,2.6633333333332607
+"Mercedes-Benz C 220 d T#AMG#AHK# DISTRONIC #KEYLESS#LED#Alu19""",33490.0,61998.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,194.0,143.0,2.6633333333332607
+Mercedes-Benz C 63 AMG S T designo Perf-Abg. Pano Distr. Night,24900.0,45876.0,1.595,Benzin,Automatik,5,4/5,Euro6d,suv,1,C-Klasse,122.0,90.0,2.2466666666665938
+Mercedes-Benz 316 CDI L2/H1 Sprinter Bus Transporter LKW...,59500.0,122000.0,2.143,Diesel,Automatik,4,4/5,Euro6,van,2,Sprinter,190.0,140.0,4.66333333333326
+"Mercedes-Benz C 180 Coupé AMG+Night+Pano+LED+Kamera+19""+Spur",25700.0,17524.0,1.6,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,C-Klasse,116.0,85.0,2.4133333333332607
+Mercedes-Benz C 180 T AVANTG+LED+Kamera+Spur+Totw+Keyless+9G,25900.0,24962.0,1.6,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,C-Klasse,116.0,85.0,2.4133333333332607
+Mercedes-Benz A 35 AMG 4M Pano LED Kamera Spurhalt-Ass PTS,61790.0,7962.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,330.0,243.0,1.4133333333332605
+Mercedes-Benz V 250 Sport AVANTGARDE LANG LEDER LED,41900.0,19418.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,V-Klasse,194.0,143.0,1.3299999999999272
+Mercedes-Benz Mercedes-Benz V 250 d Sport Avantgarde extralang,41900.0,14043.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,V-Klasse,194.0,143.0,1.3299999999999272
+Mercedes-Benz GLA 220 4M AMG Exkl-Paket 360° Distr. COMAND,52890.0,45320.0,2.987,Diesel,Automatik,5,4/5,Euro6,sport,2,GLA,258.0,190.0,4.079999999999927
+Mercedes-Benz C 200 Cab. AMG Multibeam Night Airscarf Kamera,33890.0,18973.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,224.0,165.0,2.0799999999999272
+Mercedes-Benz A 180 AMG Pano LED Night Kamera Spurhalt-Ass PTS,31589.0,4998.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,1,A-Klasse,163.0,120.0,1.0799999999999272
+Mercedes-Benz C 300 de AMG Multibeam Burmester Distr. COMAND,50990.0,2001.0,1.993,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,200.0,147.0,-0.00333333333340613
+Mercedes-Benz A 200 AMG LED Navi PTS Sitzh Sitzkomfort Temp,60850.0,2001.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,306.0,225.0,0.32999999999992724
+Mercedes-Benz A 180 7G-DCT Urban *Navi| LED | Kam | PDC | Totw,54990.0,40746.0,2.996,Benzin,Automatik,5,4/5,Euro6d,suv,1,A-Klasse,367.0,270.0,2.9133333333332607
+Mercedes-Benz Mercedes Benz 116 CDI Vito tourer pro Edit...,54990.0,40746.0,2.996,Benzin,Automatik,5,4/5,Euro6d,suv,1,Vito,367.0,270.0,2.9133333333332607
+Mercedes-Benz C 180 Cabrio AMG Line Night Spur+Totw Kamera LED,36990.0,37808.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,258.0,190.0,2.3299999999999272
+Mercedes-Benz GLC 300 d 4M Exclusive int. AHK Standhz. Pano MB,96000.0,23000.0,2.999,Hybrid,Automatik,5,4/5,Euro6d,suv,2,CL,435.0,320.0,1.6633333333332605
+Mercedes-Benz E 400 d T 4M AMG/Fahrass/AHK/SHD/360°/Multi,34000.0,102000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,170.0,125.0,3.9133333333332607
+Mercedes-Benz A 200 d Progressive Navi Premium Distr. Kamera,15500.0,109938.0,1.598,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,A-Klasse,114.0,84.0,3.7466666666665938
+Mercedes-Benz A 180/Progressive/7G-DCT/Navi/Parktronic,15500.0,109938.0,1.598,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,A-Klasse,114.0,84.0,3.7466666666665938
+"Mercedes-Benz E 200d AVANTGARDE Autom.Navi,Kamera",9401.0,345008.0,1.461,Diesel,Schaltgetriebe,2,2/3,Euro6,kombi,1,E-Klasse,110.0,81.0,3.1633333333332607
+Mercedes-Benz Sprinter 319 CDI Mixto 5 Sitzer Maxi Lang Klima,13590.0,338300.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,Sprinter,143.0,105.0,4.496666666666594
+"Mercedes-Benz B 200 CDI , Allrad, Navi, Klima, SHZ",16800.0,305000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,B-Klasse,150.0,110.0,3.5799999999999272
+Mercedes-Benz 316 MAXI EXTRALANG XXL KLIMA KAMERA16.800,19500.0,298000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,kombi,1,A-Klasse,129.0,95.0,4.329999999999927
+Mercedes-Benz Mercedes-Benz E 200 d Avantgarde*Navi*Plus,25950.0,292831.0,2.987,Diesel,Automatik,3,4/5,Euro6,van,1,E-Klasse,190.0,140.0,4.41333333333326
+Mercedes-Benz E 350 d 4Matic+AMG Styling+Panorama+Kamera+ATM,15239.0,290000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,E-Klasse,163.0,120.0,3.4133333333332607
+Mercedes-Benz Sprinter 316 CDI AHK SPUR TOTW COL KAM NAV KLIMA,13199.0,284235.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Sprinter,170.0,125.0,4.496666666666594
+Mercedes-Benz Vito Kasten 111CDI FWD kompakt TOP ZUSTAND,34999.0,280400.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,1,Vito,258.0,190.0,3.5799999999999272
+Mercedes-Benz Sprinter II Kasten 210/211/213/214/216 CDI Wohn,20780.0,279000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,Sprinter,163.0,120.0,3.3299999999999272
+Mercedes-Benz Vito Mixto extralang 116 CDI,12995.0,278201.0,1.598,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,Vito,114.0,84.0,3.5799999999999272
+Mercedes-Benz V 250 Lang - Leder - Navi - Led,13990.0,271556.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,V-Klasse,170.0,125.0,4.579999999999927
+Mercedes-Benz C 250 T d AMG-Line Night Navi LED ILS,18900.0,270605.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,258.0,190.0,4.579999999999927
+Mercedes-Benz Mercedes e220d 9G-Tronic AMG line auch Tausch,20900.0,270000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,3.9966666666665938
+Mercedes-Benz GLC -Klasse GLC 220 d 4Matic AMG-Line,31999.0,269000.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,GLC,190.0,140.0,3.1633333333332607
+Mercedes-Benz GLC 250 4Matic AMG-Line PANOROAMA|AHK|1.HAND,17790.0,266643.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,204.0,150.0,4.329999999999927
+Mercedes-Benz Sprinter 316 CDI 8-Sitze Klima AHK 1. Hand Eu6,18950.0,264000.0,2.143,Diesel,Automatik,5,4/5,Euro6,andere,1,Sprinter,163.0,120.0,3.6633333333332607
+Mercedes-Benz GLC 350 d 4MATIC AMG-Line Interieur,29988.0,261095.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,GLC,211.0,155.0,3.7466666666665938
+Mercedes-Benz E 200 9G-TRONIC +NAVI+W213+Rückfahrkamera,19900.0,255529.0,2.143,Diesel,Schaltgetriebe,8,4/5,Euro6,van,1,E-Klasse,163.0,120.0,4.41333333333326
+Mercedes-Benz Mercedes* E 200 d AVANTGARDE Automatik*Org Farbe,21480.0,253856.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,204.0,150.0,4.246666666666594
+Mercedes-Benz Mercedes B200 CDI,48671.0,251000.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,1,B-Klasse,469.0,345.0,4.079999999999927
+Mercedes-Benz Mercedes E 200 d. 9 Gang,26990.0,250000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,258.0,190.0,4.329999999999927
+Mercedes-Benz C250 CDI Kombi Leder/Navi/Pano/360*camara,14637.0,250000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,170.0,125.0,4.496666666666594
+Mercedes-Benz Sprinter Kasten 314 CDI Hochdach Lang,14490.0,246046.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Sprinter,170.0,125.0,4.579999999999927
+Mercedes-Benz Vito 114 CDI Standheiz. LiegePak. Aut. Klima AHK,21990.0,245000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,194.0,143.0,3.1633333333332607
+Mercedes-Benz E 200 d T-Modell *TAXI* Gern Finanzierung,27899.0,243200.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,194.0,143.0,3.7466666666665938
+Mercedes-Benz Mercedes C- 200 D Avantgarde schwarz Parkt...,18840.0,242873.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,OTHER,163.0,120.0,3.9966666666665938
+Mercedes-Benz C 220 d 4MATIC T Autom. HUD Kamera LED Distronic,17731.0,241000.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,136.0,100.0,4.246666666666594
+Mercedes-Benz A 160 d 7-dct Style kamera Sportsitze,25999.0,241000.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,1,A-Klasse,258.0,190.0,3.7466666666665938
+Mercedes-Benz E -Klasse Lim. E 200 d,23990.0,240222.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,E-Klasse,136.0,100.0,3.1633333333332607
+Mercedes-Benz Citan Mixto 111 CDI extralang,19999.0,240000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vaneo,150.0,110.0,3.2466666666665938
+Mercedes-Benz B 200d 7G-DCT AMG Line NAVI*KAMERA*LEDER*VOLL*,21900.0,239987.0,2.987,Diesel,Schaltgetriebe,2,4/5,Euro6,van,1,B-Klasse,190.0,140.0,4.41333333333326
+"Mercedes-Benz E 200 d T 9G-TRONIC, 7 Sitzer, Kamera, TOP gepfl",18999.0,235625.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,E-Klasse,194.0,143.0,3.1633333333332607
+Mercedes-Benz Sprinter II Pritsche koffer 516/316,13390.0,235000.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,1,Sprinter,90.0,66.0,4.746666666666594
+Mercedes-Benz Vito 116 CDI (BlueTEC) Lang Aut.,24990.0,235000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,194.0,143.0,2.9133333333332607
+Mercedes-Benz GLC -Klasse GLC 250 d 4Matic 21000 NETTO,22600.0,233000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,194.0,143.0,4.329999999999927
+Mercedes-Benz Kasten 111 CDI FWD lang Klima PDC VE*HI,22000.0,232500.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,OTHER,163.0,120.0,4.329999999999927
+Mercedes-Benz Mercedes ML 320 CDI Automatik Schiebedach,26999.0,232140.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,2,M-Klasse,258.0,190.0,4.41333333333326
+Mercedes-Benz C 220 BlueTEC / d T Avantgard LED LEDER NAVI AH,20999.0,231000.0,2.143,Diesel,Schaltgetriebe,3,2/3,Euro6,andere,1,C-Klasse,163.0,120.0,4.66333333333326
+Mercedes-Benz Sprinter II Koffer 316 CDI Klima Standhzg 1.Hand,23790.0,231000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,andere,1,Sprinter,143.0,105.0,3.4133333333332607
+Mercedes-Benz E -Klasse Lim. E 200 d Avantgarde,16480.0,230000.0,1.595,Benzin,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,156.0,115.0,4.16333333333326
+Mercedes-Benz E 220 d T 2xAMG-Line 9G-Tronic,18840.0,228290.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,E-Klasse,163.0,120.0,3.4966666666665938
+"Mercedes-Benz GLC 350 e 4M 2x AMG Line 19"" Comand Pano NightP",24990.0,226300.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,GLC,204.0,150.0,3.4133333333332607
+"Mercedes-Benz B -Klasse B 180 CDI, Tüv 04.2022,Sauber auto",14637.0,226102.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,B-Klasse,163.0,120.0,4.496666666666594
+Mercedes-Benz 211 CDI Sprinter Mobility/Rollstuhl-Autom. Klima,28450.0,226000.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,1,Sprinter,258.0,190.0,3.5799999999999272
+Mercedes-Benz V 250 (BlueTEC) d lang 7G-TRONIC AHK/Distro/8-Si,15351.0,225300.0,1.598,Diesel,Schaltgetriebe,2,4/5,Euro6c,van,1,V-Klasse,114.0,84.0,3.4133333333332607
+Mercedes-Benz Mercedes Sprinter 316,35799.0,224000.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,Sprinter,190.0,140.0,4.496666666666594
+Mercedes-Benz GLC 220 d 4Matic Navi e-Sitze Parklenkass. Allra,13490.0,224000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,GLC,170.0,125.0,4.329999999999927
+Mercedes-Benz V 250d Marco Polo*AMG*Küche*Leder*LED*Distr*,23999.0,223000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,V-Klasse,194.0,143.0,4.16333333333326
+Mercedes-Benz GLC -Klasse GLC 250 d 4Matic,41380.0,222658.0,1.95,Diesel,Automatik,5,4/5,Euro6,suv,1,GLC,194.0,143.0,1.746666666666594
+Mercedes-Benz Mercedes slk r170 320 v6 r 170 tüv neu cab...,27950.0,222552.0,1.991,Hybrid,Automatik,5,4/5,Euro6,suv,1,R-Klasse,211.0,155.0,4.66333333333326
+Mercedes-Benz C 200 d T Aut&Navi,25823.0,221000.0,2.143,Diesel,Automatik,2,4/5,Euro6,van,1,C-Klasse,114.0,84.0,4.079999999999927
+Mercedes-Benz Mercedes Benz E220d. W213,13490.0,221000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,136.0,100.0,4.246666666666594
+Mercedes-Benz C-Klasse C220 CDI Sport*Navi*Xenon*Keyless Go*,21980.0,219785.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,170.0,125.0,4.329999999999927
+Mercedes-Benz Vito 116 CDI BT RWD Klimaaut/Sitzh/Tempomat/MFL,69999.0,219640.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,Vito,340.0,250.0,4.079999999999927
+Mercedes-Benz CLA 180 Shooting Brake d AMG-Line Navi LED Keyle,40900.0,219000.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,2,CLA,235.0,173.0,4.579999999999927
+Mercedes-Benz Sprinter 316 CDI SCHWING SPUR TOTW COL NAVI PTS,49900.0,219000.0,2.143,Diesel,Automatik,4,4/5,Euro6,van,2,Sprinter,190.0,140.0,4.579999999999927
+Mercedes-Benz Vito Tourer 116 CDI lang Tempomat LED Navi,17895.0,219000.0,2.143,Diesel,Automatik,3,4/5,Euro6,van,1,Vito,163.0,120.0,2.7466666666665938
+Mercedes-Benz C 200 T d Navi LED ILS Ahk Park-Assist,14980.0,218000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,2,C-Klasse,163.0,120.0,3.6633333333332607
+Mercedes-Benz Mercedes-bez A180 d Led/NAVI/Kamera,13950.0,218000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,A-Klasse,136.0,100.0,4.66333333333326
+Mercedes-Benz GLC 220 d 4Matic/AHK/Automatik/Scheckheft/,12498.0,217000.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,GLC,136.0,100.0,4.579999999999927
+Mercedes-Benz C 220 C 220 d T AVANTGARDE/NAVI-LEDER-eSD,20950.0,217000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,194.0,143.0,3.5799999999999272
+Mercedes-Benz Vito Mixto 116 CDI extralang/Klima/LED/Navi*Temp,20489.0,216994.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,177.0,130.0,3.9133333333332607
+Mercedes-Benz Vito 116 CDI Extralang LED/Navi/Rückfahrkamera,20900.0,216682.0,2.143,Diesel,Schaltgetriebe,8,4/5,Euro6,van,1,Vito,163.0,120.0,4.329999999999927
+"Mercedes-Benz GLC 250 d 4Matic Coupe,Xenon,Leder,Navi,Kamera.",20900.0,216682.0,2.143,Diesel,Schaltgetriebe,8,4/5,Euro6,van,1,GLC,163.0,120.0,4.329999999999927
+"Mercedes-Benz Sprinter 316 9-Sitzer LED,KLIMA,AUTOMATIK",23990.0,216651.0,2.143,Diesel,Automatik,4,2/3,Euro6,sport,1,Sprinter,170.0,125.0,4.496666666666594
+Mercedes-Benz C 220d T Avantgarde 9G-tronic|LED-Sch.|Navi|PDC+,14999.0,214000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,170.0,125.0,3.9133333333332607
+Mercedes-Benz C 250 d T 9G-TRONIC AMG Line Burm/pano/Sthz,18590.0,213700.0,2.143,Diesel,Automatik,2,4/5,Euro6,van,1,C-Klasse,163.0,120.0,4.246666666666594
+Mercedes-Benz S 400 d 4M L *AMG*3D*Distronic*MagicSky*Exklusiv,12980.0,212630.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,S-Klasse,170.0,125.0,4.16333333333326
+Mercedes-Benz E 43 AMG 4Matic T-Model /Leder/el. Schiebe-Dach/,17990.0,212194.0,1.461,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,109.0,80.0,3.5799999999999272
+Mercedes-Benz Vito Kasten 114 CDI RWD kompakt,20480.0,212000.0,2.143,Diesel,Schaltgetriebe,2,4/5,Euro6,van,1,Vito,163.0,120.0,3.4133333333332607
+"Mercedes-Benz Sprinter 314 CDI Mixto, Klima,5-Si,Standhzg,PDC",23800.0,212000.0,2.143,Diesel,Schaltgetriebe,8,4/5,Euro6,van,2,Sprinter,163.0,120.0,3.7466666666665938
+Mercedes-Benz V 250d lang Rückkamera 7-Sitze StartStop TOP !!,15980.0,212000.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,V-Klasse,136.0,100.0,4.496666666666594
+Mercedes-Benz Vito Mixto 119 CDI/BT lang/Klima/,14590.0,210957.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,136.0,100.0,4.41333333333326
+Mercedes-Benz E -Klasse T E 220 d NAVI,25500.0,209000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,170.0,125.0,3.9133333333332607
+Mercedes-Benz 250 CDI/BT/d AVANTG./EDITION 4/Voll./Carbon/AMG,17900.0,209000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,OTHER,170.0,125.0,4.746666666666594
+Mercedes-Benz A 200 d Urban Kamera Ahk Tempomat Shz,23990.0,209000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,A-Klasse,163.0,120.0,3.2466666666665938
+"Mercedes-Benz C 250 C 250 d 4MATIC AMG Line Autom,Panorama",17890.0,208423.0,2.143,Diesel,Automatik,3,4/5,Euro6,andere,1,C-Klasse,163.0,120.0,3.5799999999999272
+Mercedes-Benz Mercedes E220 Diesel,20900.0,208000.0,1.991,Benzin,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,211.0,155.0,4.329999999999927
+Mercedes-Benz GLC 220 d 4Matic *LED*LEDER*STANDHZG*KAMERA*AHK,14990.0,208000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,170.0,125.0,4.579999999999927
+"Mercedes-Benz E -Klasse E 350 T d,4Matic,AMG-Paket,LED,VOLL,TO",24950.0,205527.0,2.143,Diesel,Automatik,2,4/5,Euro6,van,1,E-Klasse,163.0,120.0,3.3299999999999272
+Mercedes-Benz E 220 d*AMG*LED*KAMERA*SPUR*HUD,34990.0,205335.0,2.996,Benzin,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,401.0,295.0,4.329999999999927
+Mercedes-Benz C -Klasse T-Modell C 200.Auto/Navi/LED/ACC,17255.0,205111.0,2.143,Diesel,Schaltgetriebe,5,2/3,Euro6,van,1,C-Klasse,136.0,100.0,3.3299999999999272
+Mercedes-Benz E 200 AMG Panorama Burmester Memory,21956.0,205000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,E-Klasse,143.0,105.0,4.496666666666594
+Mercedes-Benz C 220 d T Avantgarde LED Navi PDC 9G Leder,16999.0,205000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,C-Klasse,170.0,125.0,3.1633333333332607
+Mercedes-Benz C -Klasse BlueTEC / d T AMG LINE LEDER LED NAVI,21900.0,204000.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,C-Klasse,190.0,140.0,3.7466666666665938
+Mercedes-Benz C -Klasse T-Modell C 180 BlueTEC / d T,39990.0,203859.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,258.0,190.0,4.496666666666594
+Mercedes-Benz Sprinter III Kasten 314 CDI Maxi/Klima/MBUX/Kame,35990.0,203416.0,2.925,Diesel,Automatik,5,4/5,Euro6,kombi,1,Sprinter,340.0,250.0,2.7466666666665938
+Mercedes-Benz Vito 116 CDI (Blue) Tourer 4MATIC Extralang Aut,14999.0,203200.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,136.0,100.0,3.7466666666665938
+Mercedes-Benz Vito 116 CDI Extralang Aut. TÜV Neu,19900.0,202999.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,2,Vito,194.0,143.0,4.66333333333326
+Mercedes-Benz GLA 180 CDI Facelift/Navi/12500netto,46990.0,202500.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,GLA,190.0,140.0,4.41333333333326
+Mercedes-Benz E -Klasse Lim. E 220 d,12990.0,201968.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,limousine,1,E-Klasse,136.0,100.0,4.579999999999927
+Mercedes-Benz CLS 500 AMG Shooting Brake 4MATIC- Sehr gepflegt,37490.0,201152.0,1.991,Hybrid,Automatik,5,4/5,Euro6,sport,1,CL,211.0,155.0,3.8299999999999272
+Mercedes-Benz Mercedes Benz E220CDI,15980.0,200300.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,limousine,1,E-Klasse,116.0,85.0,4.246666666666594
+Mercedes-Benz GLE 350 d4Matic*AIRMATIC*COMAND*LED*STAN*AHK*KAM,27700.0,200000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,GLE,170.0,125.0,3.6633333333332607
+Mercedes-Benz GLC 220 d 4Matic AMG Line-Pano-LED-Comand-Kamera,27750.0,200000.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,258.0,190.0,3.6633333333332607
+Mercedes-Benz E 220 d AVANTGARDE 9G-TRONIC,24950.0,200000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,194.0,143.0,4.246666666666594
+"Mercedes-Benz GLC Coupe 350d 4M AMG/PANO/TRITTBR./ILS/20""/KAM",21900.0,200000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,GLC,150.0,110.0,2.9133333333332607
+"Mercedes-Benz CLS 350 d 4Matic,AMG,Distronic,LED,360°K,1Hand",28790.0,200000.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,CL,258.0,190.0,3.5799999999999272
+"Mercedes-Benz GLC 43 AMG 4M 9G 1HD/Panorama/Distronic/21""/TOP",23998.0,200000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLC,194.0,143.0,3.5799999999999272
+Mercedes-Benz Sprinter 316 CDI AHK NAVI Cam.1.Hand WIE NEU,18900.0,199890.0,1.597,Diesel,Automatik,5,4/5,Euro6,kombi,1,Sprinter,160.0,118.0,2.1633333333332607
+Mercedes-Benz E 63 S AMG 4Matic+ VOLL KERAMIK PANO BURMESTER,16895.0,199874.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,E-Klasse,170.0,125.0,4.66333333333326
+Mercedes-Benz C 220 d T COMAND Head Up AHK LED R-Kamera Apple,26750.0,199600.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,204.0,150.0,4.746666666666594
+Mercedes-Benz Vito Tourer 111 CDI Edition kompakt Klima AHK 1H,18990.0,199499.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,170.0,125.0,4.579999999999927
+Mercedes-Benz Mercedes Benz E350d *Umbau E63AMG *Foliert,12490.0,199420.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,E-Klasse,116.0,85.0,4.66333333333326
+Mercedes-Benz C 200 d T Avantgarde /LEDiLS/Navigationssystem,22610.0,199000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,C-Klasse,143.0,105.0,2.8299999999999272
+Mercedes-Benz Sprinter 316CDI MOPF MIXTO 3.5t MAXI KLIMA 1HAND,14875.0,199000.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,suv,1,Sprinter,109.0,80.0,4.246666666666594
+Mercedes-Benz SPRINTER 316CDI 4x4*UNTERSETZUNG*KAMERA*STHZ*EU6,28950.0,198600.0,4.663,Benzin,Automatik,5,4/5,Euro6,kombi,2,Sprinter,408.0,300.0,4.66333333333326
+Mercedes-Benz S 500 Coupe 4M AMG NACHTSICHT*360°KAM*BURMESTER,19500.0,198290.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,S-Klasse,170.0,125.0,4.246666666666594
+Mercedes-Benz B 220 CDI AMG LINE LEDER NAVI ACC AHK XENON,34990.0,198026.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,B-Klasse,258.0,190.0,4.246666666666594
+Mercedes-Benz E 220 d Avantgarde*Comand*LED*Business,31890.0,198000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,170.0,125.0,3.6633333333332607
+Mercedes-Benz C 220 d 4M Navi LED ILS StHzg Keyless-Go,13950.0,198000.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,C-Klasse,136.0,100.0,3.4133333333332607
+Mercedes-Benz CLA 220 Shooting Brake CDI#AMG-Line#Key-Go#1Han,25950.0,198000.0,2.143,Diesel,Automatik,2,4/5,Euro6,van,1,CLA,163.0,120.0,3.3299999999999272
+Mercedes-Benz E 350/Avantgarde /Pano/ Leder/ Kamera/ Ambiente/,29490.0,197600.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,258.0,190.0,4.329999999999927
+Mercedes-Benz Vito 114 CDI Pro extralang*Kamera*8-Sitz* Kamera,37900.0,197500.0,2.996,Benzin,Automatik,5,4/5,Euro6c,suv,1,Vito,367.0,270.0,3.6633333333332607
+Mercedes-Benz CLA 200 Shooting Brake EU6 * AMG Line*,19950.0,197500.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,andere,1,CLA,163.0,120.0,3.8299999999999272
+Mercedes-Benz GLA 220 d DCT AMG Line Exklusiv Night Paket,26800.0,197300.0,2.143,Diesel,Automatik,5,4/5,Euro6,andere,1,GLA,204.0,150.0,4.16333333333326
+Mercedes-Benz CLA 200d CDI Shooting Brake*NightPaket*EURO6*,64990.0,197000.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,1,CLA,612.0,450.0,3.4133333333332607
+Mercedes-Benz E 220 d*LED*DAB+*COMAND*Rückfahrkam.*1. Hand,19999.0,196938.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,3.1633333333332607
+Mercedes-Benz Mercedes Vito Tourer 9 sitze,15990.0,196770.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,136.0,100.0,3.0799999999999272
+Mercedes-Benz C 220 T BTEC/d Avantgarde 9G-tr./LEDER/NAVI/LED,16300.0,195379.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,C-Klasse,136.0,100.0,3.5799999999999272
+Mercedes-Benz E -Klasse 220 d T Assistent Paket 9G Garantie,25320.0,195000.0,2.143,Diesel,Schaltgetriebe,4,4/5,Euro6,van,1,E-Klasse,163.0,120.0,3.4966666666665938
+Mercedes-Benz C 200 (BlueTEC) d T AMG Line,16100.0,195000.0,1.595,Benzin,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,156.0,115.0,4.746666666666594
+Mercedes-Benz V 250d Extra Lang Avant. Leder Kam. 8Sitze,39990.0,195000.0,2.143,Diesel,Schaltgetriebe,2,4/5,Euro6,van,1,V-Klasse,163.0,120.0,4.16333333333326
+Mercedes-Benz EQA 250 *AMG*Pano*360°*Keyless*LED*Totwinkel*,19780.0,194427.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,OTHER,170.0,125.0,4.329999999999927
+Mercedes-Benz Mercedes Benz 4Matic 220D AMG Line,19990.0,194200.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,OTHER,177.0,130.0,4.66333333333326
+Mercedes-Benz E 300 DE 4M T AVANTGARDE+PANO-SHD+NAV+AHK+KAMERA,19999.0,194000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,170.0,125.0,3.3299999999999272
+Mercedes-Benz SLC180 Roadster Navi Sitzh Leder PDC Kamera PANO,19999.0,193355.0,2.143,Diesel,Schaltgetriebe,8,4/5,Euro6,kombi,1,C-Klasse,136.0,100.0,2.9966666666665938
+Mercedes-Benz Mercedes CLA 45 AMG,20900.0,193213.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,CLA,177.0,130.0,4.16333333333326
+Mercedes-Benz A 200 AMG Line Navi-Premium Sitzheizung Kamera,17980.0,193060.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,136.0,100.0,4.579999999999927
+Mercedes-Benz GLE 350 d 4M Panorama Multibeam AHK Distornic,19495.0,192871.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,GLE,194.0,143.0,4.496666666666594
+Mercedes-Benz C 300 e Avantgarde Comand Multibeam Distronic,17690.0,192000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,170.0,125.0,4.329999999999927
+Mercedes-Benz B 200 Progressive Night Navi LED Rückfahrkamera,17480.0,192000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,B-Klasse,170.0,125.0,3.8299999999999272
+Mercedes-Benz A 220 AMG Line Navi-Premium LED Kamera Distronic,38500.0,192000.0,2.987,Diesel,Automatik,5,4/5,Euro6,sport,1,A-Klasse,258.0,190.0,4.16333333333326
+Mercedes-Benz A 180 AMG Line Navi LED Parkassistent Sitzheizg.,27500.0,192000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,A-Klasse,170.0,125.0,4.66333333333326
+Mercedes-Benz A 180 Progressive Navi Multibeam Parkassistent,17890.0,191992.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,170.0,125.0,3.5799999999999272
+Mercedes-Benz Mercedes Cla 180 AMG Nightpaket,9520.0,191100.0,1.461,Diesel,Schaltgetriebe,2,2/3,Euro6,van,1,CLA,90.0,66.0,2.1633333333332607
+Mercedes-Benz C 220 d T 4MATIC 9G-tronic Business-Paket PLUS,22499.0,191000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,C-Klasse,163.0,120.0,3.4133333333332607
+Mercedes-Benz Vito 116 CDI Kasten lang Klima Kamera Holz 270°,20900.0,190400.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vito,194.0,143.0,3.0799999999999272
+"Mercedes-Benz Sprinter 316 CDI HRK L3H2 DURCHGANG,STANDHEIZUNG",35900.0,190000.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,2,Sprinter,190.0,140.0,3.1633333333332607
+"Mercedes-Benz E 220 d 4M EXCLUSIV NIGHT WIDESCREEN,KEYLESS,AHK",28990.0,49506.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,136.0,100.0,2.7466666666665938
+Mercedes-Benz Mercedes Benz Limousine A200 AMG Line,28990.0,49506.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,136.0,100.0,2.7466666666665938
+Mercedes-Benz A180 AMG NIGHT PAKET AMBIENTE BELEUCHTUNG ...,28990.0,49506.0,2.143,Diesel,Automatik,5,4/5,Euro6,andere,1,A-Klasse,136.0,100.0,2.7466666666665938
+"Mercedes-Benz C 180 Cabrio AMG SPORT DESIGNO AIRMATIC,HEADUP",25750.0,177421.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,194.0,143.0,4.079999999999927
+"Mercedes-Benz A 250 AMG 18 ZOLL STANDHEIZUNG,KEYLESS,MULTIBEAM",63990.0,10468.0,1.95,Diesel,Automatik,7,4/5,Euro6,van,1,A-Klasse,163.0,120.0,0.9966666666665939
+Mercedes-Benz E 350 d AMG-LiNE*PANO*NiGHT*KAMERA*WiDE*MuLTIBEA,61790.0,3500.0,1.95,Diesel,Automatik,5,4/5,Euro6d,andere,1,E-Klasse,194.0,143.0,-0.00333333333340613
+Mercedes-Benz A 35 AMG 4M Limousine Night Panorama Aero-Paket,54890.0,5643.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,kombi,2,A-Klasse,194.0,143.0,0.9966666666665939
+"Mercedes-Benz V 220 d Edition lang AMG 2xKlima MBUX AHK2,5t 9G",49900.0,8100.0,1.332,Benzin,Automatik,5,4/5,Euro6d,suv,1,V-Klasse,163.0,120.0,0.07999999999992724
+Mercedes-Benz GLC 250 4Matic 9G-TRONIC,33900.0,94678.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,GLC,170.0,125.0,4.16333333333326
+Mercedes-Benz C 180 Coupe 9G-TRONIC AMG Line,29590.0,9644.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,C-Klasse,163.0,120.0,2.0799999999999272
+Mercedes-Benz V 250 (BlueTEC) d lang 7G-TRONIC Avantgarde ...,91885.0,4377.0,2.999,Benzin,Automatik,5,4/5,Euro6,suv,1,V-Klasse,367.0,270.0,2.3299999999999272
+Mercedes-Benz E 200 9G-TRONIC,80885.0,23284.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,E-Klasse,272.0,200.0,1.4133333333332605
+Mercedes-Benz GLA 200 AMG-Line Night Fall Navi 19Z LED,53985.0,11528.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,1,GLA,197.0,145.0,0.32999999999992724
+Mercedes-Benz Mercedes Benz CLA250e Coupé AMG Line Editi...,40985.0,17663.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,211.0,155.0,0.8299999999999272
+Mercedes-Benz Mercedes E200 Designo Diamantweiß Benziner,30885.0,7382.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,E-Klasse,156.0,115.0,1.9133333333332607
+Mercedes-Benz Mercedes-Benz C 220 T Modell | AMG-Line | ...,31685.0,7736.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,C-Klasse,163.0,120.0,1.0799999999999272
+Mercedes-Benz X 350d 4M*THE ROCK EDITION XXL 1 of 2 *WIDE BODY,34485.0,13858.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,OTHER,190.0,140.0,1.9966666666665938
+Mercedes-Benz C 43*AMG*Night*Perf-Abgas*360*HighEnd*Keyle*Pano,29985.0,4887.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,C-Klasse,136.0,100.0,1.0799999999999272
+Mercedes-Benz CLA 180 Shooting Brake Automatik MB Garantie,28690.0,4481.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6d,limousine,1,CLA,136.0,100.0,1.0799999999999272
+Mercedes-Benz E Klasse 200,32990.0,57373.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,194.0,143.0,2.3299999999999272
+Mercedes-Benz Mercedes Benz C 400 Coupé 4M AMG Designo g...,32990.0,57373.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,194.0,143.0,2.3299999999999272
+Mercedes-Benz B 250 e AMG Line+PSD+LED+Night P+Rückfahrkamera,33980.0,11406.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,1,B-Klasse,150.0,110.0,1.6633333333332605
+Mercedes-Benz Vito Kasten 109/110/111/114 CDI WORKER FWD kompa,23300.0,53052.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,Vito,163.0,120.0,2.3299999999999272
+Mercedes-Benz GLC -Klasse Coupe GLC 250 d 4Matic *AMG Line*,23720.0,106000.0,2.143,Diesel,Schaltgetriebe,2,2/3,Euro6,van,1,GLC,163.0,120.0,4.579999999999927
+Mercedes-Benz Mercedes a45 amg 430ps,52350.0,43000.0,2.987,Diesel,Automatik,5,4/5,Euro6d,suv,1,OTHER,258.0,190.0,2.6633333333332607
+Mercedes-Benz E 200 4Matic 9G-TRONIC,40780.0,58743.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,194.0,143.0,3.6633333333332607
+Mercedes-Benz EQA 300 4M AMG+NIGHT+LED+KAMERA+BUSINESS+DISTRON,49880.0,28900.0,1.497,Benzin,Automatik,4,2/3,Euro6d,cabrio,1,OTHER,156.0,115.0,1.6633333333332605
+Mercedes-Benz GLE 350 d Coupe 4Matic AMG/Airmatic/Sitzbel/AHK,38880.0,23920.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLE,224.0,165.0,0.5799999999999272
+Mercedes-Benz CLA 200 Shooting Brake Urban/Kamera/18z/LED/Navi,52890.0,12.0,1.95,Diesel,Automatik,7,4/5,Euro6d,van,1,CLA,163.0,120.0,0.8299999999999272
+Mercedes-Benz CLC 200 mit Garantie!!!!!,36850.0,128513.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,1,CLC,258.0,190.0,4.579999999999927
+Mercedes-Benz Mercedes Benz C 200 9G-TRONIC limousine,98988.0,19820.0,1.95,Hybrid,Automatik,5,4/5,Euro6d,sport,1,C-Klasse,320.0,235.0,0.8299999999999272
+Mercedes-Benz GLC 250 4M AMG LINE NIGHT SHD STAND KAMERA AHK,58690.0,9000.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,10,GLC,306.0,225.0,0.07999999999992724
+"Mercedes-Benz MERCEDES BENZ V-Klasse Kombilimousine, 360...",57540.0,5000.0,1.95,Diesel,Automatik,7,4/5,Euro6d,van,1,V-Klasse,163.0,120.0,0.07999999999992724
+Mercedes-Benz C 180 Cabrio/AMG/ KEYLESSGO/NAVI//KAMERA/LED/SHZ,44980.0,7237.0,1.991,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,320.0,235.0,0.9966666666665939
+Mercedes-Benz V -Klasse V 250 CDI/AVANTGARD./EDITION Standheiz,54900.0,34200.0,2.996,Benzin,Automatik,5,4/5,Euro6d,limousine,1,V-Klasse,390.0,287.0,2.6633333333332607
+Mercedes-Benz E 400 T 4matic AHK Standhzg. Widescreen,46880.0,8000.0,1.332,Hybrid,Automatik,5,4/5,Euro6d,kombi,1,E-Klasse,160.0,118.0,0.07999999999992724
+Mercedes-Benz Mercedes C400 Coupe AMG Line echter Hinguc...,46880.0,8000.0,1.332,Hybrid,Automatik,5,4/5,Euro6d,van,1,OTHER,160.0,118.0,0.07999999999992724
+Mercedes-Benz GLC 200 4M Exclusive Int. AHK Navi Spur+Totw LED,29785.0,77995.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,CL,194.0,143.0,3.4133333333332607
+Mercedes-Benz E 220 d C AMG LINE BURMESTER MEM PANO WIDESCREEN,38900.0,12770.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,156.0,115.0,0.7466666666665939
+"Mercedes-Benz V250d lang AMG, Pano,Burmester,360,Junge Sterne",45950.0,10190.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,1,OTHER,211.0,155.0,0.9966666666665939
+Mercedes-Benz Mercedes Cla Garantie Standheizung Massage...,58900.0,14253.0,1.95,Diesel,Automatik,5,4/5,Euro6d,suv,2,CLA,194.0,143.0,0.5799999999999272
+Mercedes-Benz GLC 220 d 4M AMG LINE*LED*PANO*VIRTUAL*KAMERA*20,31400.0,5333.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,1,GLC,136.0,100.0,1.1633333333332607
+Mercedes-Benz Mercedes E43,98500.0,58000.0,5.461,Benzin,Automatik,7,4/5,Euro6,suv,2,OTHER,585.0,430.0,4.496666666666594
+Mercedes-Benz E 350 d T 9G-TRONIC AMG Line,62880.0,10342.0,1.991,Hybrid,Automatik,5,4/5,Euro6,suv,1,E-Klasse,211.0,155.0,0.9966666666665939
+Mercedes-Benz E 300 AMG Night Pano Leder Fahrass WEBASTO Burm,49499.0,101742.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,2,E-Klasse,190.0,140.0,3.5799999999999272
+Mercedes-Benz GLC 250 d 4M Fahrassist.*360°*HUD*LED*AHK*Standh,49499.0,101742.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,2,GLC,190.0,140.0,3.5799999999999272
+Mercedes-Benz E 400 d 4M T All-Terrain Avantgarde*AirBody*Pano,25880.0,87566.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,E-Klasse,170.0,125.0,3.6633333333332607
+Mercedes-Benz GLE 350 d 4M *AMG*Comand*Fahrassist.*Pano.-Dach*,28880.0,74706.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLE,204.0,150.0,3.3299999999999272
+Mercedes-Benz A 180 AMG PEAK Edition Navi LED Sitzheizung PDC,40990.0,27872.0,1.95,Diesel,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,150.0,110.0,1.6633333333332605
+Mercedes-Benz B 180 7G-DCT*NAVI*PTS AKT*SHZG*BTH*MBUX*LANE*TEM,75990.0,33285.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,B-Klasse,272.0,200.0,0.9133333333332606
+Mercedes-Benz AMG C 63 S AMG MATT 19+20 Zoll H&R SAGA Pano Bur,56990.0,19900.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,C-Klasse,197.0,145.0,0.07999999999992724
+Mercedes-Benz AMG GT 53 4M+ SD+DISTRON+HUP+MBUX+MULTIBEAM+Kam,59900.0,19900.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,GT,194.0,143.0,0.07999999999992724
+Mercedes-Benz Mercedes Benz V220d Edition lang Garantie ...,25600.0,164699.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,OTHER,163.0,120.0,2.9133333333332607
+Mercedes-Benz V 250 d lang Sportpak Distr+ ILS LED AHK Kamera,44900.0,7000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,sport,1,V-Klasse,190.0,140.0,0.9133333333332606
+Mercedes-Benz C 200 T AMG Line*Panoramadach*mit Garantie-Paket,51900.0,65000.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,401.0,295.0,3.3299999999999272
+Mercedes-Benz GLE 300 d 4Matic AHK Sitzkli Assistentzp,47990.0,97200.0,1.95,Diesel,Automatik,5,4/5,Euro6,suv,1,GLE,194.0,143.0,1.9966666666665938
+Mercedes-Benz GLE Coupe 350 d 4Matic AMG Paket Line,39840.0,55184.0,1.95,Diesel,Automatik,5,4/5,Euro6d,andere,1,GLE,194.0,143.0,2.8299999999999272
+Mercedes-Benz S 63 AMG 4M+ Cp P. 360 HUD Sthzg,38840.0,45768.0,2.143,Diesel,Automatik,4,2/3,Euro6,cabrio,1,S-Klasse,170.0,125.0,4.246666666666594
+Mercedes-Benz S 560 AMG-Plus-Paket Burmester NAVI ACC Head-up,169950.0,700.0,2.925,Diesel,Automatik,5,4/5,Euro6d,suv,1,S-Klasse,330.0,243.0,0.4966666666665939
+Mercedes-Benz S 560 Cabrio AMG LINE SWAROVSKI KRISTALL LED,54999.0,4808.0,1.598,Diesel,Automatik,5,4/5,Euro6d,kombi,1,S-Klasse,160.0,118.0,0.4966666666665939
+Mercedes-Benz Mercedes Benz C63 AMG,66500.0,11355.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,OTHER,258.0,190.0,0.9966666666665939
+Mercedes-Benz Mercedes V 250 d Avangard Edition,42849.0,60105.0,2.143,Diesel,Automatik,5,4/5,Euro6c,suv,1,V-Klasse,204.0,150.0,3.0799999999999272
+Mercedes-Benz Mercedes-Benz,54849.0,46419.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,1,OTHER,340.0,250.0,1.5799999999999272
+Mercedes-Benz CLA 250 Shooting Brake 4Matic AMG Line Pano Navi,49849.0,72820.0,2.996,Benzin,Automatik,5,4/5,Euro6d,suv,1,CLA,367.0,270.0,2.7466666666665938
+Mercedes-Benz S 63 AMG COUPE 4MATIC+*360CAM*BURMESTER*PANO*VOL,129900.0,50696.0,3.982,Benzin,Automatik,4,2/3,Euro6,sport,2,S-Klasse,612.0,450.0,3.4133333333332607
+Mercedes-Benz C 63 AMG S*KERAMIK*SCHMIDT*SCHALE*EINZELSTÜCK*,79990.0,39000.0,3.982,Benzin,Automatik,4,2/3,Euro6,cabrio,2,C-Klasse,510.0,375.0,4.079999999999927
+Mercedes-Benz AMG GT 63 S*EDITION 1*KERAMIK*CARBON*AERODYNAMIK,164950.0,34000.0,3.982,Benzin,Automatik,4,4/5,Euro6,sport,2,GT,639.0,470.0,2.7466666666665938
+"Mercedes-Benz Cabriolet S 63 AMG 4Matic*Night*20""*Voll*",109999.0,52850.0,5.461,Benzin,Automatik,4,2/3,Euro6,cabrio,2,S-Klasse,585.0,430.0,4.66333333333326
+"Mercedes-Benz E 220 Automatik, LED, Navi, RFK, AHK schwenkbar",28990.0,57397.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,E-Klasse,194.0,143.0,4.41333333333326
+Mercedes-Benz C 200d G-Tronic Plus*Avantgarde*LED*AHK,28990.0,57397.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,C-Klasse,194.0,143.0,4.41333333333326
+Mercedes-Benz Mercedes Benz G63 AMG,69500.0,80000.0,5.461,Benzin,Automatik,5,4/5,Euro6,suv,2,OTHER,585.0,430.0,4.41333333333326
+Mercedes-Benz GLE 400 Coupe 4Matic//AMG PAKET//1 JAHR GARANTIE,24200.0,97000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,GLE,150.0,110.0,2.9966666666665938
+Mercedes-Benz GLC 250 4Matic 9G-TRONIC AMG Line,149000.0,67000.0,3.982,Benzin,Automatik,4,2/3,Euro6,sport,1,GLC,612.0,450.0,1.5799999999999272
+"Mercedes-Benz Vito 114 CDI KASTEN EXTRALANG NAVI,KAMERA,AHK",39000.0,44000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,Vito,211.0,155.0,3.4966666666665938
+"Mercedes-Benz V 250 CDI 7 SITZE SPORPAKET COMAND,360 GRAD,AHK",149000.0,67000.0,3.982,Benzin,Automatik,4,2/3,Euro6,sport,1,V-Klasse,612.0,450.0,1.5799999999999272
+Mercedes-Benz A 180 AMG Line (Peak),39000.0,44000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,A-Klasse,211.0,155.0,3.4966666666665938
+"Mercedes-Benz A 45 AMG 4M NIGHT KEYLESS,MEMORY,HARMAN/K,DISTRO",20000.0,59890.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,A-Klasse,122.0,90.0,4.41333333333326
+Mercedes-Benz C -Klasse Lim. C 200 d AMG Ausstatung,49950.0,23700.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,C-Klasse,367.0,270.0,3.5799999999999272
+Mercedes-Benz GLC 250 4M 9G-Tr. AMG Line *Distronic *LED *1.HD,49950.0,23700.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLC,367.0,270.0,3.5799999999999272
+"Mercedes-Benz V 250 AVED/L *Burmester*Distronic*AHK2,5t*Tisch*",42800.0,58200.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,V-Klasse,211.0,155.0,3.4966666666665938
+"Mercedes-Benz A -Klasse A 250 Sport,AMG-Line,Panorama,Navi,1HD",49950.0,23700.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,A-Klasse,367.0,270.0,3.5799999999999272
+Mercedes-Benz E220D T AVANTGARDE*MBEAM*WIDE*PANO*2018*MEMORY,42800.0,58200.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,E-Klasse,211.0,155.0,3.4966666666665938
+Mercedes-Benz CLS 53 AMG 4M+1.Hd*Night*Dist*Standheiz*Garantie,64900.0,5585.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,1,CL,239.0,176.0,0.9133333333332606
+"Mercedes-Benz C 220 d T, AVANTGARDE, Automatik, AHK, RFK, LED",25890.0,50000.0,1.991,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,C-Klasse,218.0,160.0,3.7466666666665938
+Mercedes-Benz B 180d 7G Style LED Kamera Totw. Leder Navi,41900.0,44800.0,1.991,Benzin,Automatik,2,2/3,Euro6,cabrio,1,B-Klasse,245.0,180.0,4.329999999999927
+"Mercedes-Benz E 43 AMG 4Matic Navi,GlasSD, erst 20TKM VOLL TOP",43900.0,38666.0,1.991,Benzin,Automatik,4,2/3,Euro6d,cabrio,2,E-Klasse,258.0,190.0,2.7466666666665938
+Mercedes-Benz Vito 114 CDI Extralang VA Werkst.Klima Kamera,43990.0,18000.0,1.95,Diesel,Automatik,4,2/3,Euro6,sport,1,Vito,194.0,143.0,4.16333333333326
+Mercedes-Benz Vito 114 CDI (BlueTEC) Tourer Kompakt PRO NAVI,47670.0,38700.0,1.991,Benzin,Automatik,5,4/5,Euro6,sport,2,Vito,245.0,180.0,3.8299999999999272
+Mercedes-Benz A 200 7G-DCT AMG Line Distr Kamera Night,35900.0,99250.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,2,A-Klasse,163.0,120.0,3.9966666666665938
+Mercedes-Benz C 180 T Avantgarde / Junge Sterne Garantie,19800.0,34000.0,1.461,Diesel,Automatik,5,4/5,Euro6,van,2,C-Klasse,109.0,80.0,3.4133333333332607
+Mercedes-Benz GLE 350d 4Matic AMG 9G/Comand/LED/S.-Dach/360°,49850.0,20168.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLE,401.0,295.0,3.9966666666665938
+Mercedes-Benz E 220 d Avantgarde+MBUX High End+Pre Safe+Augmen,35220.0,11650.0,1.332,Benzin,Automatik,5,4/5,Euro6d,kombi,2,E-Klasse,136.0,100.0,1.0799999999999272
+"Mercedes-Benz CLC 250 GLC 250 4Matic (Finanzierung ab 0,00%",24600.0,27000.0,1.595,Benzin,Automatik,5,4/5,Euro6,kombi,1,CLC,122.0,90.0,4.16333333333326
+Mercedes-Benz B 250 e Progressive NAVI+LED+EASYPACK+DAB+TEMPOM,26950.0,116500.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,B-Klasse,136.0,100.0,4.329999999999927
+Mercedes-Benz Mercedes Benz C220 d Avantgarde 57000km!!!!,45490.0,121414.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,3,C-Klasse,510.0,375.0,4.16333333333326
+Mercedes-Benz A 200 AMG WIDESCREEN PANO AMBIENTE NAVI,16800.0,107000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,limousine,2,A-Klasse,136.0,100.0,4.329999999999927
+Mercedes-Benz Mercedes-Benz GLC 300 Coupe 4Matic 9G-TRON...,29900.0,19500.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,GLC,150.0,110.0,3.0799999999999272
+Mercedes-Benz Mercedes-Benz C 250 d T 9G-TRONIC Exclusive,29699.0,48554.0,1.332,Benzin,Automatik,5,4/5,Euro6,limousine,2,C-Klasse,163.0,120.0,3.4133333333332607
+Mercedes-Benz GLC 250 Coupe 4Matic 9G-TRONIC AMG Line,27500.0,56143.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,2,GLC,224.0,165.0,3.4133333333332607
+Mercedes-Benz Mercedes c220d,21500.0,45500.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,C-Klasse,122.0,90.0,3.6633333333332607
+Mercedes-Benz C220d T BT 9G- Automatik COMAND LED-HP,41850.0,24200.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,C-Klasse,211.0,155.0,3.8299999999999272
+Mercedes-Benz GLA 180 Style (Park Navi Shz SK-Pak. CD Tempomat,41850.0,24200.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,GLA,211.0,155.0,3.8299999999999272
+Mercedes-Benz E 220 T d AMG Line (Comand Distronic Night AHK,39800.0,23350.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,2,E-Klasse,190.0,140.0,2.0799999999999272
+"Mercedes-Benz GLC 250d AMG BURMESTER 360° DISTRONIC COMAND 20""",29500.0,47500.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLC,184.0,135.0,4.329999999999927
+Mercedes-Benz Mercedes-Benz A 220 4Matic /AMG/Garantie/7G/Peak,11800.0,339000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,150.0,110.0,3.9966666666665938
+Mercedes-Benz Mercedes Benz c180,87900.0,26700.0,3.982,Benzin,Automatik,4,2/3,Euro6,cabrio,2,C-Klasse,510.0,375.0,2.4966666666665938
+Mercedes-Benz Vito 116 CDI Lang,87900.0,26700.0,3.982,Benzin,Automatik,4,2/3,Euro6,cabrio,2,Vito,510.0,375.0,2.4966666666665938
+Mercedes-Benz Gepflegter Mercedes Vito Tourer Baujahr 2017,24988.0,39981.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,2,Vito,184.0,135.0,3.7466666666665938
+Mercedes-Benz C 180 AMG Line Navi,36950.0,52125.0,1.95,Diesel,Automatik,5,4/5,Euro6c,limousine,2,C-Klasse,194.0,143.0,2.9966666666665938
+Mercedes-Benz B 180 CDI d 7G-DCT NAVI Aut. PTS,24777.0,60600.0,2.143,Diesel,Schaltgetriebe,9,4/5,Euro6,van,2,B-Klasse,163.0,120.0,4.746666666666594
+Mercedes-Benz C 43 AMG T Modell,19990.0,58000.0,1.595,Benzin,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,122.0,90.0,4.16333333333326
+Mercedes-Benz C 180 Coupé AMG+9G+Night+Kamera+Totwinkel+LED+,40390.0,104000.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,C-Klasse,401.0,295.0,4.41333333333326
+Mercedes-Benz CLA 180 Shooting Brake,56999.0,34216.0,2.925,Diesel,Automatik,5,2/3,Euro6,sport,2,CLA,286.0,210.0,3.2466666666665938
+Mercedes-Benz GLC 220 d 4m AMG + Pano + Standheizung + Kamera!,24990.0,131973.0,1.595,Benzin,Automatik,4,2/3,Euro6,sport,1,GLC,156.0,115.0,4.246666666666594
+Mercedes-Benz E 300 de T-Mod AMG *Kamera*Distronic*Wide*ESHD,114000.0,38000.0,3.982,Benzin,Automatik,2,2/3,Euro6,cabrio,1,E-Klasse,476.0,350.0,3.4133333333332607
+Mercedes-Benz Sprinter III Tourer RWD/AWD 319 CDI XL 9Sitze,24990.0,131973.0,1.595,Benzin,Automatik,4,2/3,Euro6,sport,1,Sprinter,156.0,115.0,4.246666666666594
+Mercedes-Benz C 200 4m T Avant*Navi*Stdhzg*Distronic*Garantie!,114000.0,38000.0,3.982,Benzin,Automatik,2,2/3,Euro6,cabrio,1,C-Klasse,476.0,350.0,3.4133333333332607
+Mercedes-Benz A 180 AMG LINE*Standheizung*LED*High-End Paket,42000.0,45000.0,3.0,Benzin,Automatik,5,4/5,Euro6,kombi,2,A-Klasse,367.0,270.0,3.9966666666665938
+Mercedes-Benz B -Klasse B 200 Progressive LED Navi,34480.0,63000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,B-Klasse,194.0,143.0,3.3299999999999272
+Mercedes-Benz C 63 AMG T *Scheckheft*Junge-Sterne-Garantie*,20999.0,69000.0,1.595,Benzin,Automatik,5,4/5,Euro6,kombi,2,C-Klasse,122.0,90.0,4.579999999999927
+Mercedes-Benz AMG GT 63 S 4M Carbon Keramik Designo HeadUp Dis,17000.0,51948.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,S-Klasse,109.0,80.0,3.4966666666665938
+Mercedes-Benz E 350 / AVANTGARDE/ DISTR/ MULTIBEAM/ AHK/ 360°,31500.0,8450.0,1.332,Benzin,Automatik,5,4/5,Euro6d,van,2,E-Klasse,163.0,120.0,1.0799999999999272
+Mercedes-Benz GLC 200 Coupe 4M AMG DISTRONIC PRO SHD 360°-Kame,17000.0,51948.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,van,1,GLC,109.0,80.0,3.4966666666665938
+Mercedes-Benz C 43 AMG 4M Night DISTRONIC PLUS Memory Pano Kam,31500.0,8450.0,1.332,Benzin,Automatik,5,4/5,Euro6d,van,2,C-Klasse,163.0,120.0,1.0799999999999272
+Mercedes-Benz CLA 250 AMG Night Panorama MBUX LED Ambientenbel,43985.0,49712.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,CLA,476.0,350.0,4.579999999999927
+Mercedes-Benz C 220 Cabrio d AMG KEYLESS Airscarf LED High Per,15750.0,100000.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,C-Klasse,136.0,100.0,4.579999999999927
+Mercedes-Benz C 43 AMG 4Matic Night Widescreen Supersport-Lenk,24500.0,144630.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,C-Klasse,194.0,143.0,4.329999999999927
+Mercedes-Benz C 63 AMG S Coupe Night V8 KEYLESS Pano DISTRONIC,28490.0,13281.0,1.595,Benzin,Automatik,5,4/5,Euro6d,suv,2,C-Klasse,122.0,90.0,2.7466666666665938
+Mercedes-Benz AMG GT 53 4M+ DISTRONIC PLUS Kamera Memory Aerod,104900.0,48900.0,5.461,Benzin,Automatik,5,4/5,Euro6,suv,1,GT,571.0,420.0,4.579999999999927
+Mercedes-Benz GLA 250 E Urban LED Kamera DAB Totwinkl. Carplay,58600.0,19900.0,2.996,Benzin,Automatik,5,4/5,Euro6d,limousine,1,E-Klasse,390.0,287.0,1.2466666666665938
+Mercedes-Benz V 250 Edition Avantgarde lang 4 Matic Comand LED,34900.0,43000.0,1.95,Diesel,Automatik,5,4/5,Euro6c,limousine,2,V-Klasse,194.0,143.0,3.7466666666665938
+"Mercedes-Benz E 220 d 4Matic AMG Styling Pano HUD Cockpit 20""",27900.0,95000.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,2,E-Klasse,211.0,155.0,3.6633333333332607
+Mercedes-Benz CLA 220 d SB AMG-LINE/ EDITION NAVI-KAMERA-LEDER,27900.0,95000.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,2,CLA,211.0,155.0,3.6633333333332607
+Mercedes-Benz B 180 / Progressive / Automatik / Navi / LED,88000.0,1800.0,2.987,Diesel,Automatik,5,2/3,Euro6c,van,1,B-Klasse,190.0,140.0,0.24666666666659387
+"Mercedes-Benz C 300 COUPE´ AMG, Distronic, LED, RFK, Navi, Aut",29500.0,40000.0,1.595,Benzin,Automatik,5,4/5,Euro6d,kombi,2,C-Klasse,156.0,115.0,3.1633333333332607
+Mercedes-Benz CLA 200 *AMG*LED*Night*Pano*Keyless*,29999.0,88000.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,CLA,190.0,140.0,3.1633333333332607
+Mercedes-Benz CLA 200 Urban Rückfahrkamera Apple CarPlay,24900.0,103100.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,CLA,177.0,130.0,3.1633333333332607
+Mercedes-Benz A 250 e Kompaktlimousine +PROGRESSIVE+AHK+LED+,24900.0,103100.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,A-Klasse,177.0,130.0,3.1633333333332607
+Mercedes-Benz Citan Kombi 109CDI Tourer lang Klima Tüv 09/2023,24900.0,103100.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vaneo,177.0,130.0,3.1633333333332607
+Mercedes-Benz A250,69800.0,7900.0,1.991,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,421.0,310.0,0.5799999999999272
+Mercedes-Benz AMG C 63 AMG 2019 / JUNGE STERNE 2022 / BLACK,25799.0,25065.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,136.0,100.0,2.3299999999999272
+"Mercedes-Benz C 220 d 9G-TRONIC Exclusive, 3 Jahre Garantie,",22490.0,53000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,kombi,2,C-Klasse,122.0,90.0,4.41333333333326
+Mercedes-Benz C 250 d T 9G-TRONIC Kombi,28990.0,49900.0,1.595,Benzin,Automatik,5,4/5,Euro6,sport,2,C-Klasse,156.0,115.0,4.16333333333326
+Mercedes-Benz GLC 220 d 4Ma AMG Line NAV/LED/PTS/AHK/4xSHZ/1HD,22990.0,68000.0,1.595,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLC,122.0,90.0,4.246666666666594
+"Mercedes-Benz GLB 250 Urban Exklusiv NAV/PSD/AHK/LEDER/AMG19""",32800.0,53000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,GLB,245.0,180.0,3.2466666666665938
+Mercedes-Benz GLA 250 e AMG Line LEDER/AHK/DISTR/MBUX/PSD/NP69,25500.0,20440.0,1.332,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,GLA,136.0,100.0,2.9133333333332607
+Mercedes-Benz E 300 T e Avantgarde NAV/LED/PSD/TW/AHK/PTS/MOPF,42600.0,42500.0,1.95,Diesel,Automatik,4,2/3,Euro6d,sport,2,E-Klasse,245.0,180.0,2.7466666666665938
+Mercedes-Benz GLE 350 d 4Matic 9G-TRONIC,36800.0,126000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,GLE,258.0,190.0,4.329999999999927
+"Mercedes-Benz AMG C 63 AMG T Panorama, Perf.Abgas, Night-Paket",56000.0,17800.0,3.982,Benzin,Automatik,5,4/5,Euro6d,kombi,2,C-Klasse,476.0,350.0,2.3299999999999272
+Mercedes-Benz CLA 250 7G-DCT AMG Line + WINTERREIFEN,37899.0,28700.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,2,CLA,224.0,165.0,2.0799999999999272
+Mercedes-Benz A 180 Style,18450.0,24000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,A-Klasse,122.0,90.0,4.329999999999927
+Mercedes-Benz B 180 EDITION 2020+AMG+Night+LED+Kamera+Totw+7G,18450.0,24000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,B-Klasse,122.0,90.0,4.329999999999927
+"Mercedes-Benz Vito 111 Extralang, Navi, Kamera, AHK, Rampe",59795.0,72700.0,2.987,Diesel,Automatik,7,4/5,Euro6,suv,2,Vito,258.0,190.0,3.9966666666665938
+Mercedes-Benz Mercedes C63S 19 & 20 Zoll H&R PAGA Pano M...,35900.0,41500.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,OTHER,367.0,270.0,4.41333333333326
+Mercedes-Benz Mercedes Benz GLC 250 4M AMG-Line Voll. Co...,35900.0,41500.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,GLC,367.0,270.0,4.41333333333326
+Mercedes-Benz C 180 T Avantgarde LED PTS SHZ Navi LM Keyless,46990.0,176700.0,2.925,Diesel,Automatik,4,4/5,Euro6d,limousine,2,C-Klasse,340.0,250.0,3.3299999999999272
+Mercedes-Benz Mercedes Benz,35499.0,25000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,OTHER,211.0,155.0,3.7466666666665938
+Mercedes-Benz C 300 de T-Modell AMG Line*LED*RFK*Easy-Pack*,46889.0,10000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,190.0,140.0,0.6633333333332606
+Mercedes-Benz GLA 250 4M PEAK AMG/Night/19''/LED/360°Kamera/,46889.0,10000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,2,GLA,190.0,140.0,0.6633333333332606
+Mercedes-Benz E 63*AMG Perform*Night*Carbon*3xTV*360*HUD*Pano*,19290.0,86718.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,2,E-Klasse,170.0,125.0,4.66333333333326
+Mercedes-Benz C 200 4M T *Allrad*LED*Kamera*Navi*PDC*SIH*,79900.0,32600.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,571.0,420.0,2.7466666666665938
+Mercedes-Benz E 350 AMG AirBody Fahras Pano 360 Multibeam Burm,29300.0,74100.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,194.0,143.0,3.3299999999999272
+Mercedes-Benz E 200 Avantgarde 9G LED Navi Kamera EU 6d-Temp,41990.0,14500.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,E-Klasse,381.0,280.0,4.246666666666594
+Mercedes-Benz B 200 Urban LED Tempomat Navi Business,58890.0,19500.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,2,B-Klasse,190.0,140.0,2.2466666666665938
+Mercedes-Benz B 180 Progressive 7G LED Nav,85900.0,46700.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,B-Klasse,612.0,450.0,3.7466666666665938
+Mercedes-Benz SLC 200 Navi Pano Dach Klima LED Park-Assist,79900.0,32600.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,SL,571.0,420.0,2.7466666666665938
+Mercedes-Benz GLE Coupe GLE 63 S AMG 4Matic,41990.0,14500.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,S-Klasse,381.0,280.0,4.246666666666594
+Mercedes-Benz E 350 AMG Line Coupe Panoramadach Leder Navi,58890.0,19500.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,2,E-Klasse,190.0,140.0,2.2466666666665938
+Mercedes-Benz CLS 350 d 4M AMG Line Schiebedach Distronic LED,85900.0,46700.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,CL,612.0,450.0,3.7466666666665938
+Mercedes-Benz C 220d T STDHZG AHK PANOSD Avantgarde Burmeste,79900.0,32600.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,571.0,420.0,2.7466666666665938
+Mercedes-Benz C 220d 4Matic T°AMG LINE°HUD°LED°NAV°ACC°LEDER°,29300.0,74100.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,194.0,143.0,3.3299999999999272
+Mercedes-Benz E 220 d d T 9G-TRONIC Avantgarde*Multibeam*Headu,34490.0,49100.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,381.0,280.0,4.329999999999927
+Mercedes-Benz Mercedes-Benz C 300 T-Modell /AMG Paket / ...,50000.0,15100.0,1.991,Benzin,Automatik,4,2/3,Euro6d,cabrio,1,C-Klasse,197.0,145.0,2.3299999999999272
+Mercedes-Benz Mercedes Benz A180,34900.0,18000.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,2,A-Klasse,258.0,190.0,2.6633333333332607
+Mercedes-Benz C 180 AMG LINE +SCHECKHEFT EXTRAS,41500.0,36954.0,1.497,Hybrid,Automatik,4,2/3,Euro6,sport,2,C-Klasse,184.0,135.0,2.1633333333332607
+Mercedes-Benz A 200,72900.0,48925.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,A-Klasse,435.0,320.0,2.9966666666665938
+Mercedes-Benz C 200 CGI *1.Hd.*NAVI*LED*PDC*Top Zusta.*,19750.0,105000.0,1.991,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,1,C-Klasse,184.0,135.0,4.16333333333326
+Mercedes-Benz Mercedes GLA AMG LINE 7G 220D Tausch,30600.0,91876.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,GLA,194.0,143.0,3.0799999999999272
+Mercedes-Benz E350 4Matic AMG-Line,17500.0,83000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,E-Klasse,122.0,90.0,4.16333333333326
+Mercedes-Benz E400 4Matic Coupe 9G-TRONIC AMG Line MB-GARANTIE,21499.0,59000.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,2,OTHER,109.0,80.0,3.3299999999999272
+Mercedes-Benz GLC 250 d 4M Coupé AMG Line Night Fahrassistenz,21499.0,59000.0,1.461,Diesel,Automatik,5,4/5,Euro6,limousine,2,GLC,109.0,80.0,3.3299999999999272
+Mercedes-Benz Mercedes Benz G63 AMG Designo,46500.0,59800.0,2.996,Benzin,Automatik,4,2/3,Euro6,sport,1,OTHER,333.0,245.0,4.079999999999927
+Mercedes-Benz Sprinter III Kasten FWD 314 CDI L1#ERST 13 TKM #,42999.0,82597.0,1.95,Diesel,Automatik,4,2/3,Euro6d,sport,3,Sprinter,245.0,180.0,2.9966666666665938
+Mercedes-Benz C250 dT AVANTGARDE Navi+Teil-Leder/1.Hand,22990.0,64000.0,1.598,Diesel,Automatik,5,4/5,Euro6,limousine,2,C-Klasse,116.0,85.0,4.66333333333326
+Mercedes-Benz Mercedes B180Cdi Euro6,48990.0,1600.0,1.993,Hybrid,Automatik,5,4/5,Euro6d,limousine,1,B-Klasse,200.0,147.0,0.24666666666659387
+Mercedes-Benz E -Klasse Coupe E 220 d AMG Line,33500.0,28181.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,E-Klasse,194.0,143.0,2.9966666666665938
+Mercedes-Benz GLE 450 4M AMG Line Leder Pano Burm Webasto AHK,48500.0,59500.0,2.925,Diesel,Automatik,5,4/5,Euro6d,kombi,2,GLE,340.0,250.0,2.2466666666665938
+Mercedes-Benz E 300 de AMG Line Night Fahrass Burm Bafa fähig,27499.0,68950.0,2.143,Diesel,Automatik,5,4/5,Euro6c,kleinwagen,2,E-Klasse,170.0,125.0,2.9966666666665938
+Mercedes-Benz GLC 350 e 4M Coupé Sitzlima Air Body SD HUD AHK,23499.0,54236.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,2,GLC,136.0,100.0,4.66333333333326
+Mercedes-Benz C 63 S Coupé magno Keramik Driver Carbon Perfo,21799.0,59850.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,136.0,100.0,4.16333333333326
+Mercedes-Benz E 200 Cabriolet AMG/19''/9G/LED/360°Kamera/Navi/,36800.0,126000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,258.0,190.0,4.329999999999927
+Mercedes-Benz CLA 250 SB AMG/19''/Multibeam/Premium-Navi/HUD/,56000.0,17800.0,3.982,Benzin,Automatik,5,4/5,Euro6d,kombi,2,CLA,476.0,350.0,2.3299999999999272
+Mercedes-Benz GLE 350 de 4M Coupé AMG/20''/Multibeam/Airmatic/,37899.0,28700.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,2,GLE,224.0,165.0,2.0799999999999272
+Mercedes-Benz Sprinter 316 CDI Maxi MBUX/DAB/Klima/Navi/,18450.0,24000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,Sprinter,122.0,90.0,4.329999999999927
+Mercedes-Benz V 300 d Avantgarde Comand/8 Sitzer/Rückfahr.,56000.0,17800.0,3.982,Benzin,Automatik,5,4/5,Euro6d,kombi,2,V-Klasse,476.0,350.0,2.3299999999999272
+Mercedes-Benz Vito 116 CDI Sport Line 2 Schiebetüren/Standh.,37899.0,28700.0,1.991,Benzin,Automatik,5,4/5,Euro6d,sport,2,Vito,224.0,165.0,2.0799999999999272
+Mercedes-Benz C 180 Cabriolet AMG/LED/Kamera/Navigation/,18450.0,24000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,limousine,2,C-Klasse,122.0,90.0,4.329999999999927
+Mercedes-Benz E 220 d T Avantgarde/LED/Widescreen/Distronic/MB,59795.0,72700.0,2.987,Diesel,Automatik,7,4/5,Euro6,suv,2,E-Klasse,258.0,190.0,3.9966666666665938
+"Mercedes-Benz CLA 200 Coupe AMG *Night *CAM *AHK *Pano *19""",35900.0,41500.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,CLA,367.0,270.0,4.41333333333326
+Mercedes-Benz S 350 AMG BlueTEC/d*VOLL+PANO+20`LM*,35900.0,41500.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,2,S-Klasse,367.0,270.0,4.41333333333326
+Mercedes-Benz GLB 250 4M*AMG*Pano*Burm*Wides*RFK*KeyGo*Distro*,46990.0,176700.0,2.925,Diesel,Automatik,4,4/5,Euro6d,limousine,2,GLB,340.0,250.0,3.3299999999999272
+Mercedes-Benz E400 Cabrio 4M.*AMG*Widescre.*360°*ACC*SitzKlima,46990.0,176700.0,2.925,Diesel,Automatik,4,4/5,Euro6d,limousine,2,OTHER,340.0,250.0,3.3299999999999272
+Mercedes-Benz B 200d *AMG-Line*Head-Up*Pano*360*Distronic,35499.0,25000.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,B-Klasse,211.0,155.0,3.7466666666665938
+Mercedes-Benz CLA -Klasse SB CLA 200*AMG*SOUND*NIGHT*,46889.0,10000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,2,CLA,190.0,140.0,0.6633333333332606
+Mercedes-Benz A 200 Progressive MBUX HighEnd LED Sitzheizung,19290.0,86718.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,2,A-Klasse,170.0,125.0,4.66333333333326
+Mercedes-Benz C43T AMG 4Matic|NAVI|PERFORMANCE ABGAS|STDHZ,41990.0,14500.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,OTHER,381.0,280.0,4.246666666666594
+Mercedes-Benz CLA45 AMG 4Mat| AERO-PAKET|PANO|PERFORMANCE AGA,58890.0,19500.0,1.95,Diesel,Automatik,6,4/5,Euro6d,van,2,A-Klasse,190.0,140.0,2.2466666666665938
+Mercedes-Benz S63 AMG 4Matic+LANGVERSION|DRIVER´S PACKAGE|VOLL,85900.0,46700.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,OTHER,612.0,450.0,3.7466666666665938
+Mercedes-Benz Sprinter 316 CDI Kasten Hochdach Lang,79900.0,32600.0,3.982,Benzin,Automatik,5,4/5,Euro6d,limousine,1,Sprinter,571.0,420.0,2.7466666666665938
+Mercedes-Benz C 180 Cp. AMG ILS LED Kamera PTS Sitzh Temp,29300.0,74100.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,194.0,143.0,3.3299999999999272
+Mercedes-Benz CLA 200 EDITION 2020+AMG+Night+LED+Kamera+Totw,17000.0,165000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,CLA,170.0,125.0,4.16333333333326
+Mercedes-Benz GLE 300 d 4M AMG/Panorama/AHK/Airmatik/,34490.0,49100.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,GLE,381.0,280.0,4.329999999999927
+Mercedes-Benz Citan 108 CDI lang Worker,50000.0,15100.0,1.991,Benzin,Automatik,4,2/3,Euro6d,cabrio,1,Vaneo,197.0,145.0,2.3299999999999272
+Mercedes-Benz A 200 AMG Sport Night Pano BEAM BUR BiColor AHK,34900.0,18000.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,2,A-Klasse,258.0,190.0,2.6633333333332607
+"Mercedes-Benz CLA 35 AMG T SB 4M Sportpaket AMG 19"" Distronic",17000.0,165000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,CLA,170.0,125.0,4.16333333333326
+Mercedes-Benz GLE 43 AMG Cp. 4M 360° Airmat Pano Distr.,34490.0,49100.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,GLE,381.0,280.0,4.329999999999927
+Mercedes-Benz GLE 53 AMG 4M WideScreen Airmat Pano Multibeam,50000.0,15100.0,1.991,Benzin,Automatik,4,2/3,Euro6d,cabrio,1,GLE,197.0,145.0,2.3299999999999272
+Mercedes-Benz GLA 250 AMG LED Kamera Navi Totwinkel PTS Sitzh,34900.0,18000.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,2,GLA,258.0,190.0,2.6633333333332607
+Mercedes-Benz E 200 Avantgarde/MBUX High-End/get.Glas/EQ,41500.0,36954.0,1.497,Hybrid,Automatik,4,2/3,Euro6,sport,2,E-Klasse,184.0,135.0,2.1633333333332607
+Mercedes-Benz C -Klasse Lim. C 220 d 4Matic,72900.0,48925.0,2.999,Benzin,Automatik,5,4/5,Euro6d,limousine,1,C-Klasse,435.0,320.0,2.9966666666665938
+Mercedes-Benz 211 CDI Sprinter 906.613,49500.0,99300.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,2,Sprinter,190.0,140.0,4.246666666666594
+Mercedes-Benz C 250 d T 9G-TRONIC AMG Line Keyless Navi Kamera,19500.0,12500.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6d,van,2,C-Klasse,110.0,81.0,2.0799999999999272
+Mercedes-Benz C 180 Cab. AMG Multibeam Night Airscarf Kamera,29400.0,27985.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,1,C-Klasse,184.0,135.0,4.16333333333326
+Mercedes-Benz Vito 116 CDI Tourer PRO Lang,21490.0,97294.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,2,Vito,136.0,100.0,4.66333333333326
+Mercedes-Benz A 250 Progressive KLIMA SHZ PTS KAMERA NAVI LED,108000.0,10.0,2.925,Diesel,Automatik,5,4/5,Euro6d,sport,1,A-Klasse,330.0,243.0,-0.00333333333340613
+Mercedes-Benz GLS 400 d 4M AMG line NP 151TSD E-Active Body Co,26900.0,26000.0,1.595,Benzin,Automatik,5,4/5,Euro6d,kombi,1,GLS,156.0,115.0,2.7466666666665938
+Mercedes-Benz A 180 d Style LED NAVI MBUX KAMERA SHZ 7G PARKP,89900.0,39000.0,3.982,Benzin,Automatik,5,4/5,Euro6,suv,2,A-Klasse,421.0,310.0,4.41333333333326
+Mercedes-Benz A 180 LED NAVI MBUX KAMERA SHZ 7G TEILLEDER PARK,23750.0,99000.0,1.595,Benzin,Automatik,5,4/5,Euro6,limousine,1,A-Klasse,122.0,90.0,4.079999999999927
+Mercedes-Benz GLA 200 Automatik LED Comand PDC SHZ,36990.0,13000.0,1.991,Benzin,Automatik,5,4/5,Euro6d,kombi,2,GLA,258.0,190.0,2.7466666666665938
+Mercedes-Benz E 200 T EURO 6d-TEMP 9G AHK,44200.0,13500.0,1.991,Benzin,Automatik,4,2/3,Euro6d,cabrio,1,E-Klasse,184.0,135.0,2.4133333333332607
+Mercedes-Benz B 220 d Progressive Night LED Kamera SHZ MBUX,44890.0,62180.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,2,B-Klasse,194.0,143.0,2.9133333333332607
+Mercedes-Benz GLC 43 AMG Cp. 4M 360° Burmester Distr. COMAND,27000.0,45000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,GLC,150.0,110.0,4.246666666666594
+Mercedes-Benz GLE 63s AMG COUPE 4-matic**NP ca. 172 Tsd**,22999.0,173000.0,2.143,Hybrid,Automatik,5,4/5,Euro6,limousine,3,GLE,204.0,150.0,3.9133333333332607
+Mercedes-Benz C 43 AMG T 4M Perf-Abg Pano Distr 360° HUD,27288.0,25148.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,2,C-Klasse,136.0,100.0,2.3299999999999272
+Mercedes-Benz A 250 e Lim./MBUX High-End/Ambiente/Kamera,27288.0,25148.0,1.332,Benzin,Automatik,5,4/5,Euro6d,limousine,2,A-Klasse,136.0,100.0,2.3299999999999272
+Mercedes-Benz E 400 d 4M AMG WideScreen Stdhzg Burmester LED,27999.0,84300.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,170.0,125.0,4.16333333333326
+Mercedes-Benz A 180 Progressive Park-Assist Navi MBUX Sitzhzg.,32999.0,13000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,184.0,135.0,2.4966666666665938
+Mercedes-Benz A200/7G-DCT/Navi/Parktronic,32999.0,13000.0,1.497,Benzin,Automatik,5,4/5,Euro6d,kombi,1,A-Klasse,184.0,135.0,2.4966666666665938
+Mercedes-Benz C 300 de T AMG NIGHT*Kamera*AHK*MULTIBEAM*COMAND,69990.0,89654.0,3.982,Benzin,Automatik,5,4/5,Euro6,limousine,3,C-Klasse,612.0,450.0,4.579999999999927
+Mercedes-Benz E 200 d Navi Parktronik Motor NEU mit Garantie,5899.0,406900.0,1.461,Diesel,Schaltgetriebe,2,4/5,Euro6,van,2,E-Klasse,75.0,55.0,2.4966666666665938
+Mercedes-Benz GLC -Klasse GLC 350 d 4Matic,28900.0,391000.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,1,GLC,204.0,150.0,4.41333333333326
+Mercedes-Benz Mercedes E Klasse Diesel Avantgarde,19900.0,375322.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,258.0,190.0,3.4966666666665938
+Mercedes-Benz E 200 d Automatik PDC Navi originalfarbe,12800.0,367000.0,1.95,Diesel,Automatik,5,4/5,Euro6c,kombi,1,E-Klasse,150.0,110.0,3.3299999999999272
+Mercedes-Benz E 200 E 200 d T Autom.,11750.0,364000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,2,E-Klasse,170.0,125.0,3.9133333333332607
+Mercedes-Benz Sprinter 316 CDi Kühlwagen Navi Kamera Euro 6,13700.0,355000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,Sprinter,139.0,102.0,3.8299999999999272
+Mercedes-Benz Citan Kasten 111 CDI extralang,12999.0,352000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,Vaneo,150.0,110.0,4.16333333333326
+Mercedes-Benz E -Klasse T-Modell E 220 d 4Matic*TAXI*MULTIBEAM,13990.0,350000.0,2.143,Diesel,Schaltgetriebe,3,4/5,Euro6,van,1,E-Klasse,163.0,120.0,4.079999999999927
+Mercedes-Benz E 200 d W213 Lim. Avantgarde LED Navi,11800.0,339000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,150.0,110.0,3.9966666666665938
+Mercedes-Benz Mercedes w213 e200,16950.0,330000.0,2.987,Diesel,Schaltgetriebe,5,4/5,Euro6,andere,1,E-Klasse,190.0,140.0,3.9133333333332607
+Mercedes-Benz Mercedes Benz E270 CDI .Tauschen mgl,14500.0,325412.0,2.143,Diesel,Automatik,5,4/5,Euro6,andere,1,E-Klasse,143.0,105.0,4.579999999999927
+Mercedes-Benz E 200 d T Autom.,20990.0,317411.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,E-Klasse,150.0,110.0,4.746666666666594
+Mercedes-Benz Sprinter 316 CDI Maxi Navi Kamera,26900.0,298000.0,2.987,Diesel,Automatik,5,4/5,Euro6,limousine,2,Sprinter,258.0,190.0,3.8299999999999272
+Mercedes-Benz Mercedes Sprinter 316cdi Hoch Lang,17600.0,290000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,Sprinter,150.0,110.0,3.3299999999999272
+Mercedes-Benz Sprinter II Kasten 316 CDI Automatik Klima/RFK,16900.0,282000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,Sprinter,194.0,143.0,3.5799999999999272
+Mercedes-Benz GLE -Klasse GLE 250 d 4Matic *1. Hand/Navi*,16900.0,278700.0,2.143,Diesel,Automatik,3,4/5,Euro6,van,1,GLE,163.0,120.0,3.8299999999999272
+Mercedes-Benz E 350 d T 9G-TRONIC 1Hd MULTIBEAM Kamera,16785.0,277000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,204.0,150.0,4.079999999999927
+Mercedes-Benz Mercedes-Benz E 200 d Automatik*Navi*PDC*Kamera*,25900.0,273000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,E-Klasse,204.0,150.0,4.579999999999927
+Mercedes-Benz Sprinter II Kasten/313/CDI//MAXI,14200.0,270000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,Sprinter,150.0,110.0,4.66333333333326
+Mercedes-Benz Sprinter III Koffer 316 CDI RWD L3 7 G-tronic,13500.0,266000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,2,Sprinter,150.0,110.0,4.079999999999927
+Mercedes-Benz S 560 4Mat DISTR+ HUD NACHT LED BURM 360° PARKAS,18250.0,262000.0,1.95,Diesel,Automatik,5,4/5,Euro6c,limousine,1,S-Klasse,150.0,110.0,3.6633333333332607
+Mercedes-Benz C 220d T Bluetec Navi Xenon Klimaautomatik Einpa,24990.0,255000.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,C-Klasse,190.0,140.0,3.6633333333332607
+Mercedes-Benz E 200 9G AVANTGARDE RÜCKFAHRKAMERA+LED,17900.0,250000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,E-Klasse,150.0,110.0,2.3299999999999272
+Mercedes-Benz Comand. Avantgarde LED Licht - Distro Plus,13990.0,249459.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,OTHER,170.0,125.0,3.5799999999999272
+Mercedes-Benz Gle 350 D 9G-TRONIC 4 Matic,18900.0,249000.0,1.95,Diesel,Automatik,5,4/5,Euro6c,limousine,2,GLE,150.0,110.0,3.3299999999999272
+Mercedes-Benz Mercedes C220 Avantgarde Comand T-Modell ...,29850.0,244578.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,C-Klasse,258.0,190.0,4.16333333333326
+Mercedes-Benz Sprinter 319 CDI hoch & lang/Klima/Navi/AHK/EUR6,17900.0,242000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,Sprinter,194.0,143.0,3.9133333333332607
+"Mercedes-Benz Comand,Avantgarde, LED, Distronic Plus",29950.0,240000.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,1,OTHER,190.0,140.0,3.8299999999999272
+Mercedes-Benz Mercedes E-Klasse,34900.0,235000.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,E-Klasse,190.0,140.0,3.1633333333332607
+Mercedes-Benz E -Klasse T-Modell E 200 d Das Taxi PDC SHZ,10990.0,233214.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,andere,2,E-Klasse,110.0,81.0,3.7466666666665938
+Mercedes-Benz E -Klasse Lim. E 350 d Avantgarde Voll,12990.0,232582.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,136.0,100.0,3.8299999999999272
+Mercedes-Benz V 250 d SCORE 4M lang*LED*KAM*STHZ*NAVI*BURM*7SI,17500.0,232000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,V-Klasse,150.0,110.0,4.579999999999927
+Mercedes-Benz B -Klasse B 160 CDI / d,25900.0,228000.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,1,B-Klasse,163.0,120.0,4.579999999999927
+Mercedes-Benz E-klasse 220d amg line,17699.0,224000.0,1.597,Diesel,Schaltgetriebe,5,4/5,Euro6d,kombi,1,E-Klasse,160.0,118.0,2.9966666666665938
+Mercedes-Benz S -Klasse Lim. S 400 d 4Matic L VOLL,21950.0,223450.0,2.143,Diesel,Schaltgetriebe,2,2/3,Euro6,andere,1,S-Klasse,163.0,120.0,2.7466666666665938
+Mercedes-Benz V 250 d AVANTG./EDIT/AMG/4MATIC/DISTR/LED/BRABUS,16750.0,223000.0,1.95,Diesel,Automatik,5,4/5,Euro6,limousine,1,V-Klasse,150.0,110.0,3.9133333333332607
+Mercedes-Benz Sprinter 316 CDI Lang *Klima*PDC*AHK*2xSchiebetü,10750.0,221711.0,1.461,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,Sprinter,109.0,80.0,4.496666666666594
+"Mercedes-Benz V -Klasse V 200/220 CDI/d, 250 CDI/BT/d extralan",28500.0,221000.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,V-Klasse,190.0,140.0,4.246666666666594
+Mercedes-Benz C 250 CGI T 9GT 2XAVANTGARDE COMAND ILS PANO HUD,14600.0,215000.0,2.143,Diesel,Automatik,5,4/5,Euro6c,kombi,1,C-Klasse,170.0,125.0,3.5799999999999272
+Mercedes-Benz Sprinter 316 CDI L2H2*StHz*Tempomat*Klima*Navi*,16990.0,212345.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,1,Sprinter,136.0,100.0,4.746666666666594
+Mercedes-Benz E 400 T d AMG-Line Widescreen COMAND Burmester,17990.0,210000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,E-Klasse,194.0,143.0,4.579999999999927
+Mercedes-Benz C 180 BlueTEC/d Business Navi PDC Start/Stop 1Hd,29990.0,208261.0,2.143,Diesel,Automatik,9,4/5,Euro6,kombi,1,C-Klasse,163.0,120.0,2.9133333333332607
+Mercedes-Benz E350T 4M AMG Line HeadUp Widescr Distr+Multibeam,20800.0,207000.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,E-Klasse,204.0,150.0,3.8299999999999272
+Mercedes-Benz GLC 250 d 4Matic 9G-TRONIC,44999.0,206500.0,2.143,Diesel,Automatik,5,4/5,Euro6,van,1,GLC,190.0,140.0,4.41333333333326
+Mercedes-Benz GLC 250 d 4Matic/EXCLUSIVE/NAVI/SERVICE/TOP,29750.0,204500.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,3,CL,190.0,140.0,4.66333333333326
+Mercedes-Benz GLE 350 d 4M AMG LINE NIGHTPAKET/HUD/ACC/LUFT/AH,23790.0,201236.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,1,GLE,204.0,150.0,3.7466666666665938
+Mercedes-Benz B -Klasse B 200 CDI / d 4Matic-Leder-Navi-Xenon,27900.0,200000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,2,B-Klasse,204.0,150.0,4.329999999999927
+Mercedes-Benz Sprinter 316 CDI L2H2*Klima*Kamera*Navi*7GTronic,16000.0,200000.0,2.143,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,1,GT,170.0,125.0,3.7466666666665938
+Mercedes-Benz Mercedes S-Kasse S500 sehr gepflegt,28900.0,199000.0,2.143,Diesel,Automatik,8,4/5,Euro6,van,1,OTHER,163.0,120.0,2.9133333333332607
+Mercedes-Benz C 220 d 4Matic T 9G-TRONIC,34800.0,198987.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,258.0,190.0,4.746666666666594
+Mercedes-Benz GLC 350 d Coupe 4Matic *AMG*HEAD-UP*COM*BURM*360,16800.0,196000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,GLC,194.0,143.0,3.9966666666665938
+"Mercedes-Benz GLC 220d 4M 9G AMG PANO/COM/KAM/BURM/19""/AMBIENT",26900.0,196000.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,GLC,258.0,190.0,3.9966666666665938
+Mercedes-Benz Sprinter II Kasten 316 CDI H3L2*Klima*Navi_Sitzh,21980.0,195000.0,2.143,Diesel,Automatik,5,4/5,Euro5,kombi,2,Sprinter,170.0,125.0,4.329999999999927
+"Mercedes-Benz Top Zustand,Service,Alle Assistenten,Langstrecke",20600.0,195000.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,OTHER,194.0,143.0,3.0799999999999272
+Mercedes-Benz C 63 AMG EDITION1 PERFORMANCE AGA DESIGNO BURMES,19480.0,195000.0,2.143,Diesel,Automatik,5,4/5,Euro6,suv,1,C-Klasse,177.0,130.0,4.746666666666594
+Mercedes-Benz GLC 220 d 4MATIC,22900.0,194200.0,2.143,Diesel,Automatik,5,4/5,Euro6,limousine,2,GLC,170.0,125.0,3.9966666666665938
+Mercedes-Benz EQS 450+ AMG Line Hyperscreen HeadUp Burmester,19900.0,194000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,OTHER,194.0,143.0,3.9133333333332607
+Mercedes-Benz GLA 200 AMG Line MBUX-HighEnd Panorama AHK LED,26500.0,194000.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,2,GLA,258.0,190.0,3.9966666666665938
+Mercedes-Benz GLC 220 d 4Matic AMG-LINE ILS*Standheiz.*1.Hand,23900.0,193300.0,2.143,Diesel,Automatik,5,4/5,Euro6,kombi,2,GLC,136.0,100.0,3.5799999999999272
+Mercedes-Benz GLE 450 4M Panorama Airmatic Burmester Standhzg.,21400.0,192950.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,GLE,194.0,143.0,4.41333333333326
+Mercedes-Benz C 180 Avantgarde Navi AHK LED Rückfahrkamera,18399.0,192000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,1,C-Klasse,194.0,143.0,4.329999999999927
+Mercedes-Benz MERCEDES 63 AMG (S)GLE 585 PS BJ 2017 EURO 6,23800.0,191000.0,1.95,Diesel,Automatik,5,4/5,Euro6,kombi,2,GLE,194.0,143.0,4.16333333333326
+Mercedes-Benz B 200 d Progressive Navi-Premium LED Totwinkel,15599.0,190600.0,1.598,Diesel,Schaltgetriebe,5,4/5,Euro6,kombi,2,B-Klasse,136.0,100.0,3.9133333333332607
+Mercedes-Benz GLE 350 d 4M Coupe Comand P-GSD Distronic Leder,69900.0,58900.0,3.982,Benzin,Automatik,4,2/3,Euro6,cabrio,2,GLE,510.0,375.0,4.246666666666594
+Mercedes-Benz Mercedes Benz C63 AMG W205 Night&Drivers P...,28990.0,19987.0,1.595,Benzin,Schaltgetriebe,2,2/3,Euro6,cabrio,2,OTHER,156.0,115.0,3.9133333333332607
+Mercedes-Benz E 220 d T Avantgarde LED Park-Spur-Spgl-Pkt Navi,24500.0,30935.0,1.595,Benzin,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,156.0,115.0,4.16333333333326
+Mercedes-Benz CLA 250e SB/AMG/LEDER/NIGHT-PAKET/AHK/LED/KAMERA,40500.0,88246.0,1.991,Benzin,Automatik,5,4/5,Euro6d,suv,2,CLA,211.0,155.0,2.9966666666665938
+"Mercedes-Benz C43 AMG Facelift, absolut voll, Performanc...",45850.0,76250.0,2.143,Diesel,Automatik,6,4/5,Euro6,van,2,OTHER,190.0,140.0,4.246666666666594
+Mercedes-Benz C 180 T Avantgarde|LED|PDC Kamera|SHZ|EUR6d-Temp,27700.0,43000.0,1.991,Benzin,Automatik,5,4/5,Euro6,limousine,1,C-Klasse,184.0,135.0,2.9966666666665938
+Mercedes-Benz C 300 T e Avantgarde|Distronic|Comand|EUR6d-Temp,29999.0,12900.0,1.595,Benzin,Automatik,5,4/5,Euro6,suv,2,C-Klasse,156.0,115.0,2.2466666666665938
+Mercedes-Benz Mercedes Benz Citan mit Garantie bis 10.2022,79890.0,52949.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,Vaneo,258.0,190.0,2.8299999999999272
+Mercedes-Benz E 300 Coupe,79890.0,52949.0,2.987,Diesel,Automatik,5,4/5,Euro6,suv,2,E-Klasse,258.0,190.0,2.8299999999999272
+Mercedes-Benz AMG GLS 63 4Matic AMG Speedshift 7G-TRONIC,21000.0,28200.0,1.6,Benzin,Automatik,5,4/5,Euro6,kombi,2,GLS,122.0,90.0,2.8299999999999272
+Mercedes-Benz C 220 d T-Modell,43900.0,40200.0,2.143,Diesel,Automatik,5,4/5,Euro6,sport,2,C-Klasse,204.0,150.0,4.079999999999927
+Mercedes-Benz Mercedes GLA 180 Automatik,47990.0,41751.0,1.95,Diesel,Automatik,4,2/3,Euro6d,sport,1,GLA,194.0,143.0,2.7466666666665938
+Mercedes-Benz A 45 S 4MATIC+ / AMG Aerodynamik-Paket,47990.0,41751.0,1.95,Diesel,Automatik,4,2/3,Euro6d,sport,1,A-Klasse,194.0,143.0,2.7466666666665938
+Mercedes-Benz GLE 350 d 4M AMG*Pano*AHK*Distr*360°Kam*Multibea,42888.0,71000.0,1.991,Benzin,Automatik,5,4/5,Euro6,sport,2,GLE,211.0,155.0,4.16333333333326
+Mercedes-Benz E 43 AMG 4M Pano HUD 360° DTR Wide Amb 20´´ Keyl,41990.0,94500.0,2.996,Benzin,Automatik,5,4/5,Euro6,limousine,3,E-Klasse,367.0,270.0,4.579999999999927
+Mercedes-Benz Mercedes AMG C 43 Cabrio,39700.0,22500.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,1,C-Klasse,163.0,120.0,1.9133333333332607
+Mercedes-Benz E 200 d T EXCLUSIVE Distron*Kamera*AHK*Standheiz,24998.0,82000.0,1.595,Benzin,Schaltgetriebe,5,4/5,Euro6,sport,2,E-Klasse,122.0,90.0,4.41333333333326
+Mercedes-Benz GLC 43 AMG 4M *Comand*Standheizung*Burmester*360,36880.0,58203.0,1.991,Benzin,Automatik,5,4/5,Euro6,suv,2,GLC,211.0,155.0,3.5799999999999272
+Mercedes-Benz A 250 e AMG+Night+LED+Kamera+8G,23999.0,39318.0,1.595,Benzin,Automatik,5,4/5,Euro6,sport,1,A-Klasse,122.0,90.0,3.7466666666665938
+Mercedes-Benz E 220 d T Avantgarde COMAND*Kamera*LED*Spur-Pak.,37850.0,38000.0,1.991,Hybrid,Automatik,5,4/5,Euro6,limousine,1,E-Klasse,211.0,155.0,3.4966666666665938
+Mercedes-Benz Citan Kasten 111 CDI lang 110PS AHK PDC Sitzheiz,45900.0,54500.0,3.982,Benzin,Automatik,5,4/5,Euro6,kombi,2,Vaneo,476.0,350.0,4.579999999999927
+Mercedes-Benz GLE 580 4M AMG WideScreen 360° Stdhzg Pano HUD,28850.0,31500.0,1.95,Diesel,Automatik,5,4/5,Euro6d,limousine,2,GLE,150.0,110.0,2.9966666666665938
+Mercedes-Benz GLE 63 AMG 4M BURMESTER 3D DRIVERS-P. MULTIBEAM,53999.0,74500.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,2,GLE,190.0,140.0,3.9966666666665938
+Mercedes-Benz GLE 63 S 4M Coupe,53999.0,74500.0,2.143,Diesel,Automatik,7,4/5,Euro6,van,2,S-Klasse,190.0,140.0,3.9966666666665938
+Mercedes-Benz GLE 350 d Cp Orange Edition AMG Pano Sound Memor,54500.0,44518.0,2.925,Diesel,Automatik,5,4/5,Euro6,limousine,1,GLE,286.0,210.0,2.9966666666665938
+Mercedes-Benz GLE 350d 4M Coupe AMG Pano AHK,39440.0,33975.0,1.95,Diesel,Automatik,5,4/5,Euro6d,kombi,3,GLE,194.0,143.0,2.2466666666665938
+Mercedes-Benz S 560 4MATIC Limousine lang AMG Sitzklima,36000.0,96500.0,2.987,Diesel,Automatik,5,4/5,Euro6,kombi,2,S-Klasse,258.0,190.0,3.9133333333332607
+Mercedes-Benz AMG GT 63 S 4Matic+,78000.0,55000.0,3.982,Benzin,Automatik,2,2/3,Euro6c,sport,1,S-Klasse,476.0,350.0,4.246666666666594
