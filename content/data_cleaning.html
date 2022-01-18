@@ -1,0 +1,3657 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Data Cleaning</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. EDA und Regression Diagnostic" href="EDA_Regression_Diagnostic.html" />
+    <link rel="prev" title="2. Webscraper mobile.de" href="webscraper_mobile.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Applied Data Analytics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Restwertermittlung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_restwertermittlung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraper_mobile.html">
+   2. Webscraper mobile.de
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Data Cleaning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_Regression_Diagnostic.html">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelbuilding_restwertermittlung.html">
+   5. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leasingrisiko
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_leasingrisiko.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_clean_Dataset.html">
+   2. Create clean Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exploration_leasingrisk.html">
+   3. Explorative Datenanalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modelbuilding_leasingrisk.html">
+   4. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kundensegmentierung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_segmentierung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_cluster_dataset.html">
+   2. Create Dataset for Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_segemntierung.html">
+   3. EDA &amp; Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans_segmentation.html">
+   4. Modeling &amp; Evaluation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/data_cleaning.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cy006/data_analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cy006/data_analytics/issues/new?title=Issue%20on%20page%20%2Fcontent/data_cleaning.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cy006/data_analytics/master?urlpath=tree/docs/content/data_cleaning.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-dependencies">
+   Import Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-data">
+   Import Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-price">
+     Clean Column “price”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-modelname-from-carname">
+     Create Modelname from Carname
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-milage">
+     Clean column “milage”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-hubraum">
+     Clean column “hubraum”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-power-ps">
+     Clean column power PS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-power-kw">
+     Clean column power KW
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-fuel-type">
+     Clean column fuel_type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-transmission">
+     Clean column transmission
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-age-of-the-car-from-frist-registration">
+     Calculate Age of the Car from frist_registration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-num-seats">
+     Clean column num_seats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-num-doors">
+     Clean column num_doors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-emission-class">
+     Clean column emission_class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-car-type">
+     Clean column car_type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-num-owners">
+     Clean column num_owners
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clean-column-damage">
+     Clean column damage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-columns-that-are-no-longer-needed">
+     Remove columns that are no longer needed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-dtypes-of-the-columns">
+     Change dtypes of the columns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bereinigung-der-missing-values">
+   Bereinigung der Missing Values
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bereinung-der-mvs-von-hubraum">
+     Bereinung der MVs von Hubraum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bereinung-der-mvs-von-num-seats">
+     Bereinung der MVs von num_seats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bereinung-der-mvs-von-emission-class">
+     Bereinung der MVs von emission_class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Bereinung der MVs von emission_class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bereinung-der-mvs-von-schaden">
+     Bereinung der MVs von schaden
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-cleaning">
+<h1>3. Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h1>
+<p>In den folgenden Zeilen werden die gescrapten Daten bereinitgt und weitere Spalten erstellt.</p>
+<div class="section" id="import-dependencies">
+<h2>Import Dependencies<a class="headerlink" href="#import-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-data">
+<h2>Import Data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Mobile.de/zsf_031021_mobile_data_1000_200000.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16.950 € (Brutto)</td>
+      <td>198.245 km</td>
+      <td>2.143 cm³</td>
+      <td>105 kW (143 PS)</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Van / Minibus</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60.490 € (Brutto)</td>
+      <td>10.529 km</td>
+      <td>1.950 cm³</td>
+      <td>140 kW (190 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24.990 € (Brutto)</td>
+      <td>91.205 km</td>
+      <td>1.332 cm³</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mercedes-Benz S 63 AMG COUPE 4MATIC+*360CAM*BU...</td>
+      <td>129900</td>
+      <td>50.696 km</td>
+      <td>3.982 cm³</td>
+      <td>450 kW (612 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2018</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Sportwagen / Coupé</td>
+      <td>2</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mercedes-Benz C 63 AMG S*KERAMIK*SCHMIDT*SCHAL...</td>
+      <td>79990</td>
+      <td>39.000 km</td>
+      <td>3.982 cm³</td>
+      <td>375 kW (510 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>09/2017</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Cabrio / Roadster</td>
+      <td>2</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1410</th>
+      <td>Mercedes-Benz Mercedes Benz C63 AMG</td>
+      <td>66.500 € (Brutto)</td>
+      <td>11.355 km</td>
+      <td>1.991 cm³</td>
+      <td>190 kW (258 PS)</td>
+      <td>Benzin, E10-geeignet</td>
+      <td>Automatik</td>
+      <td>2020</td>
+      <td>10/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1411</th>
+      <td>Mercedes-Benz Mercedes V 250 d Avangard Edition</td>
+      <td>42.849 € (Brutto)</td>
+      <td>60.105 km</td>
+      <td>2.143 cm³</td>
+      <td>150 kW (204 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>09/2018</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6c</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1412</th>
+      <td>Mercedes-Benz Mercedes-Benz</td>
+      <td>54.849 € (Brutto)</td>
+      <td>46.419 km</td>
+      <td>2.925 cm³</td>
+      <td>250 kW (340 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>03/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Kombi</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+    </tr>
+    <tr>
+      <th>1413</th>
+      <td>Mercedes-Benz E 2200 d Avantgarde NIGHT 360° L...</td>
+      <td>46.849 € (Brutto)</td>
+      <td>52.553 km</td>
+      <td>2.987 cm³</td>
+      <td>190 kW (258 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2017</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1414</th>
+      <td>Mercedes-Benz CLA 250 Shooting Brake 4Matic AM...</td>
+      <td>49.849 € (Brutto)</td>
+      <td>72.820 km</td>
+      <td>2.996 cm³</td>
+      <td>270 kW (367 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1415 entries, 0 to 1414
+Data columns (total 15 columns):
+ #   Column              Non-Null Count  Dtype 
+---  ------              --------------  ----- 
+ 0   carname             1415 non-null   object
+ 1   price               1415 non-null   object
+ 2   milage              1415 non-null   object
+ 3   hubraum             1415 non-null   object
+ 4   power               1415 non-null   object
+ 5   fuel_type           1415 non-null   object
+ 6   transmission        1415 non-null   object
+ 7   construction_year   1415 non-null   int64 
+ 8   first_registration  1415 non-null   object
+ 9   num_seats           1415 non-null   int64 
+ 10  num_doors           1415 non-null   object
+ 11  emission_class      1415 non-null   object
+ 12  car_type            1415 non-null   object
+ 13  num_owners          1415 non-null   int64 
+ 14  damage              1415 non-null   object
+dtypes: int64(3), object(12)
+memory usage: 165.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> <span class="c1"># liefert hier noch wenig Erkenntnisse, da die Daten noch nicht in der richtigen Form vorliegen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>construction_year</th>
+      <th>num_seats</th>
+      <th>num_owners</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1415.000000</td>
+      <td>1415.000000</td>
+      <td>1415.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>290.195760</td>
+      <td>3.371025</td>
+      <td>0.488339</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>709.734086</td>
+      <td>2.756786</td>
+      <td>1.152317</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-1.000000</td>
+      <td>-1.000000</td>
+      <td>-1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-1.000000</td>
+      <td>-1.000000</td>
+      <td>-1.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>-1.000000</td>
+      <td>5.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>-1.000000</td>
+      <td>5.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2021.000000</td>
+      <td>9.000000</td>
+      <td>10.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="clean-column-price">
+<h3>Clean Column “price”<a class="headerlink" href="#clean-column-price" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">price</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       16.950 € (Brutto)
+1       60.490 € (Brutto)
+2       24.990 € (Brutto)
+3                  129900
+4                   79990
+              ...        
+1410    66.500 € (Brutto)
+1411    42.849 € (Brutto)
+1412    54.849 € (Brutto)
+1413    46.849 € (Brutto)
+1414    49.849 € (Brutto)
+Name: price, Length: 1415, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zwei Datentypen (int, str) in der Spalte &quot;price&quot;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;    757
+&lt;class &#39;int&#39;&gt;    658
+Name: price, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_str</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">]</span>
+<span class="n">df_int</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Entfernen von ., € und Brutto</span>
+<span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(brutto)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;€&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
+<span class="n">df_int</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">df_int</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_str</span><span class="p">,</span> <span class="n">df_int</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-10-842851fea67b&gt;:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_str[&#39;price&#39;] = df_str[&#39;price&#39;].apply(lambda x: float(x.lower().replace(&#39;(brutto)&#39;, &#39;&#39;).replace(&#39;.&#39;,&#39;&#39;).replace(&#39;€&#39;,&#39;&#39;)))
+/Users/cenkyagkan/opt/anaconda3/lib/python3.8/site-packages/pandas/core/generic.py:5516: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self[name] = value
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;    1415
+Name: price, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;price&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;price&#39;, ylabel=&#39;Count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_16_1.png" src="../_images/data_cleaning_16_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="create-modelname-from-carname">
+<h3>Create Modelname from Carname<a class="headerlink" href="#create-modelname-from-carname" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_car_model</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s1">&#39;a-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;a klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; A &#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;A1&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;A2&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;A4&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;A-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;b-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;b klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; B &#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;B1&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;B2&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;B-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;c-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;c klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; c &#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;c1&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;c2&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;c3&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;C-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;e-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;e klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; E &#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;e2&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;e3&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;E-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;s-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;s klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; S &#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;S-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;g-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;g klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; G &#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;G-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;m-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;m klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;ML&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">&#39;ml&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;M-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;x-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;x klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;X-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;r-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;r klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; r &#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;R-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;v-klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;v klasse&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39; v &#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;viano&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;V-Klasse&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;marco polo&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;marco&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;polo&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;MarcoPolo&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;cla&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;CLA&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;clc&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;CLC&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;clk&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;CLK&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;cl&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;CL&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;cls&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;CLS&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;sl&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;SL&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;slc&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;SLC&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;slk&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;SLK&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;slr&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;SLR&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;sls&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;SLS&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;gla&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLA&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;glb&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLB&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;glc&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLC&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;glk&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLK&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;gle&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLE&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;gls&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GLS&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;gl&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GL&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;GT&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;GT&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;vaneo&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;citan&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Vaneo&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;vito&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Vito&#39;</span>
+    
+    <span class="k">elif</span> <span class="s1">&#39;sprinter&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Sprinter&#39;</span>
+    
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;OTHER&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">carname</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="o">.</span><span class="n">carname</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">]</span>
+<span class="n">df_new</span> <span class="o">=</span> <span class="n">df_new</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">660</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;carname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">make_car_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">Model</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C-Klasse     259
+E-Klasse     237
+A-Klasse     120
+GLC          115
+CLA           91
+OTHER         81
+Vito          70
+Sprinter      60
+GLE           60
+V-Klasse      58
+S-Klasse      54
+B-Klasse      49
+GLA           39
+CL            29
+GT            17
+G-Klasse      16
+GLB           15
+Vaneo         15
+GLS           12
+MarcoPolo      6
+M-Klasse       4
+SL             2
+CLC            2
+GL             1
+CLK            1
+R-Klasse       1
+Name: Model, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198.245 km</td>
+      <td>2.143 cm³</td>
+      <td>105 kW (143 PS)</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Van / Minibus</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Sprinter</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10.529 km</td>
+      <td>1.950 cm³</td>
+      <td>140 kW (190 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>GLB</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91.205 km</td>
+      <td>1.332 cm³</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84.925 km</td>
+      <td>1.595 cm³</td>
+      <td>115 kW (156 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2017</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Cabrio / Roadster</td>
+      <td>2</td>
+      <td>-1</td>
+      <td>C-Klasse</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91.205 km</td>
+      <td>1.332 cm³</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1405</th>
+      <td>Mercedes-Benz S -Klasse Lim. S 350 d L AMG</td>
+      <td>44500.0</td>
+      <td>115.000 km</td>
+      <td>-1</td>
+      <td>295 kW (401 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>08/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+    </tr>
+    <tr>
+      <th>1406</th>
+      <td>Mercedes-Benz Vito 119 CDI Tourer Select 4-Mat...</td>
+      <td>36000.0</td>
+      <td>66.000 km</td>
+      <td>-1</td>
+      <td>280 kW (381 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Sportwagen / Coupé</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Vito</td>
+    </tr>
+    <tr>
+      <th>1407</th>
+      <td>Mercedes-Benz Vito Tourer 116 CDI Lang BlueTEC...</td>
+      <td>33900.0</td>
+      <td>35.000 km</td>
+      <td>-1</td>
+      <td>143 kW (194 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>-1</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Vito</td>
+    </tr>
+    <tr>
+      <th>1408</th>
+      <td>Mercedes-Benz AMG GT 63 S 4Matic+</td>
+      <td>78000.0</td>
+      <td>55.000 km</td>
+      <td>3.982 cm³</td>
+      <td>350 kW (476 PS)</td>
+      <td>Benzin, E10-geeignet</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>2</td>
+      <td>2/3</td>
+      <td>Euro6c</td>
+      <td>Sportwagen / Coupé</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+    </tr>
+    <tr>
+      <th>1409</th>
+      <td>Mercedes-Benz Vito Marco Polo 220d Activity Ed...</td>
+      <td>22400.0</td>
+      <td>67.500 km</td>
+      <td>-1</td>
+      <td>130 kW (177 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>03/2017</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Kombi</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>MarcoPolo</td>
+    </tr>
+  </tbody>
+</table>
+<p>1414 rows × 16 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="clean-column-milage">
+<h3>Clean column “milage”<a class="headerlink" href="#clean-column-milage" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;milage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;km&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;milage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;milage&#39;, ylabel=&#39;Count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_25_1.png" src="../_images/data_cleaning_25_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-hubraum">
+<h3>Clean column “hubraum”<a class="headerlink" href="#clean-column-hubraum" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_str</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="o">.</span><span class="n">hubraum</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">]</span>
+<span class="n">df_int</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="o">.</span><span class="n">hubraum</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_int</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_int</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; cm³&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_str</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_str</span><span class="p">,</span> <span class="n">df_int</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-21-d1240cbb6fbc&gt;:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_int[&#39;hubraum&#39;] = df_int[&#39;hubraum&#39;].replace(-1, np.nan)
+&lt;ipython-input-21-d1240cbb6fbc&gt;:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_str[&#39;hubraum&#39;] = df_str[&#39;hubraum&#39;].str.replace(&#39; cm³&#39;, &#39;&#39;)
+&lt;ipython-input-21-d1240cbb6fbc&gt;:3: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_str[&#39;hubraum&#39;] = df_str[&#39;hubraum&#39;].astype(float)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mf">11.7</span><span class="p">,</span><span class="mf">8.27</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;hubraum&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;hubraum&#39;, ylabel=&#39;count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_29_1.png" src="../_images/data_cleaning_29_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>105 kW (143 PS)</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Van / Minibus</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Sprinter</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>140 kW (190 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>GLB</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>115 kW (156 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2017</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Cabrio / Roadster</td>
+      <td>2</td>
+      <td>-1</td>
+      <td>C-Klasse</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1401</th>
+      <td>Mercedes-Benz S 500 4M Lim lang AMG Nightp. PD...</td>
+      <td>15500.0</td>
+      <td>375000.0</td>
+      <td>NaN</td>
+      <td>110 kW (150 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>02/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+    </tr>
+    <tr>
+      <th>1405</th>
+      <td>Mercedes-Benz S -Klasse Lim. S 350 d L AMG</td>
+      <td>44500.0</td>
+      <td>115000.0</td>
+      <td>NaN</td>
+      <td>295 kW (401 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>08/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+    </tr>
+    <tr>
+      <th>1406</th>
+      <td>Mercedes-Benz Vito 119 CDI Tourer Select 4-Mat...</td>
+      <td>36000.0</td>
+      <td>66000.0</td>
+      <td>NaN</td>
+      <td>280 kW (381 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Sportwagen / Coupé</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Vito</td>
+    </tr>
+    <tr>
+      <th>1407</th>
+      <td>Mercedes-Benz Vito Tourer 116 CDI Lang BlueTEC...</td>
+      <td>33900.0</td>
+      <td>35000.0</td>
+      <td>NaN</td>
+      <td>143 kW (194 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>-1</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Vito</td>
+    </tr>
+    <tr>
+      <th>1409</th>
+      <td>Mercedes-Benz Vito Marco Polo 220d Activity Ed...</td>
+      <td>22400.0</td>
+      <td>67500.0</td>
+      <td>NaN</td>
+      <td>130 kW (177 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>03/2017</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Kombi</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>MarcoPolo</td>
+    </tr>
+  </tbody>
+</table>
+<p>1414 rows × 16 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="clean-column-power-ps">
+<h3>Clean column power PS<a class="headerlink" href="#clean-column-power-ps" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">]</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">df_new</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1414 entries, 0 to 1409
+Data columns (total 16 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   carname             1414 non-null   object 
+ 1   price               1414 non-null   float64
+ 2   milage              1414 non-null   float64
+ 3   hubraum             1085 non-null   float64
+ 4   power               1414 non-null   object 
+ 5   fuel_type           1414 non-null   object 
+ 6   transmission        1414 non-null   object 
+ 7   construction_year   1414 non-null   int64  
+ 8   first_registration  1414 non-null   object 
+ 9   num_seats           1414 non-null   int64  
+ 10  num_doors           1414 non-null   object 
+ 11  emission_class      1414 non-null   object 
+ 12  car_type            1414 non-null   object 
+ 13  num_owners          1414 non-null   int64  
+ 14  damage              1414 non-null   object 
+ 15  Model               1414 non-null   object 
+dtypes: float64(3), int64(3), object(10)
+memory usage: 220.1+ KB
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;    1414
+Name: power, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract ps from the column power</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">&quot;nan&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+      <th>Model</th>
+      <th>power_ps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>105 kW (143 PS)</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Van / Minibus</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Sprinter</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>140 kW (190 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>GLB</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+      <td>136</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>115 kW (156 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2017</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Cabrio / Roadster</td>
+      <td>2</td>
+      <td>-1</td>
+      <td>C-Klasse</td>
+      <td>156</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+      <td>136</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1401</th>
+      <td>Mercedes-Benz S 500 4M Lim lang AMG Nightp. PD...</td>
+      <td>15500.0</td>
+      <td>375000.0</td>
+      <td>NaN</td>
+      <td>110 kW (150 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>02/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <th>1405</th>
+      <td>Mercedes-Benz S -Klasse Lim. S 350 d L AMG</td>
+      <td>44500.0</td>
+      <td>115000.0</td>
+      <td>NaN</td>
+      <td>295 kW (401 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>08/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+      <td>401</td>
+    </tr>
+    <tr>
+      <th>1406</th>
+      <td>Mercedes-Benz Vito 119 CDI Tourer Select 4-Mat...</td>
+      <td>36000.0</td>
+      <td>66000.0</td>
+      <td>NaN</td>
+      <td>280 kW (381 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2017</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Sportwagen / Coupé</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Vito</td>
+      <td>381</td>
+    </tr>
+    <tr>
+      <th>1407</th>
+      <td>Mercedes-Benz Vito Tourer 116 CDI Lang BlueTEC...</td>
+      <td>33900.0</td>
+      <td>35000.0</td>
+      <td>NaN</td>
+      <td>143 kW (194 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>-1</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Vito</td>
+      <td>194</td>
+    </tr>
+    <tr>
+      <th>1409</th>
+      <td>Mercedes-Benz Vito Marco Polo 220d Activity Ed...</td>
+      <td>22400.0</td>
+      <td>67500.0</td>
+      <td>NaN</td>
+      <td>130 kW (177 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>03/2017</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Kombi</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>MarcoPolo</td>
+      <td>177</td>
+    </tr>
+  </tbody>
+</table>
+<p>1414 rows × 17 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="clean-column-power-kw">
+<h3>Clean column power KW<a class="headerlink" href="#clean-column-power-kw" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract KW from the column power</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power_kw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">&quot;nan&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-fuel-type">
+<h3>Clean column fuel_type<a class="headerlink" href="#clean-column-fuel-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">fuel_type</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;    1407
+&lt;class &#39;int&#39;&gt;       7
+Name: fuel_type, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fueltype</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;-1&#39;</span><span class="p">:</span>
+        
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fueltype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Diesel     794
+Benzin     554
+Hybrid      51
+Elektro      7
+Andere       1
+Name: fuel_type, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-transmission">
+<h3>Clean column transmission<a class="headerlink" href="#clean-column-transmission" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_45_1.png" src="../_images/data_cleaning_45_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1414 entries, 0 to 1409
+Data columns (total 18 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   carname             1414 non-null   object 
+ 1   price               1414 non-null   float64
+ 2   milage              1414 non-null   float64
+ 3   hubraum             1085 non-null   float64
+ 4   power               1414 non-null   object 
+ 5   fuel_type           1407 non-null   object 
+ 6   transmission        1406 non-null   object 
+ 7   construction_year   1414 non-null   int64  
+ 8   first_registration  1414 non-null   object 
+ 9   num_seats           1414 non-null   int64  
+ 10  num_doors           1414 non-null   object 
+ 11  emission_class      1414 non-null   object 
+ 12  car_type            1414 non-null   object 
+ 13  num_owners          1414 non-null   int64  
+ 14  damage              1414 non-null   object 
+ 15  Model               1414 non-null   object 
+ 16  power_ps            1399 non-null   object 
+ 17  power_kw            1399 non-null   object 
+dtypes: float64(3), int64(3), object(12)
+memory usage: 242.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculate-age-of-the-car-from-frist-registration">
+<h3>Calculate Age of the Car from frist_registration<a class="headerlink" href="#calculate-age-of-the-car-from-frist-registration" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">car_age</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mf">2021.83</span> <span class="o">-</span> <span class="n">year</span> <span class="o">-</span> <span class="p">(</span><span class="n">month</span><span class="o">/</span><span class="mf">12.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">age</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;first_registration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">car_age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;age&#39;, ylabel=&#39;Count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_51_1.png" src="../_images/data_cleaning_51_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-num-seats">
+<h3>Clean column num_seats<a class="headerlink" href="#clean-column-num-seats" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_54_1.png" src="../_images/data_cleaning_54_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-num-doors">
+<h3>Clean column num_doors<a class="headerlink" href="#clean-column-num-doors" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>construction_year</th>
+      <th>first_registration</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>damage</th>
+      <th>Model</th>
+      <th>power_ps</th>
+      <th>power_kw</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>105 kW (143 PS)</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Van / Minibus</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Sprinter</td>
+      <td>143</td>
+      <td>105</td>
+      <td>4.246667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>140 kW (190 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2020</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>SUV / Geländewagen / Pickup</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>GLB</td>
+      <td>190</td>
+      <td>140</td>
+      <td>1.413333</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+      <td>136</td>
+      <td>100</td>
+      <td>2.496667</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>115 kW (156 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>01/2017</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>Cabrio / Roadster</td>
+      <td>2</td>
+      <td>-1</td>
+      <td>C-Klasse</td>
+      <td>156</td>
+      <td>115</td>
+      <td>4.746667</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>100 kW (136 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>04/2019</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d-TEMP</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>A-Klasse</td>
+      <td>136</td>
+      <td>100</td>
+      <td>2.496667</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1401</th>
+      <td>Mercedes-Benz S 500 4M Lim lang AMG Nightp. PD...</td>
+      <td>15500.0</td>
+      <td>375000.0</td>
+      <td>NaN</td>
+      <td>110 kW (150 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>02/2017</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+      <td>150</td>
+      <td>110</td>
+      <td>4.663333</td>
+    </tr>
+    <tr>
+      <th>1405</th>
+      <td>Mercedes-Benz S -Klasse Lim. S 350 d L AMG</td>
+      <td>44500.0</td>
+      <td>115000.0</td>
+      <td>NaN</td>
+      <td>295 kW (401 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>08/2017</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-1</td>
+      <td>Limousine</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>S-Klasse</td>
+      <td>401</td>
+      <td>295</td>
+      <td>4.163333</td>
+    </tr>
+    <tr>
+      <th>1406</th>
+      <td>Mercedes-Benz Vito 119 CDI Tourer Select 4-Mat...</td>
+      <td>36000.0</td>
+      <td>66000.0</td>
+      <td>NaN</td>
+      <td>280 kW (381 PS)</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>05/2017</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-1</td>
+      <td>Sportwagen / Coupé</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>Vito</td>
+      <td>381</td>
+      <td>280</td>
+      <td>4.413333</td>
+    </tr>
+    <tr>
+      <th>1407</th>
+      <td>Mercedes-Benz Vito Tourer 116 CDI Lang BlueTEC...</td>
+      <td>33900.0</td>
+      <td>35000.0</td>
+      <td>NaN</td>
+      <td>143 kW (194 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>07/2017</td>
+      <td>NaN</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>Limousine</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>Vito</td>
+      <td>194</td>
+      <td>143</td>
+      <td>4.246667</td>
+    </tr>
+    <tr>
+      <th>1409</th>
+      <td>Mercedes-Benz Vito Marco Polo 220d Activity Ed...</td>
+      <td>22400.0</td>
+      <td>67500.0</td>
+      <td>NaN</td>
+      <td>130 kW (177 PS)</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>-1</td>
+      <td>03/2017</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>Kombi</td>
+      <td>1</td>
+      <td>Unfallfrei</td>
+      <td>MarcoPolo</td>
+      <td>177</td>
+      <td>130</td>
+      <td>4.580000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1414 rows × 19 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="clean-column-emission-class">
+<h3>Clean column emission_class<a class="headerlink" href="#clean-column-emission-class" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Euro6d-TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;Euro6d&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_61_1.png" src="../_images/data_cleaning_61_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-car-type">
+<h3>Clean column car_type<a class="headerlink" href="#clean-column-car-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simplify_cartype</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">xl</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">xl</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;tageszulassung&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;vorführfahrzeug&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;suv&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;suv&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;van&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;minibus&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;van&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;cabrio&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;roadster&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;cabrio&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;sportwagen&#39;</span> <span class="ow">in</span> <span class="n">xl</span> <span class="ow">or</span> <span class="s1">&#39;coup&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;sport&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;limousine&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;limousine&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;kombi&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;kombi&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;kleinwagen&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;kleinwagen&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;andere&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;andere&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">xl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">simplify_cartype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;car_type&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;car_type&#39;, ylabel=&#39;count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_65_1.png" src="../_images/data_cleaning_65_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-num-owners">
+<h3>Clean column num_owners<a class="headerlink" href="#clean-column-num-owners" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clean-column-damage">
+<h3>Clean column damage<a class="headerlink" href="#clean-column-damage" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;damage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;damage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">damage</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s1">&#39;repariert&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;repariert&#39;</span>
+    <span class="k">elif</span> <span class="s1">&#39;unfallfrei&#39;</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;unfallfrei&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">fuel_type</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;      1407
+&lt;class &#39;float&#39;&gt;       7
+Name: fuel_type, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;schaden&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;damage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">damage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;schaden&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;schaden&#39;, ylabel=&#39;count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_73_1.png" src="../_images/data_cleaning_73_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="remove-columns-that-are-no-longer-needed">
+<h3>Remove columns that are no longer needed<a class="headerlink" href="#remove-columns-that-are-no-longer-needed" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_new</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;construction_year&#39;</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">,</span> <span class="s1">&#39;first_registration&#39;</span><span class="p">,</span> <span class="s1">&#39;damage&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1414 entries, 0 to 1409
+Data columns (total 16 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   carname         1414 non-null   object 
+ 1   price           1414 non-null   float64
+ 2   milage          1414 non-null   float64
+ 3   hubraum         1085 non-null   float64
+ 4   fuel_type       1407 non-null   object 
+ 5   transmission    1406 non-null   object 
+ 6   num_seats       1043 non-null   object 
+ 7   num_doors       1098 non-null   object 
+ 8   emission_class  1027 non-null   object 
+ 9   car_type        1414 non-null   object 
+ 10  num_owners      933 non-null    object 
+ 11  Model           1414 non-null   object 
+ 12  power_ps        1399 non-null   object 
+ 13  power_kw        1399 non-null   object 
+ 14  age             1414 non-null   float64
+ 15  schaden         677 non-null    object 
+dtypes: float64(4), object(12)
+memory usage: 220.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="change-dtypes-of-the-columns">
+<h3>Change dtypes of the columns<a class="headerlink" href="#change-dtypes-of-the-columns" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;power_kw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;power_kw&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;schaden&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;schaden&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>Model</th>
+      <th>power_ps</th>
+      <th>power_kw</th>
+      <th>age</th>
+      <th>schaden</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>van</td>
+      <td>1</td>
+      <td>Sprinter</td>
+      <td>143.0</td>
+      <td>105.0</td>
+      <td>4.246667</td>
+      <td>unfallfrei</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>suv</td>
+      <td>1</td>
+      <td>GLB</td>
+      <td>190.0</td>
+      <td>140.0</td>
+      <td>1.413333</td>
+      <td>unfallfrei</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>100.0</td>
+      <td>2.496667</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>cabrio</td>
+      <td>2</td>
+      <td>C-Klasse</td>
+      <td>156.0</td>
+      <td>115.0</td>
+      <td>4.746667</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>100.0</td>
+      <td>2.496667</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1401</th>
+      <td>Mercedes-Benz S 500 4M Lim lang AMG Nightp. PD...</td>
+      <td>15500.0</td>
+      <td>375000.0</td>
+      <td>NaN</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>limousine</td>
+      <td>NaN</td>
+      <td>S-Klasse</td>
+      <td>150.0</td>
+      <td>110.0</td>
+      <td>4.663333</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1405</th>
+      <td>Mercedes-Benz S -Klasse Lim. S 350 d L AMG</td>
+      <td>44500.0</td>
+      <td>115000.0</td>
+      <td>NaN</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>limousine</td>
+      <td>NaN</td>
+      <td>S-Klasse</td>
+      <td>401.0</td>
+      <td>295.0</td>
+      <td>4.163333</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1406</th>
+      <td>Mercedes-Benz Vito 119 CDI Tourer Select 4-Mat...</td>
+      <td>36000.0</td>
+      <td>66000.0</td>
+      <td>NaN</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>sport</td>
+      <td>NaN</td>
+      <td>Vito</td>
+      <td>381.0</td>
+      <td>280.0</td>
+      <td>4.413333</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1407</th>
+      <td>Mercedes-Benz Vito Tourer 116 CDI Lang BlueTEC...</td>
+      <td>33900.0</td>
+      <td>35000.0</td>
+      <td>NaN</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>NaN</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>Vito</td>
+      <td>194.0</td>
+      <td>143.0</td>
+      <td>4.246667</td>
+      <td>unfallfrei</td>
+    </tr>
+    <tr>
+      <th>1409</th>
+      <td>Mercedes-Benz Vito Marco Polo 220d Activity Ed...</td>
+      <td>22400.0</td>
+      <td>67500.0</td>
+      <td>NaN</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>kombi</td>
+      <td>1</td>
+      <td>MarcoPolo</td>
+      <td>177.0</td>
+      <td>130.0</td>
+      <td>4.580000</td>
+      <td>unfallfrei</td>
+    </tr>
+  </tbody>
+</table>
+<p>1414 rows × 16 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="bereinigung-der-missing-values">
+<h2>Bereinigung der Missing Values<a class="headerlink" href="#bereinigung-der-missing-values" title="Permalink to this headline">¶</a></h2>
+<p>Nachdem die Daten nun in der ersten Runde aufbereitet wurden, werde ich mich in den kommenden Zeilen um die Missing Values kümmern.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1414 entries, 0 to 1409
+Data columns (total 16 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   carname         1414 non-null   object  
+ 1   price           1414 non-null   float64 
+ 2   milage          1414 non-null   float64 
+ 3   hubraum         1085 non-null   float64 
+ 4   fuel_type       1407 non-null   category
+ 5   transmission    1406 non-null   category
+ 6   num_seats       1043 non-null   category
+ 7   num_doors       1098 non-null   category
+ 8   emission_class  1027 non-null   category
+ 9   car_type        1414 non-null   category
+ 10  num_owners      933 non-null    category
+ 11  Model           1414 non-null   category
+ 12  power_ps        1399 non-null   float64 
+ 13  power_kw        1399 non-null   float64 
+ 14  age             1414 non-null   float64 
+ 15  schaden         677 non-null    category
+dtypes: category(9), float64(6), object(1)
+memory usage: 136.0+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_83_1.png" src="../_images/data_cleaning_83_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>carname             0
+price               0
+milage              0
+hubraum           329
+fuel_type           7
+transmission        8
+num_seats         371
+num_doors         316
+emission_class    387
+car_type            0
+num_owners        481
+Model               0
+power_ps           15
+power_kw           15
+age                 0
+schaden           737
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bereinung-der-mvs-von-hubraum">
+<h3>Bereinung der MVs von Hubraum<a class="headerlink" href="#bereinung-der-mvs-von-hubraum" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;hubraum&quot;</span><span class="p">)</span>
+<span class="n">df_cleaned</span><span class="o">.</span><span class="n">hubraum</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2498516129032273
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_86_1.png" src="../_images/data_cleaning_86_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;hubraum&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;price&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;hubraum&#39;, ylabel=&#39;price&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_87_1.png" src="../_images/data_cleaning_87_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>hubraum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>price</th>
+      <td>1.000000</td>
+      <td>0.576906</td>
+    </tr>
+    <tr>
+      <th>hubraum</th>
+      <td>0.576906</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="c1">#matrix = np.triu(corr)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_89_1.png" src="../_images/data_cleaning_89_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.695e+04, 2.143e+00],
+       [6.049e+04, 1.950e+00],
+       [2.499e+04, 1.332e+00],
+       ...,
+       [3.600e+04,       nan],
+       [3.390e+04,       nan],
+       [2.240e+04,       nan]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zwischen price und hubraum besteht eine hohe korrelation -&gt; Je höher der Preis, desto größer der Hubraum. Es besteht in diesem Fall eine positive Beziehung. So würde ich mich für eine deterministische Regressions Imputation entscheiden, um die MVs zu berechnen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.experimental</span> <span class="kn">import</span> <span class="n">enable_iterative_imputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">IterativeImputer</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original x: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Initialize Deterministic Regression Imputation with 10 iterations</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">IterativeImputer</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#imp2 = IterativeImputer(max_iter=10, sample_posterior=True, random_state=0)</span>
+
+<span class="c1">#Fit and transform array x and print the result</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#imp2.fit(x)</span>
+<span class="n">x_cleaned</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#x_cleaned2 = np.round(imp2.transform(x))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deterministic Regression Imputation of x: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x_cleaned</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original x: 
+ [[1.695e+04 2.143e+00]
+ [6.049e+04 1.950e+00]
+ [2.499e+04 1.332e+00]
+ ...
+ [3.600e+04       nan]
+ [3.390e+04       nan]
+ [2.240e+04       nan]]
+Deterministic Regression Imputation of x: 
+ [[1.69500000e+04 2.14300000e+00]
+ [6.04900000e+04 1.95000000e+00]
+ [2.49900000e+04 1.33200000e+00]
+ ...
+ [3.60000000e+04 2.16195251e+00]
+ [3.39000000e+04 2.13078524e+00]
+ [2.24000000e+04 1.96010734e+00]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="n">x_cleaned</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">:</span> <span class="n">x_cleaned</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]})</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;hubraum_regimputation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">hubraum</span>
+<span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;hubraum_regimputation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="p">[</span><span class="s1">&#39;hubraum_regimputation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_94_1.png" src="../_images/data_cleaning_94_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="c1">#matrix = np.triu(corr)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_95_1.png" src="../_images/data_cleaning_95_1.png" />
+</div>
+</div>
+<p>Es hat sich herausgestellt,dass die Beziehung zwischen Hubraum und der Zielvariable price durch die Regressions Imputation deutlich geschwächt wurde. (Von 0,58 auf -0,0015 gesunken) So entscheide ich mich doch dafür die MVs einfach zu droppen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;hubraum_regimputation&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1085 entries, 0 to 1408
+Data columns (total 16 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   carname         1085 non-null   object  
+ 1   price           1085 non-null   float64 
+ 2   milage          1085 non-null   float64 
+ 3   hubraum         1085 non-null   float64 
+ 4   fuel_type       1084 non-null   category
+ 5   transmission    1081 non-null   category
+ 6   num_seats       1028 non-null   category
+ 7   num_doors       1080 non-null   category
+ 8   emission_class  1012 non-null   category
+ 9   car_type        1085 non-null   category
+ 10  num_owners      921 non-null    category
+ 11  Model           1085 non-null   category
+ 12  power_ps        1084 non-null   float64 
+ 13  power_kw        1084 non-null   float64 
+ 14  age             1085 non-null   float64 
+ 15  schaden         666 non-null    category
+dtypes: category(9), float64(6), object(1)
+memory usage: 80.3+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_100_1.png" src="../_images/data_cleaning_100_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bereinung-der-mvs-von-num-seats">
+<h3>Bereinung der MVs von num_seats<a class="headerlink" href="#bereinung-der-mvs-von-num-seats" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_seats</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;num_seats&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;num_seats&#39;, ylabel=&#39;count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_103_1.png" src="../_images/data_cleaning_103_1.png" />
+</div>
+</div>
+<p>Da num_seats sehr häufig vorkommt, der ich die MVS mit most_frequent bzw. Modus ersetzen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df_cleaned.num_seats.mode().iloc[0]</span>
+<span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_seats</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_seats</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_seats</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_seats</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_107_1.png" src="../_images/data_cleaning_107_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bereinung-der-mvs-von-emission-class">
+<h3>Bereinung der MVs von emission_class<a class="headerlink" href="#bereinung-der-mvs-von-emission-class" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">emission_class</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/data_cleaning_111_1.png" src="../_images/data_cleaning_111_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Bereinung der MVs von emission_class<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_owners</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>105
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Da num_owners ebenfalls eine wichtige Variable für das Modell ist, werde nur die MVS entfernen und nicht die ganze Spalte.</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">num_owners</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bereinung-der-mvs-von-schaden">
+<h3>Bereinung der MVs von schaden<a class="headerlink" href="#bereinung-der-mvs-von-schaden" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">schaden</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>unfallfrei    616
+repariert       2
+Name: schaden, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">schaden</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>289
+</pre></div>
+</div>
+</div>
+</div>
+<p>Da sehr viele MVs vorliegen und es hauptsächlich um unfallfreie Fahrzeuge handelt, hat dieses Feature keine Aussagekraft für die Zielvariable price. Deshalb werde ich dieses Feature entfernen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;schaden&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>carname           0
+price             0
+milage            0
+hubraum           0
+fuel_type         1
+transmission      2
+num_seats         0
+num_doors         4
+emission_class    0
+car_type          0
+num_owners        0
+Model             0
+power_ps          1
+power_kw          1
+age               0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>carname           0
+price             0
+milage            0
+hubraum           0
+fuel_type         0
+transmission      0
+num_seats         0
+num_doors         0
+emission_class    0
+car_type          0
+num_owners        0
+Model             0
+power_ps          0
+power_kw          0
+age               0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 900 entries, 0 to 1408
+Data columns (total 15 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   carname         900 non-null    object  
+ 1   price           900 non-null    float64 
+ 2   milage          900 non-null    float64 
+ 3   hubraum         900 non-null    float64 
+ 4   fuel_type       900 non-null    category
+ 5   transmission    900 non-null    category
+ 6   num_seats       900 non-null    category
+ 7   num_doors       900 non-null    category
+ 8   emission_class  900 non-null    category
+ 9   car_type        900 non-null    category
+ 10  num_owners      900 non-null    category
+ 11  Model           900 non-null    category
+ 12  power_ps        900 non-null    float64 
+ 13  power_kw        900 non-null    float64 
+ 14  age             900 non-null    float64 
+dtypes: category(8), float64(6), object(1)
+memory usage: 66.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;mobile_clean_data&quot;</span><span class="o">+</span> <span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="webscraper_mobile.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2. Webscraper mobile.de</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="EDA_Regression_Diagnostic.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. EDA und Regression Diagnostic</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch Cenk Yagkan<br/>
+        
+            &copy; Urheberrechte © 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

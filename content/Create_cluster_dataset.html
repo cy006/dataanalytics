@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Create Dataset for Clustering</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. EDA &amp; Data Preparation" href="EDA_segemntierung.html" />
+    <link rel="prev" title="1. Einführung" href="../plan_segmentierung.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Applied Data Analytics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Restwertermittlung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_restwertermittlung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraper_mobile.html">
+   2. Webscraper mobile.de
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_cleaning.html">
+   3. Data Cleaning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_Regression_Diagnostic.html">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelbuilding_restwertermittlung.html">
+   5. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leasingrisiko
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_leasingrisiko.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_clean_Dataset.html">
+   2. Create clean Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exploration_leasingrisk.html">
+   3. Explorative Datenanalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modelbuilding_leasingrisk.html">
+   4. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kundensegmentierung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_segmentierung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Create Dataset for Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_segemntierung.html">
+   3. EDA &amp; Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans_segmentation.html">
+   4. Modeling &amp; Evaluation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Create_cluster_dataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cy006/data_analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cy006/data_analytics/issues/new?title=Issue%20on%20page%20%2Fcontent/Create_cluster_dataset.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cy006/data_analytics/master?urlpath=tree/docs/content/Create_cluster_dataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-dependencies">
+   Import Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-data">
+   Import Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-custom-dataset">
+   Create custom dataset
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="create-dataset-for-clustering">
+<h1>2. Create Dataset for Clustering<a class="headerlink" href="#create-dataset-for-clustering" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-dependencies">
+<h2>Import Dependencies<a class="headerlink" href="#import-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-data">
+<h2>Import Data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Clustering/Mall_Customers.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CustomerID</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Annual Income (k$)</th>
+      <th>Spending Score (1-100)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Male</td>
+      <td>19</td>
+      <td>15</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Male</td>
+      <td>21</td>
+      <td>15</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Female</td>
+      <td>20</td>
+      <td>16</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Female</td>
+      <td>23</td>
+      <td>16</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Female</td>
+      <td>31</td>
+      <td>17</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>196</td>
+      <td>Female</td>
+      <td>35</td>
+      <td>120</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>197</td>
+      <td>Female</td>
+      <td>45</td>
+      <td>126</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>198</td>
+      <td>Male</td>
+      <td>32</td>
+      <td>126</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>199</td>
+      <td>Male</td>
+      <td>32</td>
+      <td>137</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>200</td>
+      <td>Male</td>
+      <td>30</td>
+      <td>137</td>
+      <td>83</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 5 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="create-custom-dataset">
+<h2>Create custom dataset<a class="headerlink" href="#create-custom-dataset" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Einkommen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Annual Income (k$)&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Annual Income (k$)&#39;</span><span class="p">,</span> <span class="s1">&#39;Spending Score (1-100)&#39;</span><span class="p">,</span> <span class="s1">&#39;CustomerID&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Einkommen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>19</td>
+      <td>15000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>21</td>
+      <td>15000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Female</td>
+      <td>20</td>
+      <td>16000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Female</td>
+      <td>23</td>
+      <td>16000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Female</td>
+      <td>31</td>
+      <td>17000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>Female</td>
+      <td>35</td>
+      <td>120000</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>Female</td>
+      <td>45</td>
+      <td>126000</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>Male</td>
+      <td>32</td>
+      <td>126000</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>Male</td>
+      <td>32</td>
+      <td>137000</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>Male</td>
+      <td>30</td>
+      <td>137000</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">15001</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">380</span><span class="p">,</span><span class="mi">440</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">15001</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">25000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">440</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">25000</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">50000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">650</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50000</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">75000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">75000</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">90000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">950</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">90000</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">120000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1300</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1300</span><span class="p">,</span> <span class="mi">1800</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Leasingrate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">rate</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Einkommen</th>
+      <th>Leasingrate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>19</td>
+      <td>15000</td>
+      <td>423.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>21</td>
+      <td>15000</td>
+      <td>420.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Female</td>
+      <td>20</td>
+      <td>16000</td>
+      <td>474.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Female</td>
+      <td>23</td>
+      <td>16000</td>
+      <td>449.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Female</td>
+      <td>31</td>
+      <td>17000</td>
+      <td>451.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Female</td>
+      <td>22</td>
+      <td>17000</td>
+      <td>486.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Female</td>
+      <td>35</td>
+      <td>18000</td>
+      <td>443.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Female</td>
+      <td>23</td>
+      <td>18000</td>
+      <td>449.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Male</td>
+      <td>64</td>
+      <td>19000</td>
+      <td>477.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Female</td>
+      <td>30</td>
+      <td>19000</td>
+      <td>499.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Male</td>
+      <td>67</td>
+      <td>19000</td>
+      <td>499.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Female</td>
+      <td>35</td>
+      <td>19000</td>
+      <td>500.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Female</td>
+      <td>58</td>
+      <td>20000</td>
+      <td>461.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Female</td>
+      <td>24</td>
+      <td>20000</td>
+      <td>467.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Male</td>
+      <td>37</td>
+      <td>20000</td>
+      <td>440.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Male</td>
+      <td>22</td>
+      <td>20000</td>
+      <td>440.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Female</td>
+      <td>35</td>
+      <td>21000</td>
+      <td>492.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Male</td>
+      <td>20</td>
+      <td>21000</td>
+      <td>456.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Male</td>
+      <td>52</td>
+      <td>23000</td>
+      <td>458.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Female</td>
+      <td>35</td>
+      <td>23000</td>
+      <td>469.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mf">11.7</span><span class="p">,</span><span class="mf">8.27</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Einkommen&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Leasingrate&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Create_cluster_dataset_12_0.png" src="../_images/Create_cluster_dataset_12_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/Users/cenkyagkan/Desktop/OMM/7.Semester/Applied Data Analytics/Clustering/final_dataset_cluster.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../plan_segmentierung.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. Einführung</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="EDA_segemntierung.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3. EDA &amp; Data Preparation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch Cenk Yagkan<br/>
+        
+            &copy; Urheberrechte © 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1765 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. EDA und Regression Diagnostic</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Modelbuilding" href="modelbuilding_restwertermittlung.html" />
+    <link rel="prev" title="3. Data Cleaning" href="data_cleaning.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Applied Data Analytics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Restwertermittlung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_restwertermittlung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraper_mobile.html">
+   2. Webscraper mobile.de
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_cleaning.html">
+   3. Data Cleaning
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelbuilding_restwertermittlung.html">
+   5. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leasingrisiko
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_leasingrisiko.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_clean_Dataset.html">
+   2. Create clean Dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exploration_leasingrisk.html">
+   3. Explorative Datenanalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modelbuilding_leasingrisk.html">
+   4. Modelbuilding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kundensegmentierung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plan_segmentierung.html">
+   1. Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create_cluster_dataset.html">
+   2. Create Dataset for Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EDA_segemntierung.html">
+   3. EDA &amp; Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans_segmentation.html">
+   4. Modeling &amp; Evaluation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/EDA_Regression_Diagnostic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cy006/data_analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cy006/data_analytics/issues/new?title=Issue%20on%20page%20%2Fcontent/EDA_Regression_Diagnostic.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cy006/data_analytics/master?urlpath=tree/docs/content/EDA_Regression_Diagnostic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   4. EDA und Regression Diagnostic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#daten-exploration">
+   Daten Exploration
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anpassung-der-datentypen">
+     Anpassung der Datentypen
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deskriptive-statistiken">
+     Deskriptive Statistiken
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#uberprufung-des-fehlers-bei-age-0-003333">
+       Überprüfung des Fehlers bei age -0.003333
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#verteilung-der-features">
+       Verteilung der Features
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ausreiszer">
+       Ausreißer
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#uberprufung-mit-influence-plots">
+       Überprüfung mit Influence plots
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#entfernung-der-ausreiszerwerte">
+         Entfernung der Ausreißerwerte
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#partial-regression-plot">
+       Partial Regression Plot
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#residuals-vs-fitted-plot">
+       Residuals vs fitted plot
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#breusch-pagan-lagrange-multiplier-test">
+       Breusch-Pagan Lagrange Multiplier test
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#korrelation-multikollineraitat">
+       Korrelation / Multikollineraität
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#korrelation-der-features-mit-dem-label">
+         Korrelation der Features mit dem Label
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multikollinearitat">
+       Multikollinearität
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zusammenfassung-der-ergebnisse">
+     Zusammenfassung der Ergebnisse:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#outliers-and-high-leverage-points">
+       Outliers and high-leverage points
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#verteilung-der-daten">
+       Verteilung der Daten
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lineare-beziehung-und-heteroskedastizitat">
+       Lineare Beziehung und Heteroskedastizität
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#korrelation">
+       Korrelation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Multikollinearität
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="eda-und-regression-diagnostic">
+<h1>4. EDA und Regression Diagnostic<a class="headerlink" href="#eda-und-regression-diagnostic" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mf">11.7</span><span class="p">,</span><span class="mf">8.27</span><span class="p">)})</span>
+<span class="kn">from</span> <span class="nn">patsy</span> <span class="kn">import</span> <span class="n">dmatrices</span>
+<span class="kn">from</span> <span class="nn">statsmodels.compat</span> <span class="kn">import</span> <span class="n">lzip</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;figure&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;font&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/cenkyagkan/books/mynewbook/content/mobile_clean_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>Model</th>
+      <th>power_ps</th>
+      <th>power_kw</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mercedes-Benz Sprinter II Kasten 214 CDI Klima...</td>
+      <td>16950.0</td>
+      <td>198245.0</td>
+      <td>2.143</td>
+      <td>Diesel</td>
+      <td>Schaltgetriebe</td>
+      <td>3</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>van</td>
+      <td>1</td>
+      <td>Sprinter</td>
+      <td>143.0</td>
+      <td>105.0</td>
+      <td>4.246667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mercedes-Benz GLB 220 d 4M Progressive AHK Dis...</td>
+      <td>60490.0</td>
+      <td>10529.0</td>
+      <td>1.950</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>suv</td>
+      <td>1</td>
+      <td>GLB</td>
+      <td>190.0</td>
+      <td>140.0</td>
+      <td>1.413333</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mercedes-Benz A 200 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>100.0</td>
+      <td>2.496667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mercedes-Benz C 180 *CABRIO*AMG LINE*9G*2.HAND...</td>
+      <td>31990.0</td>
+      <td>84925.0</td>
+      <td>1.595</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>4</td>
+      <td>2/3</td>
+      <td>Euro6</td>
+      <td>cabrio</td>
+      <td>2</td>
+      <td>C-Klasse</td>
+      <td>156.0</td>
+      <td>115.0</td>
+      <td>4.746667</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mercedes-Benz A 180 7G*1.HAND*LED*NAVI*LEDER*K...</td>
+      <td>24990.0</td>
+      <td>91205.0</td>
+      <td>1.332</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>A-Klasse</td>
+      <td>136.0</td>
+      <td>100.0</td>
+      <td>2.496667</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>895</th>
+      <td>Mercedes-Benz GLE 63 S 4M Coupe</td>
+      <td>53999.0</td>
+      <td>74500.0</td>
+      <td>2.143</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>7</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>van</td>
+      <td>2</td>
+      <td>S-Klasse</td>
+      <td>190.0</td>
+      <td>140.0</td>
+      <td>3.996667</td>
+    </tr>
+    <tr>
+      <th>896</th>
+      <td>Mercedes-Benz GLE 350 d Cp Orange Edition AMG ...</td>
+      <td>54500.0</td>
+      <td>44518.0</td>
+      <td>2.925</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>limousine</td>
+      <td>1</td>
+      <td>GLE</td>
+      <td>286.0</td>
+      <td>210.0</td>
+      <td>2.996667</td>
+    </tr>
+    <tr>
+      <th>897</th>
+      <td>Mercedes-Benz GLE 350d 4M Coupe AMG Pano AHK</td>
+      <td>39440.0</td>
+      <td>33975.0</td>
+      <td>1.950</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6d</td>
+      <td>kombi</td>
+      <td>3</td>
+      <td>GLE</td>
+      <td>194.0</td>
+      <td>143.0</td>
+      <td>2.246667</td>
+    </tr>
+    <tr>
+      <th>898</th>
+      <td>Mercedes-Benz S 560 4MATIC Limousine lang AMG ...</td>
+      <td>36000.0</td>
+      <td>96500.0</td>
+      <td>2.987</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>kombi</td>
+      <td>2</td>
+      <td>S-Klasse</td>
+      <td>258.0</td>
+      <td>190.0</td>
+      <td>3.913333</td>
+    </tr>
+    <tr>
+      <th>899</th>
+      <td>Mercedes-Benz AMG GT 63 S 4Matic+</td>
+      <td>78000.0</td>
+      <td>55000.0</td>
+      <td>3.982</td>
+      <td>Benzin</td>
+      <td>Automatik</td>
+      <td>2</td>
+      <td>2/3</td>
+      <td>Euro6c</td>
+      <td>sport</td>
+      <td>1</td>
+      <td>S-Klasse</td>
+      <td>476.0</td>
+      <td>350.0</td>
+      <td>4.246667</td>
+    </tr>
+  </tbody>
+</table>
+<p>900 rows × 15 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_4_0.png" src="../_images/EDA_Regression_Diagnostic_4_0.png" />
+</div>
+</div>
+<p>Abhängige Variable ist: price</p>
+<p><strong>Erste Erkenntnisse:</strong></p>
+<ul class="simple">
+<li><p>Zwischen price und power_ps besteht eine positive Beziehung</p></li>
+<li><p>Zwischen price und power_kw besteht eine positive Beziehung</p></li>
+<li><p>Da power_ps und power_kw den Leistungswert des Fahrzeuges bestimmen, korrelieren diese sehr stark miteinander. So sollte später beim Modelbuilding nur einer der Variablen berücksichtigt werden, das sonst unter den unabhängigen Variablen eine Multikollinearität besteht.</p></li>
+<li><p>Zwischen price und Hubraum besteht eine positive Beziehung.</p></li>
+<li><p>Zwischen Hubraum und power_ps,power_kw besteht ebenfalls eine positive Beziehung.</p></li>
+</ul>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="daten-exploration">
+<h1>Daten Exploration<a class="headerlink" href="#daten-exploration" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 900 entries, 0 to 899
+Data columns (total 15 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   carname         900 non-null    object 
+ 1   price           900 non-null    float64
+ 2   milage          900 non-null    float64
+ 3   hubraum         900 non-null    float64
+ 4   fuel_type       900 non-null    object 
+ 5   transmission    900 non-null    object 
+ 6   num_seats       900 non-null    int64  
+ 7   num_doors       900 non-null    object 
+ 8   emission_class  900 non-null    object 
+ 9   car_type        900 non-null    object 
+ 10  num_owners      900 non-null    int64  
+ 11  Model           900 non-null    object 
+ 12  power_ps        900 non-null    float64
+ 13  power_kw        900 non-null    float64
+ 14  age             900 non-null    float64
+dtypes: float64(6), int64(2), object(7)
+memory usage: 105.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Insgesamt gibt es 13 unabhängige Variablen und eine abhänige Variable “price”</p></li>
+<li><p>MVs gibt es keine, da bereits beim data cleaning alle MVs beseitigt wurden</p></li>
+<li><p>Die Datentypen müssen angepasst werden für die Variablen mit dtype: object.</p></li>
+</ul>
+<div class="section" id="anpassung-der-datentypen">
+<h2>Anpassung der Datentypen<a class="headerlink" href="#anpassung-der-datentypen" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;carname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;carname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;transmission&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_seats&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_doors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;emission_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;car_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;num_owners&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 900 entries, 0 to 899
+Data columns (total 15 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   carname         900 non-null    category
+ 1   price           900 non-null    float64 
+ 2   milage          900 non-null    float64 
+ 3   hubraum         900 non-null    float64 
+ 4   fuel_type       900 non-null    category
+ 5   transmission    900 non-null    category
+ 6   num_seats       900 non-null    category
+ 7   num_doors       900 non-null    category
+ 8   emission_class  900 non-null    category
+ 9   car_type        900 non-null    category
+ 10  num_owners      900 non-null    category
+ 11  Model           900 non-null    category
+ 12  power_ps        900 non-null    float64 
+ 13  power_kw        900 non-null    float64 
+ 14  age             900 non-null    float64 
+dtypes: category(9), float64(6)
+memory usage: 92.6 KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="deskriptive-statistiken">
+<h2>Deskriptive Statistiken<a class="headerlink" href="#deskriptive-statistiken" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>milage</th>
+      <th>hubraum</th>
+      <th>power_ps</th>
+      <th>power_kw</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>43408.403333</td>
+      <td>87759.004444</td>
+      <td>2.226998</td>
+      <td>228.208889</td>
+      <td>167.902222</td>
+      <td>2.780556</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>27921.526152</td>
+      <td>88064.879424</td>
+      <td>0.693198</td>
+      <td>111.816226</td>
+      <td>82.223382</td>
+      <td>1.430579</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5899.000000</td>
+      <td>10.000000</td>
+      <td>1.332000</td>
+      <td>75.000000</td>
+      <td>55.000000</td>
+      <td>-0.003333</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>24990.000000</td>
+      <td>17236.500000</td>
+      <td>1.950000</td>
+      <td>163.000000</td>
+      <td>120.000000</td>
+      <td>1.413333</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>35995.000000</td>
+      <td>49700.000000</td>
+      <td>1.991000</td>
+      <td>194.000000</td>
+      <td>143.000000</td>
+      <td>3.163333</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>51900.000000</td>
+      <td>153202.250000</td>
+      <td>2.143000</td>
+      <td>258.000000</td>
+      <td>190.000000</td>
+      <td>4.080000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>169950.000000</td>
+      <td>406900.000000</td>
+      <td>5.461000</td>
+      <td>639.000000</td>
+      <td>470.000000</td>
+      <td>4.746667</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Auffälligkeiten bei numerischen Features:</strong></p>
+<ul class="simple">
+<li><p>milage: Es gibt neuwertige Fahrzeuge in dem Datensatz mit einer Laufleistung von 10KM. Auf der anderen Seite gibt auch Fahrzeuge, mit denen sehr oft gefahren wurde. Um den Restwert zu ermitteln spielt die milage eine wichtige Rolle, da Fahrzeuge mit mehr Kilometer auf dem Tachometer anfälliger sind.</p></li>
+<li><p>power_ps: Mit einem Median von 194PS sind die Fahrzeuge von Mercedes gut motorisiert.</p></li>
+<li><p>age: Bei der Berechnung von age im data cleaning ist vermutlich für eine oder mehrere Instanzen ein Fehler passiert. Dieser Fehler mit -0.003333 muss genauer betrachtet werden -&gt; Erste Identifikation von Noise</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carname</th>
+      <th>fuel_type</th>
+      <th>transmission</th>
+      <th>num_seats</th>
+      <th>num_doors</th>
+      <th>emission_class</th>
+      <th>car_type</th>
+      <th>num_owners</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+      <td>900</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>900</td>
+      <td>3</td>
+      <td>2</td>
+      <td>8</td>
+      <td>2</td>
+      <td>4</td>
+      <td>8</td>
+      <td>4</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>Mercedes-Benz 211 CDI Sprinter 906.613</td>
+      <td>Diesel</td>
+      <td>Automatik</td>
+      <td>5</td>
+      <td>4/5</td>
+      <td>Euro6</td>
+      <td>kombi</td>
+      <td>1</td>
+      <td>C-Klasse</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>522</td>
+      <td>779</td>
+      <td>701</td>
+      <td>817</td>
+      <td>548</td>
+      <td>267</td>
+      <td>682</td>
+      <td>163</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Auffälligkeiten bei kategorischen Features:</strong>
+Ein großteil der Fahrzeuge haben folgende Eigenschaften:</p>
+<ul class="simple">
+<li><p>Der Kraftstofftyp ist Diesel</p></li>
+<li><p>Automatikgetriebe</p></li>
+<li><p>Fünfsitzer</p></li>
+<li><p>4/5 Türer</p></li>
+<li><p>Haben die Emissionsklasse 6</p></li>
+<li><p>Kombifahrzeug</p></li>
+<li><p>als Model die C-Klasse</p></li>
+<li><p>1 Vorbesitzer</p></li>
+</ul>
+<div class="section" id="uberprufung-des-fehlers-bei-age-0-003333">
+<h3>Überprüfung des Fehlers bei age -0.003333<a class="headerlink" href="#uberprufung-des-fehlers-bei-age-0-003333" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_18_0.png" src="../_images/EDA_Regression_Diagnostic_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0799999999999272
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Man kann erkennen, dass der Fehler nun beseitigt ist.</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_21_0.png" src="../_images/EDA_Regression_Diagnostic_21_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="verteilung-der-features">
+<h3>Verteilung der Features<a class="headerlink" href="#verteilung-der-features" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">13</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">20</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-14-446d79012efc&gt;:3: UserWarning: To output multiple subplots, the figure containing the passed axes is being cleared
+  df.hist(ax = ax, bins = 20);
+</pre></div>
+</div>
+<img alt="../_images/EDA_Regression_Diagnostic_23_1.png" src="../_images/EDA_Regression_Diagnostic_23_1.png" />
+</div>
+</div>
+<p>Betrachtet man die Verteilungen der einzelnen Features, so zeigt sich, dass bei allen numerischen Features keine Normalverteilung vorliegt.
+Damit die Lineare Regression eine besser Performance erzielt, könnte man die numerischen Features durch eine BoxCox-Transformation in eine Normalverteilung bringen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_cat</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="mi">417</span><span class="n">f855cde30</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/pyplot.py</span> in <span class="ni">show</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span><span class="sd">     _warn_if_gui_out_of_main_thread()</span>
+<span class="ne">--&gt; </span><span class="mi">353</span><span class="sd">     return _backend_mod.show(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span><span class="sd"> </span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/ipykernel/pylab/backend_inline.py</span> in <span class="ni">show</span><span class="nt">(close, block)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="sd">     try:</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="sd">         for figure_manager in Gcf.get_all_fig_managers():</span>
+<span class="ne">---&gt; </span><span class="mi">41</span><span class="sd">             display(</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">                 figure_manager.canvas.figure,</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd">                 metadata=_fetch_figure_metadata(figure_manager.canvas.figure)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/display.py</span> in <span class="ni">display</span><span class="nt">(include, exclude, metadata, transient, display_id, *objs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span><span class="sd">             publish_display_data(data=obj, metadata=metadata, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span><span class="sd">         else:</span>
+<span class="ne">--&gt; </span><span class="mi">313</span><span class="sd">             format_dict, md_dict = format(obj, include=include, exclude=exclude)</span>
+<span class="g g-Whitespace">    </span><span class="mi">314</span><span class="sd">             if not format_dict:</span>
+<span class="g g-Whitespace">    </span><span class="mi">315</span><span class="sd">                 # nothing to display (e.g. _ipython_display_ took over)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/formatters.py</span> in <span class="ni">format</span><span class="nt">(self, obj, include, exclude)</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="sd">             md = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">180</span><span class="sd">                 data = formatter(obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span><span class="sd">             except:</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span><span class="sd">                 # FIXME: log the exception</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/decorator.py</span> in <span class="ni">fun</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span><span class="sd">             if not kwsyntax:</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span><span class="sd">                 args, kw = fix(args, kw, sig)</span>
+<span class="ne">--&gt; </span><span class="mi">231</span><span class="sd">             return caller(func, *(extras + args), **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span><span class="sd">     fun.__name__ = func.__name__</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span><span class="sd">     fun.__doc__ = func.__doc__</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/formatters.py</span> in <span class="ni">catch_format_error</span><span class="nt">(method, self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="sd">     &quot;&quot;&quot;</span><span class="n">show</span> <span class="n">traceback</span> <span class="n">on</span> <span class="n">failed</span> <span class="nb">format</span> <span class="n">call</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">     try:</span>
+<span class="ne">--&gt; </span><span class="mi">224</span><span class="s2">         r = method(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2">     except NotImplementedError:</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span><span class="s2">         # don&#39;t warn on NotImplementedErrors</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="s2">                 pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span><span class="s2">             else:</span>
+<span class="ne">--&gt; </span><span class="mi">341</span><span class="s2">                 return printer(obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span><span class="s2">             # Finally look for special method names</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2">             method = get_real_method(obj, self.print_method)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(fig)</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">247</span><span class="s2">     if &#39;png&#39; in formats:</span>
+<span class="ne">--&gt; </span><span class="mi">248</span><span class="s2">         png_formatter.for_type(Figure, lambda fig: print_figure(fig, &#39;png&#39;, **kwargs))</span>
+<span class="g g-Whitespace">    </span><span class="mi">249</span><span class="s2">     if &#39;retina&#39; in formats or &#39;png2x&#39; in formats:</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span><span class="s2">         png_formatter.for_type(Figure, lambda fig: retina_figure(fig, **kwargs))</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/IPython/core/pylabtools.py</span> in <span class="ni">print_figure</span><span class="nt">(fig, fmt, bbox_inches, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="s2">         FigureCanvasBase(fig)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">132</span><span class="s2">     fig.canvas.print_figure(bytes_io, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span><span class="s2">     data = bytes_io.getvalue()</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span><span class="s2">     if fmt == &#39;svg&#39;:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/backend_bases.py</span> in <span class="ni">print_figure</span><span class="nt">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2193</span><span class="s2">                         self.figure.draw(renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2194</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">2195</span><span class="s2">                     bbox_inches = self.figure.get_tightbbox(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2196</span><span class="s2">                         renderer, bbox_extra_artists=bbox_extra_artists)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2197</span><span class="s2">                     if pad_inches is None:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/figure.py</span> in <span class="ni">get_tightbbox</span><span class="nt">(self, renderer, bbox_extra_artists)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2513</span><span class="s2">                 # need this conditional....</span>
+<span class="g g-Whitespace">   </span><span class="mi">2514</span><span class="s2">                 try:</span>
+<span class="ne">-&gt; </span><span class="mi">2515</span><span class="s2">                     bbox = ax.get_tightbbox(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2516</span><span class="s2">                         renderer, bbox_extra_artists=bbox_extra_artists)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2517</span><span class="s2">                 except TypeError:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">get_tightbbox</span><span class="nt">(self, renderer, call_axes_locator, bbox_extra_artists, for_layout_only)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4151</span><span class="s2">             if self.xaxis.get_visible():</span>
+<span class="g g-Whitespace">   </span><span class="mi">4152</span><span class="s2">                 try:</span>
+<span class="ne">-&gt; </span><span class="mi">4153</span><span class="s2">                     bb_xaxis = self.xaxis.get_tightbbox(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4154</span><span class="s2">                         renderer, for_layout_only=for_layout_only)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4155</span><span class="s2">                 except TypeError:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axis.py</span> in <span class="ni">get_tightbbox</span><span class="nt">(self, renderer, for_layout_only)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1112</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1113</span><span class="s2">         # go back to just this axis&#39;s tick labels</span>
+<span class="ne">-&gt; </span><span class="mi">1114</span><span class="s2">         ticklabelBoxes, ticklabelBoxes2 = self._get_tick_bboxes(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1115</span><span class="s2">                     ticks_to_draw, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1116</span><span class="s2"> </span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axis.py</span> in <span class="ni">_get_tick_bboxes</span><span class="nt">(self, ticks, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1089</span><span class="s2">     def _get_tick_bboxes(self, ticks, renderer):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1090</span><span class="s2">         &quot;&quot;&quot;</span><span class="n">Return</span> <span class="n">lists</span> <span class="n">of</span> <span class="n">bboxes</span> <span class="k">for</span> <span class="n">ticks</span><span class="s1">&#39; label1&#39;</span><span class="n">s</span> <span class="ow">and</span> <span class="n">label2</span><span class="s1">&#39;s.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1091</span>         <span class="k">return</span> <span class="p">([</span><span class="n">tick</span><span class="o">.</span><span class="n">label1</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span>                  <span class="k">for</span> <span class="n">tick</span> <span class="ow">in</span> <span class="n">ticks</span> <span class="k">if</span> <span class="n">tick</span><span class="o">.</span><span class="n">label1</span><span class="o">.</span><span class="n">get_visible</span><span class="p">()],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span>                 <span class="p">[</span><span class="n">tick</span><span class="o">.</span><span class="n">label2</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axis.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1089</span>     <span class="k">def</span> <span class="nf">_get_tick_bboxes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ticks</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1090</span>         <span class="sd">&quot;&quot;&quot;Return lists of bboxes for ticks&#39; label1&#39;s and label2&#39;s.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1091</span>         <span class="k">return</span> <span class="p">([</span><span class="n">tick</span><span class="o">.</span><span class="n">label1</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span>                  <span class="k">for</span> <span class="n">tick</span> <span class="ow">in</span> <span class="n">ticks</span> <span class="k">if</span> <span class="n">tick</span><span class="o">.</span><span class="n">label1</span><span class="o">.</span><span class="n">get_visible</span><span class="p">()],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span>                 <span class="p">[</span><span class="n">tick</span><span class="o">.</span><span class="n">label2</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/text.py</span> in <span class="ni">get_window_extent</span><span class="nt">(self, renderer, dpi)</span>
+<span class="g g-Whitespace">    </span><span class="mi">899</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Cannot get window extent w/o renderer&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span> 
+<span class="ne">--&gt; </span><span class="mi">901</span>         <span class="k">with</span> <span class="n">cbook</span><span class="o">.</span><span class="n">_setattr_cm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">902</span>             <span class="n">bbox</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">descent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_layout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">903</span>             <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_unitless_position</span><span class="p">()</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">115</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/cbook/__init__.py</span> in <span class="ni">_setattr_cm</span><span class="nt">(obj, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2052</span>     <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2053</span>         <span class="n">orig</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">sentinel</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2054</span>         <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span> <span class="ow">or</span> <span class="n">orig</span> <span class="ow">is</span> <span class="n">sentinel</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2055</span>             <span class="c1"># if we are pulling from the instance dict or the object</span>
+<span class="g g-Whitespace">   </span><span class="mi">2056</span>             <span class="c1"># does not have this attribute we can trust the above</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ausreiszer">
+<h3>Ausreißer<a class="headerlink" href="#ausreiszer" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_28_0.png" src="../_images/EDA_Regression_Diagnostic_28_0.png" />
+</div>
+</div>
+<p><strong>Auffälligkeiten:</strong></p>
+<ul class="simple">
+<li><p>Bei price und milage gibt es Ausreißer, die näher betrachtet werden sollten.</p></li>
+<li><p>Des Weiteren zeigen die Boxplots von price und milage, dass die Daten rechtsschief vorliegen. -&gt; mehr bezahlbare Fahrzeuge &amp; mehr Fahrzeuge deren Laufleistung nicht so hoch ist.</p></li>
+<li><p>Durch den hohen Wertebereich von price und milage, müssen die anderen Features einzeln betrachtet werden.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;car_type&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_30_0.png" src="../_images/EDA_Regression_Diagnostic_30_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>In dieser Grafik kann man feststellen, dass die Ausreißerwerte vor allem durch die Fahrzeugkategorien Limousine und Sport kommen.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_power</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="s1">&#39;power_kw&#39;</span><span class="p">]]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_power</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_32_0.png" src="../_images/EDA_Regression_Diagnostic_32_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Auch bei power_ps &amp; und power_kw gibt es mehrere Ausreißerwerte</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;hubraum&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_new</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_34_0.png" src="../_images/EDA_Regression_Diagnostic_34_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Bei hubraum gibt es ebenfalls mehrere Ausreißerwerte</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;milage&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_36_0.png" src="../_images/EDA_Regression_Diagnostic_36_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="uberprufung-mit-influence-plots">
+<h3>Überprüfung mit Influence plots<a class="headerlink" href="#uberprufung-mit-influence-plots" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_newindex</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;car_type&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Erstellung eines linearen Modells mit numerischen Features, da die kategorischen Features noch onehot-encoded werden müssen</span>
+<span class="n">lm</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s2">&quot;price ~ hubraum + milage + power_ps + age&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_newindex</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.720
+Model:                            OLS   Adj. R-squared:                  0.719
+Method:                 Least Squares   F-statistic:                     574.6
+Date:                Fri, 17 Dec 2021   Prob (F-statistic):          4.63e-245
+Time:                        12:55:08   Log-Likelihood:                -9882.0
+No. Observations:                 897   AIC:                         1.977e+04
+Df Residuals:                     892   BIC:                         1.980e+04
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   1.868e+04   1884.865      9.912      0.000     1.5e+04    2.24e+04
+hubraum     1.401e+04   1504.989      9.306      0.000    1.11e+04     1.7e+04
+milage        -0.0547      0.007     -7.342      0.000      -0.069      -0.040
+power_ps      85.6656      9.463      9.053      0.000      67.093     104.238
+age        -7632.9725    449.611    -16.977      0.000   -8515.391   -6750.553
+==============================================================================
+Omnibus:                      349.996   Durbin-Watson:                   1.766
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1969.059
+Skew:                           1.691   Prob(JB):                         0.00
+Kurtosis:                       9.423   Cond. No.                     5.46e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.46e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">influence_plot</span><span class="p">(</span><span class="n">lm</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;cooks&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_41_0.png" src="../_images/EDA_Regression_Diagnostic_41_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>wie man bereits in den Boxplots sehen konnte, haben die Fahrzeugkategorien Sport &amp; Limousine viele Ausreißerwerte. In dem Influencespot kann man ebenfalls erkennen, dass diese Fahrzeugkategorien + Sport + Cabrio einen stärkeren Einfluss haben.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;power_ps&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;car_type&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_43_0.png" src="../_images/EDA_Regression_Diagnostic_43_0.png" />
+</div>
+</div>
+<p>In der Grafik kann man erkennen, dass die Fahrzeugkategorien Sport, Limousine, SUV und Cabrio zu den teuren Fahrahzeugkategorien gehören. Da diese eine sehr große Streuung haben und einen großen Einfluss auf die Perfomance des Modells haben, werde ich diese Ausreißerwerte entfernen.</p>
+<div class="section" id="entfernung-der-ausreiszerwerte">
+<h4>Entfernung der Ausreißerwerte<a class="headerlink" href="#entfernung-der-ausreiszerwerte" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_without_outlier</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">75000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_without_outlier</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es wurden ungesamt 98 ausreißer Fahrzeuge entfernt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lm2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s2">&quot;price ~ hubraum + milage + power_ps + age&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_without_outlier</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lm2</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.727
+Model:                            OLS   Adj. R-squared:                  0.726
+Method:                 Least Squares   F-statistic:                     528.3
+Date:                Fri, 17 Dec 2021   Prob (F-statistic):          4.96e-222
+Time:                        14:03:06   Log-Likelihood:                -8281.2
+No. Observations:                 799   AIC:                         1.657e+04
+Df Residuals:                     794   BIC:                         1.660e+04
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   2.796e+04   1170.740     23.881      0.000    2.57e+04    3.03e+04
+hubraum     5079.6424    916.845      5.540      0.000    3279.916    6879.369
+milage        -0.0544      0.004    -13.629      0.000      -0.062      -0.047
+power_ps      71.6266      5.683     12.604      0.000      60.471      82.782
+age        -4352.9411    257.876    -16.880      0.000   -4859.140   -3846.742
+==============================================================================
+Omnibus:                      109.100   Durbin-Watson:                   1.817
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              172.809
+Skew:                           0.902   Prob(JB):                     2.99e-38
+Kurtosis:                       4.391   Cond. No.                     6.49e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.49e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Betrachtet man den R-squared, den Adj. R-squared und die F-Statisitic kann man deutlich erkennen, dass durch die Entfernung der Ausreißer, dass das zweite Modell im Verlgeich zum ersten Modell besser performt.</strong></p>
+</div>
+</div>
+<div class="section" id="partial-regression-plot">
+<h3>Partial Regression Plot<a class="headerlink" href="#partial-regression-plot" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_partregress_grid</span><span class="p">(</span><span class="n">lm2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_53_0.png" src="../_images/EDA_Regression_Diagnostic_53_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Man kann deutlich erkennen, dass die PS-Anzahl und die Hubraumgröße einen positiven Einfluss auf den Preis haben.</p></li>
+<li><p>Und bei milage und age kann man erkennen, dass diese zwei Feautures einen negtiven EInfluss auf den Preis haben.</p></li>
+</ul>
+</div>
+<div class="section" id="residuals-vs-fitted-plot">
+<h3>Residuals vs fitted plot<a class="headerlink" href="#residuals-vs-fitted-plot" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fitted values</span>
+<span class="n">model_fitted_y</span> <span class="o">=</span> <span class="n">lm2</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+<span class="c1">#  Plot</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">residplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">model_fitted_y</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_without_outlier</span><span class="p">,</span> <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                     <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span> 
+                     <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">})</span>
+
+<span class="c1"># Titel and labels</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Residuals vs Fitted&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitted values&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_56_0.png" src="../_images/EDA_Regression_Diagnostic_56_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Aus dem Residuals vs fitted Plot kann man erkennen, dass der Fit sehr nah bei der gepunkteten Linie liegt. Das ist ein Anzeichen dafür, dass eine lineare Beziehung vorliegt.</p></li>
+<li><p>Des Weiteren kann man erkennen, das die Residuen entlang der X-Achse abnehmen, dies spricht dafür, dass eine Heteroskedastizität vorliegt. Um diese Annahme zu prüfen werde ich im nächsten Schritt eine Breusch-Pagan Lagrange Multiplier test druchführen.</p></li>
+</ul>
+</div>
+<div class="section" id="breusch-pagan-lagrange-multiplier-test">
+<h3>Breusch-Pagan Lagrange Multiplier test<a class="headerlink" href="#breusch-pagan-lagrange-multiplier-test" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lagrange multiplier statistic&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span> <span class="s1">&#39;f-value&#39;</span><span class="p">,</span> <span class="s1">&#39;f p-value&#39;</span><span class="p">]</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">het_breuschpagan</span><span class="p">(</span><span class="n">lm2</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">lm2</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span><span class="p">)</span>
+<span class="n">lzip</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Lagrange multiplier statistic&#39;, 20.638488470598723),
+ (&#39;p-value&#39;, 0.0003734449594829968),
+ (&#39;f-value&#39;, 5.263286918393706),
+ (&#39;f p-value&#39;, 0.00034614523646114696)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Test zeigt, dass die Annahme richtg war, da beide p-Werte unter 0.05 liegen -&gt; Somit liegt eine Heteroskedastizität vor.</p>
+</div>
+<div class="section" id="korrelation-multikollineraitat">
+<h3>Korrelation / Multikollineraität<a class="headerlink" href="#korrelation-multikollineraitat" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df_without_outlier</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span> <span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/EDA_Regression_Diagnostic_62_0.png" src="../_images/EDA_Regression_Diagnostic_62_0.png" />
+</div>
+</div>
+<div class="section" id="korrelation-der-features-mit-dem-label">
+<h4>Korrelation der Features mit dem Label<a class="headerlink" href="#korrelation-der-features-mit-dem-label" title="Permalink to this headline">¶</a></h4>
+<p>schwach positive Korrelation:</p>
+<ul class="simple">
+<li><p>hubraum: Zwischen Hubraum und price besteht <strong>positive Beziehung</strong></p></li>
+</ul>
+<p>mittelstarke positive/negative Korrelation:</p>
+<ul class="simple">
+<li><p>power_kw: Zwischen power_kw und price besteht <strong>positive Beziehung</strong></p></li>
+<li><p>power_ps: Zwischen power_ps und price besteht <strong>positive Beziehung</strong></p></li>
+<li><p>milage: Zwischen milage und price besteht <strong>negative Beziehung</strong></p></li>
+<li><p>age: Zwischen age und price besteht <strong>negative Beziehung</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="multikollinearitat">
+<h3>Multikollinearität<a class="headerlink" href="#multikollinearitat" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_without_outlier</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">vif_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;feature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;VIF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">vif_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    feature            VIF
+0    milage       3.655823
+1   hubraum      34.235925
+2  power_ps  647965.308676
+3  power_kw  649056.022076
+4       age       8.974137
+</pre></div>
+</div>
+</div>
+</div>
+<p>An dieser kann man deutlich erkennen, wie man schon am Anfang vermutet hat, dass power_ps und power_kw stark miteinander korrelieren. So werde ich power_kw entfernen und den VIF nochmals berechnen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_without_outlier</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;power_kw&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">vif_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;feature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;VIF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">vif_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    feature        VIF
+0    milage   3.651328
+1   hubraum  33.019454
+2  power_ps  20.767413
+3       age   8.812668
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nachdem ich power_ps entfernt habe, hat sich wie erwartet auch der VIF von power_ps reduziert. Dennoch liegt bei manchen Feature der VIF über 10. So werde ich bei der Pipelineerstellung darauf achten, wie sich die Performance des Modells verschlechter/verbessert, wenn man auch Hubraum als unabhängige Variable entfernt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_without_outlier</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;carname&#39;</span><span class="p">,</span> <span class="s1">&#39;fuel_type&#39;</span><span class="p">,</span> <span class="s1">&#39;transmission&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;num_seats&#39;</span><span class="p">,</span> <span class="s1">&#39;num_doors&#39;</span><span class="p">,</span> <span class="s1">&#39;emission_class&#39;</span><span class="p">,</span> <span class="s1">&#39;car_type&#39;</span><span class="p">,</span> <span class="s1">&#39;num_owners&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;power_kw&#39;</span><span class="p">,</span> <span class="s1">&#39;hubraum&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">vif_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;feature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;VIF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">vif_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    feature       VIF
+0    milage  3.487899
+1  power_ps  3.502665
+2       age  6.909576
+</pre></div>
+</div>
+</div>
+</div>
+<p>Enfernt man auch hubraum, so würde man die Multikollinearität im Datensatz beseitigen, da nun alle Features unter einem VIF-Wert von 10 liegen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_without_outlier</span> <span class="o">=</span> <span class="n">df_without_outlier</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;power_kw&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_without_outlier</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/Users/cenkyagkan/books/mynewbook/content/mobile_clean_data_without_outlier&quot;</span><span class="o">+</span> <span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="zusammenfassung-der-ergebnisse">
+<h2>Zusammenfassung der Ergebnisse:<a class="headerlink" href="#zusammenfassung-der-ergebnisse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="outliers-and-high-leverage-points">
+<h3>Outliers and high-leverage points<a class="headerlink" href="#outliers-and-high-leverage-points" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Es wurden Ausreißer erkannt in price, power_ps, age, milage. Nachdem diese identifiziert wurden, konnte ich einen großen Teil der Ausreißer entfernen. Hierbei löschte ich die Fahrzeuge die mehr als 75000€ gekostet haben. Bei diesen Fahrzeugen handelte es sich um die Fahrzeugkategorien Sport, Limousine, SUV und Cabrio. Mit dem Influence plot konnte auch festgestellt werden, dass diese Fahrzeugkategorien einen großen Einfluss auf die Perfomance des Modells hatten. Dies ist als zweiter Grund zu sehen, weshalb diese Fahrzeuge entfernt wurden.</p></li>
+<li><p>Bei age handelte es sich um noise, da es kein negatives Alter gibt.</p></li>
+</ul>
+</div>
+<div class="section" id="verteilung-der-daten">
+<h3>Verteilung der Daten<a class="headerlink" href="#verteilung-der-daten" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Es lag bei allen Features keine Normalverteilung vor.</p></li>
+</ul>
+</div>
+<div class="section" id="lineare-beziehung-und-heteroskedastizitat">
+<h3>Lineare Beziehung und Heteroskedastizität<a class="headerlink" href="#lineare-beziehung-und-heteroskedastizitat" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Zwischen PS-Anzahl und price liegt eine lineare Beziehung vor.</p></li>
+<li><p>Zwischen hubraum und price liegt eine lineare Beziehung vor.</p></li>
+<li><p>Zwischen milage und price liegt eine lineare Beziehung vor.</p></li>
+<li><p>Zwischen age und price liegt eine lineare Beziehung vor.</p></li>
+<li><p>Aus dem Residuals vs fitted Plot wurde ersichtlich, dass eine Heteroskedastizität vorliegt.</p></li>
+</ul>
+</div>
+<div class="section" id="korrelation">
+<h3>Korrelation<a class="headerlink" href="#korrelation" title="Permalink to this headline">¶</a></h3>
+<p>schwach positive Korrelation:</p>
+<ul class="simple">
+<li><p>hubraum: Zwischen Hubraum und price besteht <strong>positive Beziehung</strong></p></li>
+</ul>
+<p>mittelstarke positive/negative Korrelation:</p>
+<ul class="simple">
+<li><p>power_kw: Zwischen power_kw und price besteht <strong>positive Beziehung</strong></p></li>
+<li><p>power_ps: Zwischen power_ps und price besteht <strong>positive Beziehung</strong></p></li>
+<li><p>milage: Zwischen milage und price besteht <strong>negative Beziehung</strong></p></li>
+<li><p>age: Zwischen age und price besteht <strong>negative Beziehung</strong></p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Multikollinearität<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Unter den unabhängigen Variablen korrelierten power_ps mit power_kw. So wurde power_kw entfernt.</p></li>
+<li><p>Hubraum war ebenfalls verantwortlich für eine Multikollinearität. Da hubraum eine schwache positive Korrelation mit price besitzt, würde ich beim Modelbuilding in einer Pipeline Hububraum mitaufehmen, um zu testen wie es sich die auf die Performance des Modells auswirkt.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="data_cleaning.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">3. Data Cleaning</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="modelbuilding_restwertermittlung.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. Modelbuilding</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch Cenk Yagkan<br/>
+        
+            &copy; Urheberrechte © 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
